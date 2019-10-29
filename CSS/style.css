@@ -2,7 +2,7 @@
 
 h1 {
    font-size: 5em;
-   color: black;
+   color: #101010;
    padding-bottom: 25px;
    padding-top: 15px;
    margin: 0px;
@@ -15,7 +15,7 @@ h1 {
 
 p {
   font-family: 'Lato', sans-serif;
-  color: #222;
+  color: #101010;
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
