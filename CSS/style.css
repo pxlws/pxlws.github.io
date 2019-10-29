@@ -21,7 +21,6 @@ p {
 
 .splash {
   padding-left: 18%;
-  padding-right: 30%;
   padding-top: 150px;
   width: 100%;
 }
@@ -33,10 +32,13 @@ body {
 @media (max-width: 480px) {
   h1 {
      font-size: 3em;
+     max-width: 80%;
+     min-width: 200px;
    }
   p {
     font-size: 1.1em;
-    max-width: 280px;
+    max-width: 75%;
+    min-width: 200px;
   }
   .splash {
     padding-left: 10%;
