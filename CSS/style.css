@@ -1,6 +1,41 @@
 h1 {
-   font-size: 3em;
+   font-size: 4.2em;
    font-weight: 900;
    font-family: 'Playfair Display', serif;
-   color: tomato;
+   color: white;
+   padding-bottom: 25px;
+   padding-top: 15px;
+   margin: 0px;
+   line-height: 1.2em;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  color: lightGray;
+  font-size: 1.3em;
+  margin: 0px;
+  line-height: 1.5em;
+  max-width: 400px;
+
+}
+
+.splash {
+  padding-left: 18%;
+  padding-right: 30%;
+  padding-top: 150px;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.circle {
+  background-color: #131313;
+  width: 650px;
+  height: 650px;
+  border-radius: 500px;
+  margin-top: 200px;
+  margin-left: 35%;
+  margin-right: 35%;
 }
