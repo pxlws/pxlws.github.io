@@ -30,7 +30,7 @@ body {
   background-color: black;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 480px) {
   h1 {
      font-size: 3em;
    }
