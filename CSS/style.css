@@ -1,21 +1,25 @@
+/* Main styles */
+
 h1 {
-   font-size: 4.2em;
-   font-weight: 900;
-   font-family: 'Playfair Display', serif;
-   color: white;
+   font-size: 5em;
+   color: black;
    padding-bottom: 25px;
    padding-top: 15px;
    margin: 0px;
    line-height: 1.2em;
+   font-family: AlbraText-Bold;
+   font-weight: normal;
+   font-style: normal;
+   max-width: 60%;
 }
 
 p {
   font-family: 'Lato', sans-serif;
-  color: lightGray;
+  color: #222;
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
-  max-width: 480px;
+  max-width: 60%;
 
 }
 
@@ -26,8 +30,10 @@ p {
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
+
+/* Media queries */
 
 @media (max-width: 480px) {
   h1 {
@@ -43,4 +49,67 @@ body {
   .splash {
     padding-left: 10%;
   }
+}
+
+/* Fonts */
+
+.Albra-Semi {
+	font-family: Albra-Semi;
+	font-weight: normal;
+	font-style: normal;
+}
+.Albra-Black {
+	font-family: Albra-Black;
+	font-weight: normal;
+	font-style: normal;
+}
+.Albra-Bold {
+	font-family: Albra-Bold;
+	font-weight: normal;
+	font-style: normal;
+}
+.Albra-Light {
+	font-family: Albra-Light;
+	font-weight: normal;
+	font-style: normal;
+}
+.Albra-Medium {
+	font-family: Albra-Medium;
+	font-weight: normal;
+	font-style: normal;
+}
+.Albra-Regular {
+	font-family: Albra-Regular;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Bold {
+	font-family: AlbraText-Bold;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Black {
+	font-family: AlbraText-Black;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Medium {
+	font-family: AlbraText-Medium;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Light {
+	font-family: AlbraText-Light;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Regular {
+	font-family: AlbraText-Regular;
+	font-weight: normal;
+	font-style: normal;
+}
+.AlbraText-Semi {
+	font-family: AlbraText-Semi;
+	font-weight: normal;
+	font-style: normal;
 }
