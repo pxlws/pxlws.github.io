@@ -1,15 +1,16 @@
 /* Main styles */
 
 h1 {
-   font-size: 4.2em;
+   font-size: 5em;
    color: black;
    padding-bottom: 25px;
    padding-top: 15px;
    margin: 0px;
    line-height: 1.2em;
-   font-family: AlbraText-Medium;
+   font-family: AlbraText-Bold;
    font-weight: normal;
    font-style: normal;
+   max-width: 60%;
 }
 
 p {
@@ -18,7 +19,7 @@ p {
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
-  max-width: 480px;
+  max-width: 60%;
 
 }
 
