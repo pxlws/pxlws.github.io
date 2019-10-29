@@ -40,7 +40,8 @@ p {
   margin: 0px;
   line-height: 1.5em;
   width: 80%;
-  max-width: 700px;
+  max-width: 780px;
+  text-align: left;
 }
 
 button {
@@ -62,19 +63,58 @@ button:hover {
   transition: background-color .25s, box-shadow .25s;
 }
 
-.hero {
-  padding-left: 18%;
-  padding-top: 140px;
+#hero {
+  padding-left: 20%;
+  padding-top: 190px;
   padding-bottom: 150px;
   background-color: #E9EAEB;
   margin: 0;
 }
 
-.nav {
+.nav-bar {
+  position: fixed;
   background-color: black;
   height: 70px;
   width: 100%;
   margin: 0;
+}
+
+.logo {
+  float: left;
+  color: white;
+  font-family: AlbraText-Semi;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.7em;
+  padding: 16px 0px 16px 35px;
+  min-width: 180px;
+  width: 180px;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0 25px 0 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  min-width: 300px;
+
+}
+
+li {
+  float: right;
+  padding-top: 14px;
+}
+
+li a {
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover, a:active {
+  background-color: #222222;
+  border-radius: 5px;
 }
 
 body {
@@ -82,9 +122,24 @@ body {
   margin: 0px;
 }
 
-.main {
-  padding-left: 18%;
+#main {
+  padding-left: 20%;
   padding-top: 30px;
+}
+
+.about img {
+  width: 200px;
+  float: left;
+  padding-right: 40px;
+  margin-top: 60px;"
+}
+
+.about-text {
+   float: left;
+}
+
+.about {
+  margin-bottom: 30px;
 }
 
 /* Media queries */
@@ -97,13 +152,13 @@ body {
      min-width: 200px;
    }
 
-   .hero {
+   #hero {
      padding-left: 10%;
-     padding-top: 80px;
+     padding-top: 140px;
      padding-bottom: 100px;
    }
 
-   .main {
+   #main {
      padding-left: 10%;
      padding-top: 30px;
      width: 90%;
@@ -133,13 +188,13 @@ body {
     width: 90%;
   }
 
-  .hero {
+  #hero {
     padding-left: 10%;
-    padding-top: 60px;
+    padding-top: 130px;
     padding-bottom: 80px;
   }
 
-  .main {
+  #main {
     padding-left: 10%;
     padding-top: 30px;
     width: 100%;
