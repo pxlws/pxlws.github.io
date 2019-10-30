@@ -44,15 +44,19 @@ p {
 }
 
 .projects {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding-left: 20%;
   padding-top: 30px;
   padding-bottom: 60px;
   display: inline-block;
 }
 
+.projects a:hover {
+  box-shadow: 0 10px 10px black;
+}
+
 .grid-item {
-  padding: 0 25px 25px 0;
+  padding: 0 25px 0 0;
   width: 100%;
 }
 
@@ -60,18 +64,21 @@ p {
   float: left;
   width: 32%;
   min-width: 250px;
+  padding: 10px 0 25px 0;
 }
 
 .grid-col2 {
   float: left;
   width: 32%;
   min-width: 250px;
+  padding: 10px 0 25px 0;
 }
 
 .grid-col3 {
   float: left;
   width: 32%;
   min-width: 250px;
+  padding: 10px 0 25px 0;
 }
 
 .card--radius {
@@ -93,7 +100,9 @@ p {
 }
 
 .card h3 {
+  font-family: 'Lato', sans-serif;
   color: black;
+  font-weight: 600;
   font-size: 1.4em;
   padding: 0 0 10px 0;
   margin: 0;
@@ -103,8 +112,12 @@ p {
   font-size: 1.1em;
 }
 
+.card-link {
+  text-decoration: none;
+}
+
 .pa4 {
-  padding: 24px;
+  padding: 20px 24px  22px 24px;
 }
 
 button {
