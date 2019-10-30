@@ -32,7 +32,7 @@ h3 {
   font-size: 2em;
   color: #000;
   margin: 0;
-  padding: 5px 0 15px 0;
+  padding: 25px 0 15px 0;
   font-family: AlbraText-Semi;
   font-weight: normal;
   font-style: normal;
@@ -225,7 +225,7 @@ body {
 .about {
   clear: both;
   background-color: #fff;
-  padding: 30px 20% 80px 16%;
+  padding: 0 20% 80px 16%;
   display: flex;
 }
 
