@@ -211,6 +211,7 @@ body {
      padding-left: 10%;
      padding-top: 140px;
      padding-bottom: 100px;
+     padding-right: 10%;
    }
 
    .projects {
@@ -228,7 +229,6 @@ body {
 
    p {
      font-size: 1.1em;
-     width: 85%;
    }
 
    .col2 {
@@ -253,13 +253,13 @@ body {
 
   p {
     font-size: 1.1em;
-    width: 90%;
   }
 
   #hero {
     padding-left: 10%;
     padding-top: 130px;
     padding-bottom: 80px;
+    padding-right: 10%;
   }
 
   .projects {
