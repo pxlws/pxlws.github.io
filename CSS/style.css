@@ -58,19 +58,19 @@ p {
 
 .grid-col1 {
   float: left;
-  width: 30%;
+  width: 32%;
   min-width: 250px;
 }
 
 .grid-col2 {
   float: left;
-  width: 30%;
+  width: 32%;
   min-width: 250px;
 }
 
 .grid-col3 {
   float: left;
-  width: 30%;
+  width: 32%;
   min-width: 250px;
 }
 
@@ -197,7 +197,7 @@ body {
 .col1 {
   float: left;
   width: 50%;
-  min-width: 300px;
+  max-width: 850px;
   padding: 0 60px 30px 0;
 }
 
