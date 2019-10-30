@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 2em;
   color: white;
 }
 
@@ -39,8 +39,7 @@ p {
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
-  width: 80%;
-  max-width: 780px;
+  max-width: 900px;
   text-align: left;
 }
 
@@ -67,6 +66,7 @@ button:hover {
   padding-left: 20%;
   padding-top: 190px;
   padding-bottom: 150px;
+  padding-right: 20%;
   background-color: #E9EAEB;
   margin: 0;
 }
@@ -123,27 +123,81 @@ body {
   margin: 0px;
 }
 
-#main {
-  padding-left: 20%;
-  padding-top: 30px;
-}
-
-.about img {
-  width: 200px;
-  float: left;
-  padding-right: 40px;
-  margin-top: 60px;"
-}
-
-.about-text {
-   float: left;
+.projects {
+    padding-left: 20%;
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
 
 .about {
-  margin-bottom: 30px;
+  background-color: #242526;
+  padding: 30px 20% 80px 20%;
+  display: flex;
 }
 
+.col1 {
+  float: left;
+  width: 50%;
+  min-width: 300px;
+  padding: 0 60px 30px 0;
+}
+
+.col2 {
+  float: left;
+  padding: 0;
+  width: 40%;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.about p, .about h2 {
+  color: #fff;
+}
+
+.about p {
+  font-size: 1.2em;
+}
+
+.experience-card {
+  background-color: #2D2D2D;
+  padding: 22px 25px 28px;
+  border-radius: 5px;
+  margin: 0 0 14px 0;
+}
+
+.experience-card h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 6px 0 10px 0;
+}
+
+.experience-card p {
+  font-size: 1.1em;
+}
+
+
 /* Media queries */
+
+@media (max-width: 1000px) {
+
+.col1 {
+  min-width: 0;
+  width: 100%;
+  padding-right: 0;
+}
+
+.col2 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.experience-card {
+  max-width: 500px
+}
+
+}
 
 @media (max-width: 720px) {
 
@@ -159,16 +213,29 @@ body {
      padding-bottom: 100px;
    }
 
-   #main {
-     padding-left: 10%;
-     padding-top: 30px;
-     width: 90%;
+   .projects {
+       padding-left: 10%;
+       padding-top: 30px;
+       padding-bottom: 60px;
+   }
+
+   .about {
+     margin-bottom: 30px;
+     background-color: #242526;
+     padding: 30px 10% 80px 10%;
+     display: flex;
    }
 
    p {
      font-size: 1.1em;
      width: 85%;
    }
+
+   .col2 {
+     width: 100%;
+     max-width: 100%;
+   }
+
 
 }
 
@@ -195,10 +262,17 @@ body {
     padding-bottom: 80px;
   }
 
-  #main {
-    padding-left: 10%;
-    padding-top: 30px;
-    width: 100%;
+  .projects {
+      padding-left: 10%;
+      padding-top: 30px;
+      padding-bottom: 60px;
+  }
+
+  .about {
+    margin-bottom: 30px;
+    background-color: #242526;
+    padding: 30px 10% 80px 10%;
+    display: flex;
   }
 
   .logo {
@@ -216,6 +290,26 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+.about-text {
+  mx-width: 480px;
+}
+
+.col1 {
+  padding: 0;
+  min-width: 0;
+}
+
+.col2 {
+  width: 100%;
+}
+
+
+.about p, .about h2 {
+  margin: 0;
+  min-width: auto;
+}
+
 
 }
 
