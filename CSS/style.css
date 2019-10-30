@@ -14,7 +14,7 @@ h1 {
    font-family: AlbraText-Bold;
    font-weight: normal;
    font-style: normal;
-   max-width: 700px;
+   max-width: 1050px;
 }
 
 h2 {
@@ -39,7 +39,7 @@ p {
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
-  max-width: 900px;
+  max-width: 1050px;
   text-align: left;
 }
 
