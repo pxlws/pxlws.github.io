@@ -5,10 +5,10 @@
 /* Main styles */
 
 h1 {
-   font-size: 5em;
-   color: #101010;
+   font-size: 4.8em;
+   color: #fff;
    padding-bottom: 30px;
-   padding-top: 15px;
+   padding-top: 20px;
    margin: 0;
    line-height: 1.15em;
    font-family: AlbraText-Bold;
@@ -18,24 +18,29 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.8em;
   color: #101010;
-  padding-top: 35px;
+  padding-top: 50px;
   padding-bottom: 15px;
   margin: 0;
-  font-family: AlbraText-Bold;
+  font-family: AlbraText-Semi;
   font-weight: normal;
   font-style: normal;
 }
 
 h3 {
   font-size: 2em;
-  color: white;
+  color: #000;
+  margin: 0;
+  padding: 5px 0 15px 0;
+  font-family: AlbraText-Semi;
+  font-weight: normal;
+  font-style: normal;
 }
 
 p {
   font-family: 'Lato', sans-serif;
-  color: #101010;
+  color: #fff;
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
@@ -44,8 +49,8 @@ p {
 }
 
 .projects {
-  margin-bottom: 30px;
-  padding-left: 20%;
+  padding-left: 16%;
+  padding-right: 16%
   padding-top: 30px;
   padding-bottom: 60px;
   display: inline-block;
@@ -62,22 +67,22 @@ p {
 
 .grid-col1 {
   float: left;
-  width: 32%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 300px;
   padding: 10px 0 25px 0;
 }
 
 .grid-col2 {
   float: left;
-  width: 32%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 300px;
   padding: 10px 0 25px 0;
 }
 
 .grid-col3 {
   float: left;
-  width: 32%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 300px;
   padding: 10px 0 25px 0;
 }
 
@@ -92,65 +97,82 @@ p {
   background: white;
   background-size: cover;
   background-position: center center;
-  min-height: 184px;
+  min-height: 140px;
 }
 
 .card {
-  background-color: #E9EAEB;
+  background-color: #fff;
 }
 
 .card h3 {
   font-family: 'Lato', sans-serif;
   color: black;
   font-weight: 600;
-  font-size: 1.4em;
-  padding: 0 0 10px 0;
+  font-size: 1.1em;
+  padding: 0 0 8px 0;
   margin: 0;
 }
 
 .card p {
-  font-size: 1.1em;
+  font-size: 1em;
+  color: black;
 }
 
-.card-link {
+a {
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
 }
 
 .pa4 {
-  padding: 20px 24px  22px 24px;
+  padding: 16px 20px  18px 20px;
 }
 
-button {
-  padding-left: 22px;
-  padding-right: 22px;
+.white-button {
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  border: 2px solid white;
+  font-size: 1.1em;
+}
+
+.hero-button a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.black-button {
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 12px;
-  padding-bottom: 13px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  font-size: 1em;
-  border: none;
-  transition: background-color .3s, box-shadow .3s;
-}
-
-button:hover {
-  background-color: #0B49E5;
-  box-shadow: 0px 3px 8px #888888;
-  transition: background-color .25s, box-shadow .25s;
+  padding-bottom: 12px;
+  background-color: #E9EAEB;
+  color: #000;
+  border-radius: 30px;
+  border: 2px solid #000;
+  font-size: 1.1em;
+  margin-top: 18px;
 }
 
 #hero {
-  padding-left: 20%;
-  padding-top: 190px;
-  padding-bottom: 150px;
+  padding-left: 16%;
+  padding-top: 170px;
+  padding-bottom: 130px;
   padding-right: 20%;
-  background-color: #E9EAEB;
+  background-color: #101010;
   margin: 0;
+}
+
+#main {
+    background-color: #E9EAEB;
 }
 
 .nav-bar {
   position: fixed;
-  background-color: black;
+  background-color: #101010;
   height: 70px;
   width: 100%;
   margin: 0;
@@ -162,10 +184,10 @@ button:hover {
   font-family: AlbraText-Semi;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.7em;
-  padding: 16px 0px 16px 35px;
-  min-width: 165px;
-  width: 165px;
+  font-size: 1.8em;
+  padding: 14px 0px 16px 35px;
+  min-width: 80px;
+  width: 85px;
 }
 
 .nav {
@@ -202,8 +224,8 @@ body {
 
 .about {
   clear: both;
-  background-color: #242526;
-  padding: 30px 20% 80px 20%;
+  background-color: #fff;
+  padding: 30px 20% 80px 16%;
   display: flex;
 }
 
@@ -211,19 +233,20 @@ body {
   float: left;
   width: 50%;
   max-width: 850px;
+  min-width: 440px;
   padding: 0 60px 30px 0;
 }
 
 .col2 {
   float: left;
-  padding: 0;
+  padding: 30px 0 0 0;
   width: 40%;
   max-width: 400px;
   min-width: 300px;
 }
 
 .about p, .about h2 {
-  color: #fff;
+  color: #000;
 }
 
 .about p {
@@ -231,8 +254,8 @@ body {
 }
 
 .experience-card {
-  background-color: #2D2D2D;
-  padding: 22px 25px 28px;
+  background-color: #efefef;
+  padding: 18px 18px 20px 20px;
   border-radius: 5px;
   margin: 0 0 14px 0;
 }
@@ -243,6 +266,7 @@ body {
   font-size: 1.3em;
   margin: 0;
   padding: 6px 0 10px 0;
+  color: #000;
 }
 
 .experience-card p {
@@ -306,13 +330,13 @@ body {
 
    .projects {
        padding-left: 10%;
-       padding-top: 30px;
-       padding-bottom: 60px;
+       padding-top: 20px;
+       padding-bottom: 40px;
    }
 
    .about {
      margin-bottom: 30px;
-     background-color: #242526;
+     background-color: #fff;
      padding: 30px 10% 80px 10%;
      display: flex;
    }
@@ -375,9 +399,10 @@ body {
 
   .about {
     margin-bottom: 30px;
-    background-color: #242526;
+    background-color: #fff;
     padding: 30px 10% 80px 10%;
     display: flex;
+    max-width: 90%;
   }
 
   .logo {
@@ -397,7 +422,7 @@ body {
   }
 
 .about-text {
-  mx-width: 480px;
+  max-width: 480px;
 }
 
 .col1 {
@@ -413,6 +438,7 @@ body {
 .about p, .about h2 {
   margin: 0;
   min-width: auto;
+  color: #000;
 }
 
 .grid-col1 {
