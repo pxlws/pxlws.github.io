@@ -48,76 +48,6 @@ p {
   text-align: left;
 }
 
-.projects {
-  padding-left: 16%;
-  padding-right: 16%
-  padding-top: 30px;
-  padding-bottom: 60px;
-  display: inline-block;
-}
-
-.projects a:hover {
-  box-shadow: 0 10px 10px black;
-}
-
-.grid-item {
-  padding: 0 25px 0 0;
-  width: 100%;
-}
-
-.grid-col1 {
-  float: left;
-  width: 33%;
-  min-width: 300px;
-  padding: 10px 0 25px 0;
-}
-
-.grid-col2 {
-  float: left;
-  width: 33%;
-  min-width: 300px;
-  padding: 10px 0 25px 0;
-}
-
-.grid-col3 {
-  float: left;
-  width: 33%;
-  min-width: 300px;
-  padding: 10px 0 25px 0;
-}
-
-.card--radius {
-  border-radius: 5px;
-  min-height: 100%
-}
-
-.card-thumb {
-  border-radius: 5px 5px 0 0;
-  background-repeat: no-repeat;
-  background: white;
-  background-size: cover;
-  background-position: center center;
-  min-height: 140px;
-}
-
-.card {
-  background-color: #fff;
-}
-
-.card h3 {
-  font-family: 'Lato', sans-serif;
-  color: black;
-  font-weight: 600;
-  font-size: 1.1em;
-  padding: 0 0 8px 0;
-  margin: 0;
-}
-
-.card p {
-  font-size: 1em;
-  color: black;
-}
-
 a {
   text-decoration: none;
   font-family: 'Lato', sans-serif;
@@ -157,25 +87,147 @@ a {
   margin-top: 18px;
 }
 
+#layout {
+  display: block;
+}
+
 #hero {
-  padding-left: 16%;
+  background-color: #101010;
+}
+
+.hero-content {
   padding-top: 170px;
   padding-bottom: 130px;
-  padding-right: 20%;
-  background-color: #101010;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#projects {
+    background-color: #E9EAEB;
+    overflow: hidden;
+}
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.grid-item {
+  padding: 0 25px 0 0;
+  width: 100%;
+}
+
+.grid-col1 {
+  float: left;
+  width: 28%;
+  min-width: 300px;
+  padding: 10px 0 25px 0;
+}
+
+.grid-col2 {
+  float: left;
+  width: 28%;
+  min-width: 300px;
+  padding: 10px 0 25px 0;
+}
+
+.grid-col3 {
+  float: left;
+  width: 28%;
+  min-width: 300px;
+  padding: 10px 0 25px 0;
+}
+
+.card--radius {
+  border-radius: 5px;
+  min-height: 100%
+}
+
+.card-thumb {
+  border-radius: 5px 5px 0 0;
+  background-repeat: no-repeat;
+  background: white;
+  background-size: cover;
+  background-position: center center;
+  min-height: 140px;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.card h3 {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0 0 8px 0;
   margin: 0;
 }
 
-#main {
-    background-color: #E9EAEB;
+.card p {
+  font-size: 1em;
+  color: black;
+}
+
+#about {
+  background-color: #fff;
+  padding: 0 0 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.about-text p, .about-text h2 {
+  color: #000;
+}
+
+.about-text p {
+  font-size: 1.2em;
+}
+
+.col1 {
+  float: left;
+  width: 40%;
+  padding: 0 60px 30px 0;
+  max-width: 400px;
+}
+
+.col2 {
+  float: left;
+  padding: 30px 0 0 0;
+  width: 40%;
+  max-width: 400px;
+}
+
+.experience-card {
+  background-color: #efefef;
+  padding: 18px 18px 20px 20px;
+  border-radius: 5px;
+  margin: 0 0 14px 0;
+}
+
+.experience-card h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 6px 0 10px 0;
+  color: #000;
+}
+
+.experience-card p {
+  font-size: 1.1em;
 }
 
 .nav-bar {
   position: fixed;
   background-color: #101010;
   height: 70px;
-  width: 100%;
   margin: 0;
+  width: 100%;
 }
 
 .logo {
@@ -190,13 +242,12 @@ a {
   width: 85px;
 }
 
-.nav {
+.nav ul {
   list-style-type: none;
   margin: 0 30px 0 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   min-width: 300px;
-
 }
 
 li {
@@ -220,57 +271,6 @@ li a:hover, a:active {
 body {
   background-color: white;
   margin: 0px;
-}
-
-.about {
-  clear: both;
-  background-color: #fff;
-  padding: 0 20% 80px 16%;
-  display: flex;
-}
-
-.col1 {
-  float: left;
-  width: 50%;
-  max-width: 850px;
-  min-width: 440px;
-  padding: 0 60px 30px 0;
-}
-
-.col2 {
-  float: left;
-  padding: 30px 0 0 0;
-  width: 40%;
-  max-width: 400px;
-  min-width: 300px;
-}
-
-.about p, .about h2 {
-  color: #000;
-}
-
-.about p {
-  font-size: 1.2em;
-}
-
-.experience-card {
-  background-color: #efefef;
-  padding: 18px 18px 20px 20px;
-  border-radius: 5px;
-  margin: 0 0 14px 0;
-}
-
-.experience-card h3 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  font-size: 1.3em;
-  margin: 0;
-  padding: 6px 0 10px 0;
-  color: #000;
-}
-
-.experience-card p {
-  font-size: 1.1em;
 }
 
 
@@ -334,7 +334,7 @@ body {
        padding-bottom: 40px;
    }
 
-   .about {
+   #about {
      margin-bottom: 30px;
      background-color: #fff;
      padding: 30px 10% 80px 10%;
@@ -397,7 +397,7 @@ body {
       padding-bottom: 60px;
   }
 
-  .about {
+  #about {
     margin-bottom: 30px;
     background-color: #fff;
     padding: 30px 10% 80px 10%;
@@ -435,7 +435,7 @@ body {
 }
 
 
-.about p, .about h2 {
+.about-text p, .about-text h2 {
   margin: 0;
   min-width: auto;
   color: #000;
