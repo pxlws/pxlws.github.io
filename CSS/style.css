@@ -424,7 +424,7 @@ body {
   }
 
   .hero-content {
-    padding-top: 140px;
+    padding-top: 110px;
     padding-bottom: 100px;
   }
 
@@ -482,7 +482,7 @@ body {
 .hero-image {
   width: 40%;
   padding: 40px 20px 0 0;
-  min-width: 220px;
+  min-width: 210px;
 }
 
 }
