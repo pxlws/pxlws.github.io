@@ -98,12 +98,13 @@ a {
 #hero {
   background-color: #101010;
   padding: 0 10%;
+
 }
 
 .hero-content {
   padding-top: 170px;
   padding-bottom: 130px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -115,7 +116,7 @@ a {
 }
 
 .projects {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 65px;
@@ -186,7 +187,7 @@ a {
 }
 
 .about-text {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -210,11 +211,20 @@ a {
 }
 
 .experience-card {
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+/* experience card with gray background
+
+.experience-card {
   background-color: #efefef;
   padding: 18px 18px 20px 20px;
   border-radius: 5px;
   margin: 4px 0 14px 0;
 }
+
+*/
 
 .experience-card h3 {
   font-family: 'Lato', sans-serif;
