@@ -293,21 +293,18 @@ body {
 }
 
 .grid-col1 {
-  float: left;
-  width: 40%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 200px;
 }
 
 .grid-col2 {
-  float: left;
-  width: 40%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 200px;
 }
 
 .grid-col3 {
-  float: left;
-  width: 40%;
-  min-width: 250px;
+  width: 33%;
+  min-width: 200px;
 }
 
 }
@@ -320,50 +317,46 @@ body {
      min-width: 200px;
    }
 
-   #hero {
-     padding-left: 10%;
-     padding-top: 140px;
-     padding-bottom: 100px;
-     padding-right: 10%;
+   .hero-content {
+     padding-top: 160px;
+     padding-bottom: 120px;
    }
 
    .projects {
-       padding-left: 10%;
        padding-top: 20px;
        padding-bottom: 40px;
    }
 
    #about {
-     margin-bottom: 30px;
      background-color: #fff;
      padding: 30px 10% 80px 10%;
-     display: flex;
    }
 
    p {
      font-size: 1.1em;
    }
 
-   .col2 {
-     width: 100%;
-     max-width: 100%;
+   .experience-card {
+     max-width: 90%;
    }
 
    .grid-col1 {
-     float: left;
-     width: 90%;
+     width: 100%;
+     max-width: 80%;
+     padding: 10px 0 25px 0;
    }
 
    .grid-col2 {
-     float: left;
-     width: 90%;
+     width: 100%;
+     max-width: 80%;
+     padding: 10px 0 25px 0;
    }
 
    .grid-col3 {
-     float: left;
-     width: 90%;
+     width: 100%;
+     max-width: 80%;
+     padding: 10px 0 25px 0;
    }
-
 
 }
 
@@ -379,29 +372,22 @@ body {
      font-size: 2em;
    }
 
+   h3 {
+     font-size: 1.6em;
+   }
+
   p {
     font-size: 1.1em;
   }
 
-  #hero {
-    padding-left: 10%;
-    padding-top: 130px;
-    padding-bottom: 80px;
-    padding-right: 10%;
-  }
-
-  .projects {
-      padding-left: 10%;
-      padding-top: 30px;
-      padding-bottom: 60px;
+  .hero-content {
+    padding-top: 140px;
+    padding-bottom: 100px;
   }
 
   #about {
-    margin-bottom: 30px;
     background-color: #fff;
     padding: 30px 10% 80px 10%;
-    display: flex;
-    max-width: 90%;
   }
 
   .logo {
@@ -424,16 +410,6 @@ body {
   max-width: 480px;
 }
 
-.col1 {
-  padding: 0;
-  min-width: 0;
-}
-
-.col2 {
-  width: 100%;
-}
-
-
 .about-text p, .about-text h2 {
   margin: 0;
   min-width: auto;
@@ -441,18 +417,29 @@ body {
 }
 
 .grid-col1 {
-  float: left;
-  width: 95%;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px 0 25px 0;
 }
 
 .grid-col2 {
-  float: left;
-  width: 95%;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px 0 25px 0;
 }
 
 .grid-col3 {
-  float: left;
-  width: 95%;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px 0 25px 0;
+}
+
+.grid-item {
+  padding-right: 0;
+}
+
+.experience-card {
+  max-width: 100%;
 }
 
 }
