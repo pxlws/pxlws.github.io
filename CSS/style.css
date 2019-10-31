@@ -312,7 +312,7 @@ body {
 
 /* Media queries */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 
 .col1 {
   min-width: 0;
@@ -437,7 +437,7 @@ body {
   .logo {
     font-size: 1.6em;
     color: #fff;
-    padding: 16px 0px 16px 25px;
+    padding: 17px 0px 16px 25px;
   }
 
 
