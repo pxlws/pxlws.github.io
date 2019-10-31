@@ -114,6 +114,7 @@ a {
   height: 70px;
   margin: 0;
   width: 100%;
+  z-index: 999;
 }
 
 .logo {
@@ -482,7 +483,7 @@ body {
 .hero-image {
   width: 40%;
   padding: 40px 20px 0 0;
-  min-width: 210px;
+  min-width: 200px;
 }
 
 }
