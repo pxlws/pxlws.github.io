@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body > div {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* Main styles */
 
 h1 {
@@ -211,20 +223,11 @@ a {
 }
 
 .experience-card {
-  padding: 15px 0 15px 0;
-  border-bottom: 1px solid #efefef;
-}
-
-/* experience card with gray background
-
-.experience-card {
   background-color: #efefef;
   padding: 18px 18px 20px 20px;
   border-radius: 5px;
   margin: 4px 0 14px 0;
 }
-
-*/
 
 .experience-card h3 {
   font-family: 'Lato', sans-serif;
