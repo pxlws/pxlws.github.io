@@ -68,22 +68,26 @@ a {
   font-family: 'Lato', sans-serif;
 }
 
-.hero-button a:hover {
-  background-color: #fff;
-  color: #000;
-}
-
 .black-button {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: transparent;
   color: #000;
   border-radius: 30px;
   border: 2px solid #000;
   font-size: 1.1em;
   margin-top: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+.ghost-button {
+  background-color: transparent;
+  color: #676767;
+  border: none;
+  font-size: 1.1em;
+  margin-top: 10px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -114,7 +118,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 35px;
+  padding-bottom: 65px;
 }
 
 .grid-item {
@@ -126,21 +130,21 @@ a {
   float: left;
   width: 33%;
   min-width: 250px;
-  padding: 10px 0 25px 0;
+  padding: 10px 0 0px 0;
 }
 
 .grid-col2 {
   float: left;
   width: 33%;
   min-width: 250px;
-  padding: 10px 0 25px 0;
+  padding: 10px 0 0px 0;
 }
 
 .grid-col3 {
   float: left;
   width: 33%;
   min-width: 250px;
-  padding: 10px 0 25px 0;
+  padding: 10px 0 0px 0;
 }
 
 .card--radius {
@@ -346,19 +350,16 @@ body {
    .grid-col1 {
      width: 100%;
      max-width: 80%;
-     padding: 10px 0 25px 0;
    }
 
    .grid-col2 {
      width: 100%;
      max-width: 80%;
-     padding: 10px 0 25px 0;
    }
 
    .grid-col3 {
      width: 100%;
      max-width: 80%;
-     padding: 10px 0 25px 0;
    }
 
 }
@@ -398,10 +399,6 @@ body {
     padding: 16px 0px 16px 25px;
   }
 
-  .nav {
-    margin: 0 25px 0 0;
-
-  }
 
   li a {
     margin: 0 1px;
@@ -422,19 +419,16 @@ body {
 .grid-col1 {
   width: 100%;
   min-width: 100%;
-  padding: 10px 0 25px 0;
 }
 
 .grid-col2 {
   width: 100%;
   min-width: 100%;
-  padding: 10px 0 25px 0;
 }
 
 .grid-col3 {
   width: 100%;
   min-width: 100%;
-  padding: 10px 0 25px 0;
 }
 
 .grid-item {
