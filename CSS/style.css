@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-size: 2.8em;
-  color: #101010;
+  color: #222325;
   padding-top: 20px;
   padding-bottom: 15px;
   margin: 0;
@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-size: 2em;
-  color: #000;
+  color: #222325;
   margin: 0;
   padding: 25px 0 10px 0;
   font-family: AlbraText-Semi;
@@ -52,6 +52,7 @@ h3 {
 p {
   font-family: 'Lato', sans-serif;
   color: #fff;
+  opacity: .8;
   font-size: 1.3em;
   margin: 0px;
   line-height: 1.5em;
@@ -107,28 +108,87 @@ a {
   display: block;
 }
 
-#hero {
-  background-color: #101010;
-  padding: 0 10%;
+.nav-bar {
+  position: fixed;
+  background-color: #0f4e9a;
+  height: 70px;
+  margin: 0;
+  width: 100%;
+}
 
+.logo {
+  float: left;
+  color: white;
+  font-family: AlbraText-Semi;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.8em;
+  padding: 14px 0px 16px 35px;
+  min-width: 80px;
+  width: 85px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0 30px 0 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  min-width: 300px;
+}
+
+li {
+  float: right;
+  padding-top: 14px;
+}
+
+li a {
+  display: block;
+  padding: 10px 12px;
+  margin: 0 1px;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover, a:active {
+  background-color: #0b468c;
+  border-radius: 5px;
+}
+
+#hero {
+  background-color: #0f4e9a;
+  padding: 0 10%;
+  overflow: hidden;
+  display: flex;
 }
 
 .hero-content {
-  padding-top: 170px;
-  padding-bottom: 130px;
-  max-width: 1000px;
+  max-width: 1100px;
+  padding: 230px 0 240px 0;
   margin: 0 auto;
 }
 
+.hero-image {
+  float: left;
+  fill: black;
+  width: 40%;
+  padding: 40px 20px 0 0;
+  min-width: 320px;
+}
+
+.hero-text {
+  float: left;
+  width: 60%;
+}
+
 #projects {
-    background-color: #E9EAEB;
+    background-color: #ebf1f5;
     padding: 0 10%;
     overflow: hidden;
 
 }
 
 .projects {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 65px;
@@ -180,7 +240,7 @@ a {
 
 .card h3 {
   font-family: 'Lato', sans-serif;
-  color: black;
+  color: #222325;
   font-weight: 600;
   font-size: 1.1em;
   padding: 0 0 8px 0;
@@ -189,7 +249,7 @@ a {
 
 .card p {
   font-size: 1em;
-  color: black;
+  color: #222325;
 }
 
 #about {
@@ -199,16 +259,17 @@ a {
 }
 
 .about-text {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.about-text p, .about-text h2 {
-  color: #000;
+.about-text h2 {
+  color: #222325;
 }
 
 .about-text p {
   font-size: 1.2em;
+  color: #222325;
 }
 
 .col1 {
@@ -223,7 +284,7 @@ a {
 }
 
 .experience-card {
-  background-color: #efefef;
+  background-color: #ebf1f5;
   padding: 18px 18px 20px 20px;
   border-radius: 5px;
   margin: 4px 0 14px 0;
@@ -235,57 +296,12 @@ a {
   font-size: 1.3em;
   margin: 0;
   padding: 6px 0 10px 0;
-  color: #000;
+  color: #222325;
 }
 
 .experience-card p {
   font-size: 1.1em;
-}
-
-.nav-bar {
-  position: fixed;
-  background-color: #101010;
-  height: 70px;
-  margin: 0;
-  width: 100%;
-}
-
-.logo {
-  float: left;
-  color: white;
-  font-family: AlbraText-Semi;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.8em;
-  padding: 14px 0px 16px 35px;
-  min-width: 80px;
-  width: 85px;
-}
-
-.nav ul {
-  list-style-type: none;
-  margin: 0 30px 0 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-  min-width: 300px;
-}
-
-li {
-  float: right;
-  padding-top: 14px;
-}
-
-li a {
-  display: block;
-  padding: 10px 12px;
-  margin: 0 1px;
-  text-decoration: none;
-  color: white;
-}
-
-li a:hover, a:active {
-  background-color: #222222;
-  border-radius: 5px;
+  color: #222325;
 }
 
 body {
@@ -325,6 +341,10 @@ body {
 .grid-col3 {
   width: 33%;
   min-width: 200px;
+}
+
+.hero-text {
+  width: 100%;
 }
 
 }
@@ -373,6 +393,12 @@ body {
    .grid-col3 {
      width: 100%;
      max-width: 80%;
+   }
+
+   .hero-image {
+     width: 40%;
+     padding: 40px 20px 0 0;
+     min-width: 300px;
    }
 
 }
@@ -450,6 +476,12 @@ body {
 
 .experience-card {
   max-width: 100%;
+}
+
+.hero-image {
+  width: 40%;
+  padding: 40px 20px 0 0;
+  min-width: 220px;
 }
 
 }
