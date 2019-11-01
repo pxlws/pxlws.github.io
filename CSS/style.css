@@ -405,6 +405,13 @@ body {
   overflow: hidden;
 }
 
+.footer p {
+  color: gray;
+  font-size: .9em;
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+
 /* Media queries */
 
 @media (max-width: 1024px) {
