@@ -121,6 +121,7 @@ a {
 .nav-bar {
   position: fixed;
   background-color: #0f4e9a;
+  opacity: .95;
   height: 70px;
   margin: 0;
   width: 100%;
