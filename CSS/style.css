@@ -327,6 +327,64 @@ body {
   margin: 0px;
 }
 
+#project-container {
+  background-color: #fff;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+.project-hero-content {
+  max-width: 1100px;
+  padding: 0 0 50px 0;
+}
+
+.project-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.project-hero-content img {
+  width: 100%;
+  padding: 120px 0 0 0;
+}
+
+.project-content img {
+  width: 100%;
+  padding: 0 0 10px 0;
+}
+
+.project-hero-content h2 {
+  color: #000;
+  padding: 70px 0 30px 0;
+  text-align: center;
+}
+
+.project-content h3 {
+  padding: 0;
+}
+
+.project-content p {
+  font-size: 1.1em;
+}
+
+.project-col1 {
+  float: left;
+  width: 30%;
+  padding: 0 20px 0 0;
+}
+
+.project-col2 {
+  float: left;
+  width: 70%;
+}
+
+.project-section {
+  padding-bottom: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 /* Media queries */
 
 @media (max-width: 1024px) {
@@ -364,6 +422,7 @@ body {
 .hero-text {
   width: 100%;
 }
+
 
 }
 
