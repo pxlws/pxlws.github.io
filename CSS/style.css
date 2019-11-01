@@ -370,7 +370,7 @@ body {
 .project-header h2 {
   color: #000;
   font-size: 3.5em;
-  padding: 30px 0 15px 0;
+  padding: 50px 0 15px 0;
   line-height: 56px;
 }
 
@@ -548,13 +548,14 @@ body {
    }
 
    .project-header {
-     padding: 75px 10% 80px 10%;
+     padding: 65px 10% 80px 10%;
      margin: 0 0 50px 0;
    }
 
    .project-header h2 {
      font-size: 2.8em;
      line-height: 50px;
+     padding: 40px 0 15px 0;
    }
 
    .project-header p {
@@ -650,13 +651,14 @@ body {
 }
 
 .project-header {
-  padding: 75px 10% 80px 10%;
+  padding: 65px 10% 80px 10%;
   margin: 0 0 50px 0;
 }
 
 .project-header h2 {
   font-size: 2.6em;
   line-height: 50px;
+  padding: 40px 0 15px 0;
 }
 
 .project-content h3 {
