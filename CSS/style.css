@@ -527,16 +527,21 @@ body {
    }
 
    .project-header {
-     padding: 80px 10% 100px 10%;
+     padding: 75px 10% 80px 10%;
+     margin: 0 0 50px 0;
    }
 
    .project-header h2 {
      font-size: 2.8em;
-     line-height: 56px;
+     line-height: 50px;
    }
 
    .project-header p {
      font-size: 1.2em;
+   }
+
+   .project-content h3 {
+     padding: 0 0 10px 0;
    }
 
 }
@@ -624,12 +629,17 @@ body {
 }
 
 .project-header {
-  padding: 80px 10% 100px 10%;
+  padding: 75px 10% 80px 10%;
+  margin: 0 0 50px 0;
 }
 
 .project-header h2 {
   font-size: 2.6em;
-  line-height: 56px;
+  line-height: 50px;
+}
+
+.project-content h3 {
+  padding: 0 0 10px 0;
 }
 
 }
