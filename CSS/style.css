@@ -2,6 +2,106 @@
   box-sizing: border-box;
 }
 
+
+
+/*----- Menu Outline -----*/
+
+
+.menu {
+  float: right;
+	margin: 10px 30px 0 0;
+  font-size: 11px;
+  line-height: 0%;
+}
+
+.menu li {
+	margin: 0px;
+	list-style:none;
+	font-family:'Lato', sans-serif;
+}
+
+.menu a {
+	color: #fff;
+}
+
+.menu i {
+  color: #0d1c2d;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*----- Top Level -----*/
+
+.menu > ul > li {
+	float:right;
+	display:inline-block;
+	position:relative;
+	font-size:24px;
+
+}
+
+.menu > ul > li > a {
+	padding:10px 20px;
+	display:inline-block;
+
+  border-radius: 5px;
+}
+
+.menu > ul > li > a:hover {
+  background: rgba(4, 60, 128, 1);
+
+}
+
+.menu > ul > a, .menu > ul > .current-item > a {
+	background: #043c80;
+}
+
+.menu li:hover {
+	background: #043c80;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/*----- Bottom Level -----*/
+
+.menu li:hover .sub-menu {
+	z-index:1;
+	opacity:1;
+}
+
+.sub-menu {
+	width:180%;
+	padding:15px 0px 15px 25px;
+	position:absolute;
+	top:100%;
+	right:0px;
+	z-index:-1;
+	opacity:0;
+	background: #043c80;
+  border-radius: 5px 0 5px 5px;
+}
+
+.sub-menu li {
+	display:block;
+	font-size:18px;
+  line-height: 25px;
+}
+
+.sub-menu li a {
+	padding: 0 0 10px 0;
+	display: block;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+	background: transparent;
+}
+
+.menu a:hover {
+  color: white;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -120,7 +220,7 @@ a {
 
 .nav-bar {
   position: fixed;
-  background-color: #0f4e9a;
+  background-color: transparent;
   height: 80px;
   margin: 0;
   width: 100%;
@@ -129,36 +229,13 @@ a {
 
 .logo {
   float: left;
-  padding: 10px 0px 16px 35px;
-  min-width: 80px;
-  width: 92px;
+  padding: 0 0px 16px 0;
+  min-width: 60px;
+  width: 60px;
+  margin: 20px 0 0 30px;
 }
 
-.nav ul {
-  list-style-type: none;
-  margin: 0 30px 0 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-  min-width: 300px;
-}
 
-li {
-  float: right;
-  padding-top: 19px;
-}
-
-li a {
-  display: block;
-  padding: 10px 12px;
-  margin: 0 1px;
-  text-decoration: none;
-  color: white;
-}
-
-li a:hover, a:active {
-  background-color: #0b468c;
-  border-radius: 5px;
-}
 
 #hero {
   background-color: #0f4e9a;
@@ -650,6 +727,19 @@ body {
 
 .project-content h3 {
   padding: 0 0 10px 0;
+}
+
+.logo {
+  min-width: 50px;
+  width: 50px;
+  margin: 20px 0 0 22px;
+}
+
+.menu {
+  float: right;
+	margin: 10px 15px 0 0;
+  font-size: 11px;
+  line-height: 0%;
 }
 
 }
