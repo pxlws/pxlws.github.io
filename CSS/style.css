@@ -121,8 +121,7 @@ a {
 .nav-bar {
   position: fixed;
   background-color: #0f4e9a;
-  opacity: .95;
-  height: 70px;
+  height: 80px;
   margin: 0;
   width: 100%;
   z-index: 999;
@@ -130,14 +129,9 @@ a {
 
 .logo {
   float: left;
-  color: white;
-  font-family: AlbraText-Semi;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.8em;
-  padding: 14px 0px 16px 35px;
+  padding: 10px 0px 16px 35px;
   min-width: 80px;
-  width: 85px;
+  width: 92px;
 }
 
 .nav ul {
@@ -150,7 +144,7 @@ a {
 
 li {
   float: right;
-  padding-top: 14px;
+  padding-top: 19px;
 }
 
 li a {
@@ -370,7 +364,7 @@ body {
 .project-header h2 {
   color: #000;
   font-size: 3.5em;
-  padding: 30px 0 15px 0;
+  padding: 50px 0 15px 0;
   line-height: 56px;
 }
 
@@ -548,13 +542,14 @@ body {
    }
 
    .project-header {
-     padding: 75px 10% 80px 10%;
+     padding: 65px 10% 80px 10%;
      margin: 0 0 50px 0;
    }
 
    .project-header h2 {
      font-size: 2.8em;
      line-height: 50px;
+     padding: 40px 0 15px 0;
    }
 
    .project-header p {
@@ -596,13 +591,6 @@ body {
     background-color: #fff;
     padding: 30px 10% 80px 10%;
   }
-
-  .logo {
-    font-size: 1.6em;
-    color: #fff;
-    padding: 17px 0px 16px 25px;
-  }
-
 
   li a {
     margin: 0 1px;
@@ -650,13 +638,14 @@ body {
 }
 
 .project-header {
-  padding: 75px 10% 80px 10%;
+  padding: 65px 10% 80px 10%;
   margin: 0 0 50px 0;
 }
 
 .project-header h2 {
   font-size: 2.6em;
   line-height: 50px;
+  padding: 40px 0 15px 0;
 }
 
 .project-content h3 {
