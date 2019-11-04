@@ -41,7 +41,6 @@
 }
 
 
-
 #hamburger-dropdown {
   position: absolute;
   float: left;
@@ -56,11 +55,11 @@
 }
 
 #hamburger-dropdown a {
-  color: #ffff;
+  color: #fff;
 }
 
 .top-button i {
-  color: #fff;
+  color: #000;
   font-size: 20px;
 }
 
