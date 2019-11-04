@@ -31,6 +31,10 @@
   width: 100%;
 }
 
+#hamburger-dropdown a {
+  padding: 10px 15px 10px 15px;
+}
+
 #hamburger-dropdown li:hover {
   background-color: #0b9083;
   border-radius: 5px;
