@@ -19,3 +19,16 @@ $.ajax({
       }
     }
 });
+
+//Image width 800x600 (Animated)
+val.images.hidpi
+//Image width 400x300
+val.images.normal
+//Image width 200x150
+val.images.teaser
+//Title
+val.title
+//Description
+val.description
+//URL
+val.html_url
