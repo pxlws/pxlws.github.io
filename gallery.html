@@ -35,43 +35,41 @@
       <script src="https://joneckert.design/scripts/scripts.js"></script>
 
       <style>
-      @import url('https://fonts.googleapis.com/css?family=Rubik');
 
+        #shots {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 1080px;
+          margin: auto;
 
-#shots {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  margin: auto;
+          .shot {
+            position: relative;
+            display: block;
+            width: 25%;
+            background: $pink;
+            color: white;
+            text-decoration: none;
 
-  .shot {
-    position: relative;
-    display: block;
-    width: 25%;
-    background: $pink;
-    color: white;
-    text-decoration: none;
+            .title {
+              position: absolute;
+              width: calc(100% - 2rem);
+              padding: 1rem;
+              opacity: 0;
+              transition: opacity .2s ease-in-out;
+              font-size: 1rem;
+              font-weight: 500;
+              letter-spacing: 1px;
+            }
 
-    .title {
-      position: absolute;
-      width: calc(100% - 2rem);
-      padding: 1rem;
-      opacity: 0;
-      transition: opacity .2s ease-in-out;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
+            img {
+              display: block;
+              max-width: 100%;
+              transition: opacity .2s ease-in-out;
+            }
+          }
+        }
 
-    img {
-      display: block;
-      max-width: 100%;
-      transition: opacity .2s ease-in-out;
-    }
-  }
-}
-
-</style>
+    </style>
 
       <link rel=”apple-touch-icon” href=”https://pxlws.github.io/assets/images/apple-touch-icon.png”>
 
