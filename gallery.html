@@ -14,7 +14,7 @@
 
       <meta charset="utf-8">
       <title>Gallery | Jon Eckert</title>
-      <link rel="stylesheet" type="text/css" href="https://joneckert.design/CSS/style.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen">
       <link rel="stylesheet" type="text/css" href="https://joneckert.design/assets/fonts/albra/MyFontsWebfontsKit.css">
       <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
       <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
@@ -34,86 +34,32 @@
       }
       </script>
 
-      <script>
-
-      // Set the Access Token
-      var accessToken = '7ff7d97857361343a6ed1617ee9fb3b5349abd21dbb4452637702f30cb114cf8';
-
-      // Call Dribble v2 API
-      $.ajax({
-          url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
-          dataType: 'json',
-          type: 'GET',
-          success: function(data) {
-            if (data.length > 0) {
-              $.each(data.reverse(), function(i, val) {
-                $('#shots').prepend(
-                  '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
-                  )
-              })
-            }
-            else {
-              $('#shots').append('<p>No shots yet!</p>');
-            }
-          }
-      });
-
-      </script>
-
-      <style>
-
-      #shots {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1080px;
-        margin: auto;
-
-        .shot {
-          position: relative;
-          display: block;
-          width: 25%;
-          background: $pink;
-          color: white;
-          text-decoration: none;
-
-          @media only screen and (max-width: 779px){
-            width: 50%;
-          }
-
-          &:hover {
-            img {
-              opacity: .1;
-            }
-            .title {
-              opacity: 1;
-            }
-          }
-
-          .title {
-            position: absolute;
-            width: calc(100% - 2rem);
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity .2s ease-in-out;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-          }
-
-          img {
-            display: block;
-            max-width: 100%;
-            transition: opacity .2s ease-in-out;
-          }
-        }
-      }
-    </style>
+      <script src="scripts/scripts.js"></script>
 
       <link rel=”apple-touch-icon” href=”https://pxlws.github.io/assets/images/apple-touch-icon.png”>
 
     </head>
     <body>
+      <div class="nav-bar" >
+        <a href="/"><img src="assets/images/jon-avatar-teal.png" class="logo"></a>
+
+        <nav class="hamburger">
+            <span onclick="myFunction()" class="top-button"><i class="fal fa-bars" style="color: black;"></i></span>
+            <div style="clear: both;"></div>
+            <div id="hamburger-dropdown">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </div>
+          </nav>
+
+        <div style="clear: both;"></div>
+      </div>
+      <div id="gallery">
+      <h2 style="max-width: 1100px;">Gallery</h2>
       <div id="shots"></div>
-      hi.
+    </div>
     </body>
 </html>

@@ -10,7 +10,7 @@ $.ajax({
       if (data.length > 0) {
         $.each(data.reverse(), function(i, val) {
           $('#shots').prepend(
-            '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
+            '<a class="shot" target="_blank" href="'+ val.html_url +'"><img src="'+ val.images.hidpi +'"/></a>'
             )
         })
       }
@@ -19,16 +19,3 @@ $.ajax({
       }
     }
 });
-
-//Image width 800x600 (Animated)
-val.images.hidpi
-//Image width 400x300
-val.images.normal
-//Image width 200x150
-val.images.teaser
-//Title
-val.title
-//Description
-val.description
-//URL
-val.html_url
