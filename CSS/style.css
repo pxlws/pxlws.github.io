@@ -2,114 +2,57 @@
   box-sizing: border-box;
 }
 
-/*----- Menu Outline -----*/
+/* Hamburger Menu */
 
-
-.menu {
+.hamburger {
   float: right;
-	margin: 10px 30px 0 0;
-  font-size: 11px;
-  line-height: 0%;
+  margin: 18px 30px 0 0;
+  padding: 10px;
 }
 
-.menu li {
-	margin: 0px;
-	list-style:none;
-	font-family:'Lato', sans-serif;
-}
-
-.menu a {
-	color: #fff;
-}
-
-.menu i {
-  color: #0d1c2d;
-}
-
-.menu li:hover > a, .menu .current-item > a {
-	text-decoration: none;
-	color: #fff;
-}
-
-/*----- Top Level -----*/
-
-.menu > ul > li {
-	float:right;
-	display:inline-block;
-	position:relative;
-	font-size:24px;
-
-}
-
-.menu > ul > li > a {
-	padding:10px 20px;
-	display:inline-block;
-
+.top-button {
+  background: #07448e;
+  padding: 10px 16px;
+  float: right;
   border-radius: 5px;
 }
 
-.menu > ul > li > a:hover {
-  background: #31bcb8;
-
+.top-button:hover {
+  background: #023e86;
 }
 
-.menu > ul > a, .menu > ul > .current-item > a {
-	background: #31bcb8;
+#hamburger-dropdown ul {
+  list-style-type: none;
+  padding: 10px 0 10px 0;
+  margin: 0 auto;
 }
 
-.menu li:hover {
-	background: #31bcb8;
-  border-radius: 5px 5px 0px 0px;
+#hamburger-dropdown li {
+  padding: 10px 15px 10px 15px;
+  width: 100%;
 }
 
-/*----- Bottom Level -----*/
-
-.menu li:hover .sub-menu {
-	z-index:1;
-	opacity:1;
+#hamburger-dropdown li:hover {
+  background-color: #023e86;
+  border-radius: 5px;
 }
 
-.sub-menu {
-	width:180%;
-	padding:15px 0px 15px 25px;
-	position:absolute;
-	top:100%;
-	right:0px;
-	z-index:-1;
-	opacity:0;
-	background: #31bcb8;
-  border-radius: 5px 0 5px 5px;
+#hamburger-dropdown {
+  background-color: #07448e;
+  margin: 3px 30px 0 0;
+  padding: 5px 15px;
+  width: 100%;
+  display: none;
+  border-radius: 5px;
 }
 
-.sub-menu li {
-	display:block;
-	font-size:18px;
-  line-height: 25px;
+#hamburger-dropdown a {
+  color: #ffff;
 }
 
-.sub-menu li a {
-	padding: 0 0 10px 0;
-	display: block;
-}
-
-.sub-menu li a:hover, .sub-menu .current-item a {
-	background: transparent;
-}
-
-.menu a:hover {
-  color: white;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-body > div {
-    height: 100%;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
+.top-button i {
+  color: #fff;
+  font-size: 18px;
 }
 
 /* Main styles */
