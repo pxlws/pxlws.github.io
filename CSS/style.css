@@ -58,10 +58,6 @@
   float: right;
 }
 
-.top-button:hover {
-  background: rgba (0, 0, 0, .2);
-}
-
 #hamburger-dropdown ul {
   list-style-type: none;
   padding: 10px 0 10px 0;
@@ -72,7 +68,6 @@
   padding: 10px 15px 10px 15px;
   width: 100%;
 }
-
 
 #hamburger-dropdown li:hover {
   background-color: #0b9083;
