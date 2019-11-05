@@ -5,6 +5,7 @@
 /* Gallery */
 
 #shots {
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -13,22 +14,24 @@
   .shot {
     position: relative;
     display: block;
-    color: white;
     text-decoration: none;
-    margin: 5px;
+    margin: 8px;
   }
 
     img {
       display: block;
-      min-width: 30%;
-      max-width: 250px;
+
+      max-width: 300px;
+      border-radius: 6px;
     }
 
 #gallery {
-  overflow: hidden;
+  padding: 0 10%;
+}
+
+#gallery h2 {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 10%;
 }
 
 /* Hamburger Menu */
@@ -622,6 +625,20 @@ h1 {
      padding: 0 0 10px 0;
    }
 
+   img {
+     display: block;
+     border-radius: 6px;
+     max-width: 100%;
+   }
+
+   #gallery {
+     padding: 0 5%;
+   }
+
+  #gallery h2 {
+    padding-left: 6px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -725,6 +742,17 @@ h1 {
   margin: 18px 16px 0 0;
   padding: 10px;
 }
+
+img {
+  display: block;
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+#gallery {
+  padding: 0 5%;
+}
+
 
 }
 
