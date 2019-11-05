@@ -11,19 +11,18 @@
   margin: 0 auto;
 }
 
-  .shot {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    margin: 8px;
-  }
+.shot {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  margin: 8px;
+}
 
-    img {
-      display: block;
-
-      max-width: 300px;
-      border-radius: 6px;
-    }
+#shots img {
+  display: block;
+  max-width: 300px;
+  border-radius: 5px;
+}
 
 #gallery {
   padding: 0 10%;
@@ -36,12 +35,12 @@
 }
 
 #gallery .ghost-button {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 20px;
-    vertical-align:middle;
-  }
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  vertical-align:middle;
+}
 
 
 /* Hamburger Menu */
