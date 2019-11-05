@@ -3,7 +3,7 @@ var accessToken = '7ff7d97857361343a6ed1617ee9fb3b5349abd21dbb4452637702f30cb114
 
 // Call Dribble v2 API
 $.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+    url: 'https://api.dribbble.com/v2/user/shots?per_page=18&access_token='+accessToken,
     dataType: 'json',
     type: 'GET',
     success: function(data) {

@@ -27,12 +27,22 @@
 
 #gallery {
   padding: 0 10%;
+  margin: 0 0 80px 0;
 }
 
 #gallery h2 {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+#gallery .ghost-button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    vertical-align:middle;
+  }
+
 
 /* Hamburger Menu */
 
@@ -635,6 +645,8 @@ h1 {
   #gallery h2 {
     padding-left: 6px;
   }
+
+
 
 }
 
