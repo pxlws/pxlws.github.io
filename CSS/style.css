@@ -54,7 +54,7 @@
 
 .hamburger {
   float: right;
-  margin: 18px 18px 0 0;
+  margin: 10px 18px 0 0;
   padding: 10px;
 }
 
@@ -62,6 +62,10 @@
   background: transparent;
   padding: 16px 16px 12px 16px;
   float: right;
+}
+
+#hamburger-dropdown li {
+  font-size: 17px;
 }
 
 #hamburger-dropdown ul {
@@ -76,7 +80,7 @@
   float: left;
   background-color: #0f9a8c;
   margin: 0 30px 0 0;
-  padding: 5px 0;
+  padding: 10px 0;
   width: 120px;
   border-radius: 5px;
   z-index: 999;
@@ -85,7 +89,7 @@
 }
 
 #hamburger-dropdown a {
-  padding: 10px 0 10px 22px;
+  padding: 8px 0 8px 22px;
   color: #fff;
   width: 100%;
   display: block;
@@ -99,7 +103,7 @@
 
 .top-button i {
   color: #000;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /* Main styles */
