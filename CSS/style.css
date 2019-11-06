@@ -754,6 +754,10 @@ h1 {
   margin: 10px 10px 0 0;
 }
 
+#hamburger-dropdown {
+  right: 6px;
+}
+
 img {
   display: block;
   border-radius: 6px;
