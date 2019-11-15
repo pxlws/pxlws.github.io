@@ -160,6 +160,10 @@ a {
   color: #0f4e9a;
 }
 
+a:hover {
+  color: #31bcb8;
+}
+
 .pa4 {
   padding: 16px 20px  18px 20px;
 }
