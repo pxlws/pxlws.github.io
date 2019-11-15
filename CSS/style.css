@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 /* Gallery */
 
 #shots {
@@ -141,6 +140,11 @@ h3 {
   font-style: normal;
 }
 
+body {
+  background-color: white;
+  margin: 0px;
+}
+
 p {
   font-family: 'Lato', sans-serif;
   color: #fff;
@@ -152,8 +156,8 @@ p {
 }
 
 a {
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
+  text-decoration: underline;
+  color: #0f4e9a;
 }
 
 .pa4 {
@@ -381,11 +385,6 @@ a {
 .experience-card p {
   font-size: 1.1em;
   color: #222325;
-}
-
-body {
-  background-color: white;
-  margin: 0px;
 }
 
 #project-container {
