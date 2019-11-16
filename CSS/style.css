@@ -166,7 +166,7 @@ a:hover {
 }
 
 .pa4 {
-  padding: 16px 20px  18px 20px;
+  padding: 18px 20px  20px 20px;
 }
 
 .white-button {
@@ -273,6 +273,16 @@ a:hover {
   padding-bottom: 65px;
 }
 
+.proj-tag {
+  padding: 14px 0 0 0;
+  color: #a6acaf;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  font-family: "Lato", sans-sans-serif;
+}
+
 .grid-item {
   padding: 0 25px 25px 0;
   width: 100%;
@@ -328,8 +338,8 @@ a:hover {
   font-family: 'Lato', sans-serif;
   color: #222325;
   font-weight: 600;
-  font-size: 1.1em;
-  padding: 0 0 8px 0;
+  font-size: 1.2em;
+  padding: 0 0 5px 0;
   margin: 0;
 }
 
