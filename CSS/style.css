@@ -141,6 +141,16 @@ h3 {
   font-style: normal;
 }
 
+h4 {
+  font-size: 1.8em;
+  color: #222325;
+  margin: 0;
+  padding: 25px 0 10px 0;
+  font-family: AlbraText-Semi;
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: white;
   margin: 0px;
@@ -163,6 +173,11 @@ a {
 
 a:hover {
   color: #31bcb8;
+}
+
+.project-section ul {
+  font-family: "Lato", sans-serif;
+  color: tomato;
 }
 
 .pa4 {
