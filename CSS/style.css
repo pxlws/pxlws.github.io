@@ -92,6 +92,7 @@
   color: #fff;
   width: 100%;
   display: block;
+  font-family: 'Lato', sans-serif;
 }
 
 #hamburger-dropdown a:hover {
@@ -232,8 +233,6 @@ a:hover {
   width: 60px;
   margin: 20px 0 0 30px;
 }
-
-
 
 #hero {
   background-color: #0f4e9a;
