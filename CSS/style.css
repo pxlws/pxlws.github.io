@@ -108,6 +108,11 @@
 
 /* Main styles */
 
+ul {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5em;
+}
+
 h1 {
    font-size: 4.8em;
    color: #fff;
@@ -396,7 +401,7 @@ a:hover {
 
 .experience-card {
   background-color: #ebf1f5;
-  padding: 18px 18px 20px 20px;
+  padding: 18px 18px 18px 22px;
   border-radius: 5px;
   margin: 4px 0 14px 0;
 }
@@ -406,7 +411,7 @@ a:hover {
   font-weight: 600;
   font-size: 1.3em;
   margin: 0;
-  padding: 6px 0 10px 0;
+  padding: 6px 0 6px 0;
   color: #222325;
 }
 
