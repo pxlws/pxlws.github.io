@@ -401,14 +401,13 @@ a:hover {
 }
 
 .about-text ul {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   padding: 0;
 }
 
 .about-text li {
   display: inline-block;
-  line-height: 1.6em;
-  font-size: 1.1em;
+  font-size: 1em;
   background-color: #ebf1f5;
   margin: 6px 6px 6px 0;
   list-style: none;
@@ -428,7 +427,7 @@ a:hover {
   font-weight: 600;
   font-size: 1.1em;
   margin: 0;
-  padding: 6px 0 4px 0;
+  padding: 6px 0 12px 0;
   color: #222325;
 }
 
