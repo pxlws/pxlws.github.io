@@ -400,6 +400,22 @@ a:hover {
   width: 40%;
 }
 
+.about-text ul {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.about-text li {
+  display: inline-block;
+  line-height: 1.6em;
+  font-size: 1.1em;
+  background-color: #ebf1f5;
+  margin: 6px 6px 6px 0;
+  list-style: none;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+}
+
 .experience-card {
   background-color: #ebf1f5;
   padding: 16px 16px 16px 22px;
