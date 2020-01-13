@@ -161,9 +161,12 @@ h4 {
 }
 
 body {
-  background-color: white;
   margin: 0px;
 }
+
+#homebody {background-color: #fff;}
+#workbody {background-color: #ebf1f5;}
+#gallerybody {background-color: #ebf1f5;}
 
 p {
   font-family: 'Lato', sans-serif;
@@ -191,6 +194,7 @@ a:hover {
 
 .pa4 {
   padding: 18px 20px  20px 20px;
+  border-radius: 0 0 4px 4px;
 }
 
 .white-button {
@@ -988,6 +992,14 @@ p {
 
 .project-content {
   background-color: #191B1C;
+}
+
+#homebody {background-color: #191B1C;}
+#workbody {background-color: #202224;}
+#gallerybody {background-color: #202224;}
+
+a {
+  color: #227be6;
 }
 
 }
