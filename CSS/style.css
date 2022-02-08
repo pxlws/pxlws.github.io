@@ -462,7 +462,11 @@ a:hover {
 
 .project-content img {
   width: 100%;
+<<<<<<< HEAD
   padding: 20px 0 20px 0;
+=======
+  padding: 0px 0 0px 0;
+>>>>>>> db736f0e6381339af6f5e98cb50a037998c1c619
 }
 
 .project-header {
