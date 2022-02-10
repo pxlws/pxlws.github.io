@@ -433,14 +433,6 @@ a:hover {
   border-radius: 5px;
 }
 
-.experience-card-current {
-  background-color: #31bcb8;
-  color: #ffffff;
-  padding: 16px 16px 16px 22px;
-  border-radius: 5px;
-  margin: 4px 0 14px 0;
-}
-
 .experience-card {
   background-color: #ebf1f5;
   padding: 16px 16px 16px 22px;
