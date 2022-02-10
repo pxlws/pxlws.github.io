@@ -371,6 +371,11 @@ a:hover {
   color: #222325;
 }
 
+.mark-teal {
+  background: #bafffd;
+  padding: .16em;
+}
+
 .mark-blue {
   background: #cbe3ff;
   padding: .16em;
