@@ -371,8 +371,14 @@ a:hover {
   color: #222325;
 }
 
+.mark-teal-alt {
+  background: #31bcb8;
+  color: #ffffff;
+  padding: .16em;
+}
+
 .mark-teal {
-  background: #bafffd;
+  background: #a0e4e1;
   padding: .16em;
 }
 
