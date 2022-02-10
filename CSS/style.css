@@ -373,6 +373,7 @@ a:hover {
 
 .mark-teal-alt {
   background: #31bcb8;
+  opacity: .6;
   color: #ffffff;
   padding: .16em;
 }
