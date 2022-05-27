@@ -495,7 +495,7 @@ a:hover {
 }
 
 .project-header h2 {
-  color: #000;
+  color: #fff;
   font-size: 3.5em;
   padding: 50px 0 15px 0;
   line-height: 56px;
@@ -513,6 +513,7 @@ a:hover {
 .project-header p {
   text-align: center;
   font-size: 1.25em;
+  color: #fff;
 }
 
 .project-col1 {
