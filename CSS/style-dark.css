@@ -114,6 +114,7 @@ ul {
   font-family: "Lato", sans-serif;
   line-height: 1.6em;
   font-size: 1.1em;
+  color: #fff;
 }
 
 h1 {
@@ -151,7 +152,7 @@ h3 {
 
 h4 {
   font-size: 1.6em;
-  color: #222325;
+  color: #fff;
   margin: 0;
   padding: 15px 0 10px 0;
   font-family: AlbraText-Semi;
@@ -561,7 +562,7 @@ a:hover {
 }
 
 .footer-icons a {
-  color: gray;
+  color: #9CA4AB;
 }
 
 .footer-icons a:hover {
