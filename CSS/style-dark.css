@@ -160,7 +160,7 @@ h4 {
 }
 
 body {
-  background-color: #14171A;
+  background-color: white;
   margin: 0px;
 }
 
@@ -455,7 +455,7 @@ a:hover {
 }
 
 #project-container {
-  background-color: #fff;
+  background-color: #14171A;
   overflow: hidden;
 }
 
@@ -485,7 +485,7 @@ a:hover {
 .project-header {
   padding: 0 20% 100px 20%;
   text-align: center;
-  background-color: #ebf1f5;
+  background-color: #21282E;
   margin: 0 0 80px 0;
 }
 
