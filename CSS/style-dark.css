@@ -378,12 +378,14 @@ a:hover {
 }
 
 .mark-teal {
-  background: #baece9;
+  background: #005752;
+  color: #ffffff;
   padding: .16em;
 }
 
 .mark-blue {
   background: #cbe3ff;
+  color: #ffffff;
   padding: .16em;
 }
 
