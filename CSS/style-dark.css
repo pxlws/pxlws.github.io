@@ -503,11 +503,12 @@ a:hover {
 
 .project-content h3 {
   padding: 0;
+  color: #fff;
 }
 
 .project-content p {
   font-size: 1.1em;
-  color: #000;
+  color: #fff;
 }
 
 .project-header p {
