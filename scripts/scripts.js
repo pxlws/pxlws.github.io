@@ -59,17 +59,30 @@ function setGallerySize(size) {
   var container = document.getElementById("shots");
   if (!container) return;
 
+  var displaySize = normalizeGallerySize(size);
+
   container.classList.remove("shots-size-small", "shots-size-medium", "shots-size-large");
-  container.classList.add("shots-size-" + size);
+  container.classList.add("shots-size-" + displaySize);
 
   var buttons = document.querySelectorAll(".gallery-size-btn");
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.toggle("is-active", buttons[i].dataset.size === size);
+    buttons[i].classList.toggle("is-active", buttons[i].dataset.size === displaySize);
   }
 
   try {
     localStorage.setItem(GALLERY_SIZE_KEY, size);
   } catch (e) {}
+}
+
+function isGalleryMobile() {
+  return window.matchMedia("(max-width: 720px)").matches;
+}
+
+function normalizeGallerySize(size) {
+  if (isGalleryMobile() && size === "small") {
+    return "medium";
+  }
+  return size;
 }
 
 function initGallerySizeControls() {
@@ -93,6 +106,14 @@ function initGallerySizeControls() {
       setGallerySize(this.dataset.size);
     });
   }
+
+  window.matchMedia("(max-width: 720px)").addEventListener("change", function () {
+    var savedSize = "medium";
+    try {
+      savedSize = localStorage.getItem(GALLERY_SIZE_KEY) || "medium";
+    } catch (e) {}
+    setGallerySize(savedSize);
+  });
 }
 
 function loadDribbbleShots() {

@@ -806,6 +806,10 @@ h1 {
     padding-left: 6px;
   }
 
+  .gallery-size-btn[data-size="small"] {
+    display: none;
+  }
+
   #shots.shots-size-small .shot,
   #shots.shots-size-medium .shot {
     width: calc(50% - 16px);
