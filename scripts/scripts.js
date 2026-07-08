@@ -7,6 +7,48 @@ function myFunction() {
   }
 }
 
+var GALLERY_SIZE_KEY = "gallery-shot-size";
+
+function setGallerySize(size) {
+  var container = document.getElementById("shots");
+  if (!container) return;
+
+  container.classList.remove("shots-size-small", "shots-size-medium", "shots-size-large");
+  container.classList.add("shots-size-" + size);
+
+  var buttons = document.querySelectorAll(".gallery-size-btn");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.toggle("is-active", buttons[i].dataset.size === size);
+  }
+
+  try {
+    localStorage.setItem(GALLERY_SIZE_KEY, size);
+  } catch (e) {}
+}
+
+function initGallerySizeControls() {
+  var container = document.getElementById("shots");
+  if (!container) return;
+
+  var savedSize = "medium";
+  try {
+    savedSize = localStorage.getItem(GALLERY_SIZE_KEY) || "medium";
+  } catch (e) {}
+
+  if (savedSize !== "small" && savedSize !== "medium" && savedSize !== "large") {
+    savedSize = "medium";
+  }
+
+  setGallerySize(savedSize);
+
+  var buttons = document.querySelectorAll(".gallery-size-btn");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      setGallerySize(this.dataset.size);
+    });
+  }
+}
+
 function loadDribbbleShots() {
   var container = document.getElementById("shots");
   if (!container) return;
@@ -42,4 +84,7 @@ function loadDribbbleShots() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", loadDribbbleShots);
+document.addEventListener("DOMContentLoaded", function () {
+  initGallerySizeControls();
+  loadDribbbleShots();
+});

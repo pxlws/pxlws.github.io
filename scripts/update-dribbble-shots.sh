@@ -16,7 +16,7 @@ out = [
         'html_url': s['html_url'],
         'image': s['images'].get('hidpi') or s['images'].get('two_x') or s['images']['normal'],
     }
-    for s in reversed(shots)
+    for s in shots
 ]
 json.dump(out, sys.stdout, indent=2)
 print()
