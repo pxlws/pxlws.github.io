@@ -1,25 +1,3 @@
-// Set the Access Token
-var accessToken = '7ff7d97857361343a6ed1617ee9fb3b5349abd21dbb4452637702f30cb114cf8';
-
-// Call Dribble v2 API
-$.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?per_page=21&access_token='+accessToken,
-    dataType: 'json',
-    type: 'GET',
-    success: function(data) {
-      if (data.length > 0) {
-        $.each(data.reverse(), function(i, val) {
-          $('#shots').prepend(
-            '<a class="shot" target="_blank" href="'+ val.html_url +'"><img src="'+ val.images.hidpi +'"/></a>'
-            )
-        })
-      }
-      else {
-        $('#shots').append('<p>No shots yet!</p>');
-      }
-    }
-});
-
 function myFunction() {
   var x = document.getElementById("hamburger-dropdown");
   if (x.style.display === "block") {
@@ -28,3 +6,40 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+function loadDribbbleShots() {
+  var container = document.getElementById("shots");
+  if (!container) return;
+
+  fetch("/data/dribbble-shots.json")
+    .then(function (response) {
+      if (!response.ok) throw new Error("Failed to load shots");
+      return response.json();
+    })
+    .then(function (shots) {
+      if (!shots.length) {
+        container.innerHTML = "<p>No shots yet!</p>";
+        return;
+      }
+
+      container.innerHTML = shots
+        .map(function (shot) {
+          return (
+            '<a class="shot" target="_blank" rel="noopener" href="' +
+            shot.html_url +
+            '"><img src="' +
+            shot.image +
+            '" alt="' +
+            shot.title.replace(/"/g, "&quot;") +
+            '"/></a>'
+          );
+        })
+        .join("");
+    })
+    .catch(function () {
+      container.innerHTML =
+        '<p>Could not load gallery. <a href="https://dribbble.com/joneckert" target="_blank" rel="noopener">View shots on Dribbble</a>.</p>';
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadDribbbleShots);
