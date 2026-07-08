@@ -780,8 +780,12 @@ h1 {
    }
 
    .project-header {
-     padding: 0 10% 80px 10%;
+     padding: 0 7% 80px 7%;
      margin: 0 0 50px 0;
+   }
+
+   .project-section {
+     padding: 0 8% 60px 8%;
    }
 
    .project-header h2 {
@@ -899,8 +903,12 @@ h1 {
 }
 
 .project-header {
-  padding: 5px 10% 80px 10%;
+  padding: 5px 6% 80px 6%;
   margin: 0 0 50px 0;
+}
+
+.project-section {
+  padding: 0 6% 60px 6%;
 }
 
 .project-header h2 {
