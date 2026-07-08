@@ -54,24 +54,23 @@
 
 .gallery-size-controls {
   display: inline-flex;
-  background-color: #dbe2e6;
-  border-radius: 100px;
-  padding: 4px;
+  gap: 6px;
 }
 
 .gallery-size-btn {
   align-items: center;
   background: transparent;
   border: none;
-  border-radius: 100px;
-  color: #222325;
+  border-radius: 6px;
+  color: #c5cdd2;
   cursor: pointer;
   display: inline-flex;
-  height: 36px;
+  height: 32px;
   justify-content: center;
+  margin: 0;
   padding: 0;
   transition: all .2s ease;
-  width: 36px;
+  width: 32px;
 }
 
 .gallery-grid-icon {
@@ -80,12 +79,12 @@
 }
 
 .gallery-size-btn.is-active {
-  background-color: #0f4e9a;
+  background-color: #00C0B9;
   color: #fff;
 }
 
 .gallery-size-btn:hover:not(.is-active) {
-  background-color: rgba(15, 78, 154, 0.12);
+  color: #9aa5ad;
 }
 
 #shots img:hover {
@@ -119,12 +118,46 @@
   float: right;
   margin: 10px 18px 0 0;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger > div[style*="clear"] {
+  display: none;
 }
 
 .top-button {
   background: transparent;
-  padding: 16px 16px 12px 16px;
-  float: right;
+  padding: 12px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #82888c;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 18px;
+  justify-content: center;
+  padding: 12px 14px;
+  transition: color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: #0f4e9a;
+}
+
+.nav-bar[style*="0f4e9a"] .theme-toggle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-bar[style*="0f4e9a"] .theme-toggle:hover {
+  color: #fff;
 }
 
 #hamburger-dropdown li {
@@ -140,14 +173,14 @@
 
 #hamburger-dropdown {
   position: absolute;
-  float: left;
+  top: 100%;
+  right: 0;
   background-color: #0f9a8c;
-  margin: 0 30px 0 0;
+  margin: 4px 0 0 0;
   padding: 10px 0;
   width: 120px;
   border-radius: 5px;
   z-index: 999;
-  right: 14px;
   display: none;
 }
 
@@ -887,7 +920,7 @@ h1 {
 }
 
 #hamburger-dropdown {
-  right: 6px;
+  right: 0;
 }
 
 img {

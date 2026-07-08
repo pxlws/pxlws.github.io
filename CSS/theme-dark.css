@@ -1,0 +1,185 @@
+html.theme-dark {
+  color-scheme: dark;
+}
+
+html.theme-dark body,
+html.theme-dark body[style] {
+  background-color: #14171a !important;
+}
+
+html.theme-dark .nav-bar,
+html.theme-dark .nav-bar[style] {
+  background-color: #14171a !important;
+}
+
+html.theme-dark .nav-bar:has(+ #hero),
+html.theme-dark .nav-bar[style*="0f4e9a"] {
+  background-color: #1a2026 !important;
+}
+
+html.theme-dark .nav-bar:has(+ #project-container) {
+  background-color: #1a2026 !important;
+}
+
+html.theme-dark .nav-bar:has(+ #gallery) {
+  background-color: #14171a !important;
+}
+
+html.theme-dark .top-button i[style],
+html.theme-dark .hamburger .top-button i {
+  color: #fff !important;
+}
+
+html.theme-dark h2,
+html.theme-dark h3,
+html.theme-dark h4 {
+  color: #fff;
+}
+
+html.theme-dark a {
+  color: #8ecae6;
+}
+
+html.theme-dark a:hover {
+  color: #00c0b9;
+}
+
+html.theme-dark #projects {
+  background-color: #14171a;
+}
+
+html.theme-dark #gallery {
+  background-color: #14171a;
+}
+
+html.theme-dark .card {
+  background-color: #1a2026;
+}
+
+html.theme-dark .card h3,
+html.theme-dark .card p,
+html.theme-dark .card-description {
+  color: #fff;
+}
+
+html.theme-dark .proj-tag {
+  color: #9ca4ab;
+}
+
+html.theme-dark #about {
+  background-color: #1a2026;
+}
+
+html.theme-dark .about-text h2,
+html.theme-dark .about-text p {
+  color: #fff;
+}
+
+html.theme-dark .about-text li {
+  background-color: #2d363d;
+  color: #fff;
+}
+
+html.theme-dark .experience-card {
+  background-color: #2d363d;
+}
+
+html.theme-dark .experience-card h3,
+html.theme-dark .experience-card p {
+  color: #fff;
+}
+
+html.theme-dark .ghost-button {
+  background-color: #2d363d;
+  color: #fff;
+}
+
+html.theme-dark .ghost-button:hover {
+  background-color: #00c0b9;
+  color: #fff;
+}
+
+html.theme-dark .mark-teal {
+  background: #005752;
+  color: #fff;
+}
+
+html.theme-dark .mark-teal-alt {
+  background: #005752;
+  color: #fff;
+}
+
+html.theme-dark #shots img {
+  border-color: #2d363d;
+}
+
+html.theme-dark #shots img:hover {
+  border-color: #4a5560;
+}
+
+html.theme-dark #gallery,
+html.theme-dark #gallery p {
+  color: #fff;
+}
+
+html.theme-dark .footer p,
+html.theme-dark .footer p a {
+  color: #9ca4ab !important;
+}
+
+html.theme-dark .footer p a:hover {
+  color: #00c0b9 !important;
+}
+
+html.theme-dark .footer-icons a {
+  color: #9ca4ab;
+}
+
+html.theme-dark .footer-icons a:hover {
+  color: #00c0b9;
+}
+
+html.theme-dark #project-container {
+  background-color: #14171a;
+}
+
+html.theme-dark .project-header {
+  background-color: #1a2026;
+}
+
+html.theme-dark .project-header h2,
+html.theme-dark .project-header p,
+html.theme-dark .project-content h3,
+html.theme-dark .project-content p,
+html.theme-dark .project-section,
+html.theme-dark .project-section p,
+html.theme-dark .project-section li {
+  color: #fff;
+}
+
+html.theme-dark .black-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+html.theme-dark #hero {
+  background-color: #1a2026 !important;
+}
+
+html.theme-dark .theme-toggle {
+  color: #c5cdd2;
+}
+
+html.theme-dark .theme-toggle:hover {
+  color: #00c0b9;
+}
+
+html.theme-dark .nav-bar[style*="0f4e9a"] .theme-toggle,
+html.theme-dark .nav-bar:has(+ #hero) .theme-toggle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.theme-dark .nav-bar[style*="0f4e9a"] .theme-toggle:hover,
+html.theme-dark .nav-bar:has(+ #hero) .theme-toggle:hover {
+  color: #fff;
+}
