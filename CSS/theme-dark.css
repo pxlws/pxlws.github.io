@@ -25,8 +25,22 @@ html.theme-dark .nav-bar:has(+ #gallery) {
   background-color: #14171a !important;
 }
 
-html.theme-dark .top-button i[style],
-html.theme-dark .hamburger .top-button i {
+html.theme-dark .hamburger .top-button i,
+html.theme-dark .hamburger .top-button i[style] {
+  color: #fff !important;
+}
+
+html.theme-dark .hamburger .top-button:hover i {
+  color: #00c0b9 !important;
+}
+
+html.theme-dark .nav-bar[style*="0f4e9a"] .hamburger .top-button i,
+html.theme-dark .nav-bar:has(+ #hero) .hamburger .top-button i {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.theme-dark .nav-bar[style*="0f4e9a"] .hamburger .top-button:hover i,
+html.theme-dark .nav-bar:has(+ #hero) .hamburger .top-button:hover i {
   color: #fff !important;
 }
 
@@ -122,6 +136,27 @@ html.theme-dark #gallery p {
   color: #fff;
 }
 
+html.theme-dark .gallery-size-controls {
+  background-color: #2a3238;
+}
+
+html.theme-dark .gallery-size-thumb {
+  background-color: #1a2026;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+html.theme-dark .gallery-size-btn {
+  color: #7d8790;
+}
+
+html.theme-dark .gallery-size-btn.is-active {
+  color: #fff;
+}
+
+html.theme-dark .gallery-size-btn:hover:not(.is-active) {
+  color: #9aa5ad;
+}
+
 html.theme-dark .footer p,
 html.theme-dark .footer p a {
   color: #9ca4ab !important;
@@ -150,11 +185,14 @@ html.theme-dark .project-header {
 html.theme-dark .project-header h2,
 html.theme-dark .project-header p,
 html.theme-dark .project-content h3,
+html.theme-dark .project-content h4,
 html.theme-dark .project-content p,
+html.theme-dark .project-content p[style],
 html.theme-dark .project-section,
 html.theme-dark .project-section p,
+html.theme-dark .project-section p[style],
 html.theme-dark .project-section li {
-  color: #fff;
+  color: #fff !important;
 }
 
 html.theme-dark .black-button {
@@ -164,22 +202,4 @@ html.theme-dark .black-button {
 
 html.theme-dark #hero {
   background-color: #1a2026 !important;
-}
-
-html.theme-dark .theme-toggle {
-  color: #c5cdd2;
-}
-
-html.theme-dark .theme-toggle:hover {
-  color: #00c0b9;
-}
-
-html.theme-dark .nav-bar[style*="0f4e9a"] .theme-toggle,
-html.theme-dark .nav-bar:has(+ #hero) .theme-toggle {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.theme-dark .nav-bar[style*="0f4e9a"] .theme-toggle:hover,
-html.theme-dark .nav-bar:has(+ #hero) .theme-toggle:hover {
-  color: #fff;
 }
