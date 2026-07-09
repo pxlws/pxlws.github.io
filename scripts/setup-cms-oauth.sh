@@ -50,6 +50,8 @@ read -r -p "Press Enter after the OAuth App is created..."
 
 echo
 echo "Step 4: Add GitHub OAuth secrets to the worker"
+echo "IMPORTANT: use wrangler secrets (encrypted), NOT plain dashboard variables."
+echo "Plain variables are wiped on every deploy and cause GitHub 404 login errors."
 npx wrangler secret put GITHUB_OAUTH_ID
 npx wrangler secret put GITHUB_OAUTH_SECRET
 

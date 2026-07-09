@@ -301,10 +301,29 @@ function initProjectGateBadges() {
     .catch(function () {});
 }
 
+function isEditableTarget(target) {
+  if (!target || !target.closest) return false;
+  return !!target.closest("input, textarea, select, [contenteditable='true']");
+}
+
+function initAdminShortcut() {
+  document.addEventListener("keydown", function (event) {
+    if (!event.metaKey || event.key !== "Escape") return;
+    if (isEditableTarget(event.target)) return;
+
+    var path = window.location.pathname.replace(/\/index\.html$/, "/");
+    if (path.indexOf("/admin") === 0) return;
+
+    event.preventDefault();
+    window.location.href = "/admin/";
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   initNavMenu();
   initThemeToggle();
   initGallerySizeControls();
   initProjectGateBadges();
+  initAdminShortcut();
   loadDribbbleShots();
 });
