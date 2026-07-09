@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+#safari-chrome-tint {
+  background-color: var(--chrome-tint, #ebf1f5);
+  height: 8px;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 /* Gallery */
 
 #shots {

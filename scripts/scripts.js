@@ -22,6 +22,7 @@ function setTheme(theme) {
   } catch (e) {}
 
   updateThemeToggleIcon();
+  if (window.updateThemeColor) window.updateThemeColor();
 }
 
 function updateThemeToggleIcon() {
