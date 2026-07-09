@@ -268,18 +268,29 @@
   cursor: pointer;
 }
 
-#hamburger-dropdown a.nav-menu-item:hover,
+#hamburger-dropdown a.nav-menu-item:not(.is-active) {
+  opacity: 0.9;
+}
+
+#hamburger-dropdown a.nav-menu-item:not(.is-active):hover {
+  opacity: 1;
+}
+
+#hamburger-dropdown a.nav-menu-item:hover:not(.is-active),
 #hamburger-dropdown .theme-toggle:hover {
   background-color: #0b9083;
 }
 
 #hamburger-dropdown a.nav-menu-item.is-active {
-  background-color: #0b9083;
+  box-shadow: inset 3px 0 0 #fff;
+  color: #fff;
   font-weight: 700;
+  opacity: 1;
 }
 
 #hamburger-dropdown a.nav-menu-item.is-active:hover {
-  background-color: #0a8579;
+  background-color: #0b9083;
+  color: #fff;
 }
 
 .nav-menu-divider {

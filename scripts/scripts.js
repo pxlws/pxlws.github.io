@@ -92,11 +92,13 @@ function initNavMenu() {
     var link = links[i];
     var label = link.textContent.trim();
     var icon = iconByLabel[label] || "fa-circle";
+    var isActive = isNavLinkActive(link.getAttribute("href"));
+    var iconStyle = isActive ? "fas" : "fal";
     link.innerHTML =
-      '<i class="fal ' + icon + '" aria-hidden="true"></i><span>' + label + "</span>";
+      '<i class="' + iconStyle + " " + icon + '" aria-hidden="true"></i><span>' + label + "</span>";
     link.classList.add("nav-menu-item");
 
-    if (isNavLinkActive(link.getAttribute("href"))) {
+    if (isActive) {
       link.classList.add("is-active");
       link.setAttribute("aria-current", "page");
     }
