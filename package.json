@@ -1,0 +1,17 @@
+{
+  "name": "joneckert",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/sync-project-config.js && rm -rf _site && eleventy && node scripts/publish-build-outputs.js",
+    "dev": "node scripts/sync-project-config.js && eleventy --serve --watch",
+    "cms": "decap-server"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "cheerio": "^1.0.0",
+    "decap-server": "^3.0.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0"
+  }
+}

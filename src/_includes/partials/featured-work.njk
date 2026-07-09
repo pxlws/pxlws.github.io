@@ -1,0 +1,18 @@
+{% for project in featuredProjects %}
+<div class="{{ project.gridClass }}">
+  <a href="{{ project.href }}" class="card-link">
+    <div class="grid-item">
+      <div class="card card--radius">
+        <div class="card-thumb" style="background-image: url({{ project.cardThumb }});">
+        </div>
+        <article class="pa4">
+          <h3>{{ project.title }}</h3>
+          <p class="card-description">{{ project.cardDescription }}</p>
+          <div class="proj-tag">{{ project.cardTag }}</div>
+        </article>
+      </div>
+    </div>
+  </a>
+  <div style="clear: both;"></div>
+</div>
+{% endfor %}

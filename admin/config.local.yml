@@ -1,0 +1,5 @@
+# Loaded automatically on localhost — requires `npm run cms`.
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  branch: add-project

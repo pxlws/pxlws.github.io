@@ -1,0 +1,68 @@
+{
+  "frontlinemobile": {
+    "cardDescription": "Legacy platforms, meet the mobile age.",
+    "cardTag": "Product Design",
+    "cardThumb": "/assets/images/Frontline-Mobile-Thumb-1024x768.png",
+    "featured": true,
+    "featuredOrder": 1,
+    "workOrder": 1
+  },
+  "criteriacalculator": {
+    "cardDescription": "Decision-making can be easier.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/criteriacalculator/images/Criteria-Calc-Thumb.png",
+    "featured": false,
+    "featuredOrder": 99,
+    "workOrder": 2
+  },
+  "retrocontrollers": {
+    "cardDescription": "A series illustrating my childhood.",
+    "cardTag": "Illustration",
+    "cardThumb": "/projects/retrocontrollers/images/NEScontroller.png",
+    "featured": false,
+    "featuredOrder": 99,
+    "workOrder": 3
+  },
+  "flmobileonboarding": {
+    "cardDescription": "Improving the onboarding experience.",
+    "cardTag": "Product Design • Illustration",
+    "cardThumb": "/projects/flmobileonboarding/images/flmobileonboarding-thumb2.png",
+    "featured": false,
+    "featuredOrder": 99,
+    "workOrder": 4
+  },
+  "lunchbox": {
+    "cardDescription": "Modernizing & unifying legacy software.",
+    "cardTag": "Design Systems",
+    "cardThumb": "/projects/lunchbox/images/lunchbox_thumb.png",
+    "featured": true,
+    "featuredOrder": 3,
+    "workOrder": 5
+  },
+  "recorddetailsredesign": {
+    "cardDescription": "Overhauling a major part of the UI.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/recorddetailsredesign/images/recorddetails-thumb.png",
+    "featured": true,
+    "featuredOrder": 2,
+    "workOrder": 6
+  },
+  "darkmode": {
+    "cardDescription": "Exploring dark mode for the web app.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/darkmode/images/darkmode-thumb.png",
+    "featured": false,
+    "featuredOrder": 99,
+    "workOrder": 99
+  },
+  "blinkappredesign": {
+    "cardDescription": "Modernizing the app's most-used screens.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/blinkappredesign/images/blinkapp-thumb.png",
+    "featured": false,
+    "featuredOrder": 4,
+    "workOrder": 0,
+    "showOnWork": false,
+    "draft": true
+  }
+}

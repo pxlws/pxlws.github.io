@@ -1,0 +1,25 @@
+{% for section in sections %}
+<div class="project-section">
+  <div class="project-col1">
+    <h3>{{ section.heading }}</h3>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="project-col2">
+    {% for block in section.blocks %}
+      {% if block.type == "text" %}
+        {{ block.body | renderMarkdown | safe }}
+      {% elif block.type == "images" %}
+        <div style="background-color: #e4eaee; width: 100%; padding: 3% 6% 6% 6%; margin: 30px 0; border-radius: 8px;">
+          {% for image in block.items %}
+            <div{% if not loop.first %} style="padding-top: 25px;"{% endif %}>
+              <img style="padding-bottom:0px;" src="{{ image.src }}">
+              <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);">{{ image.caption }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+    <div style="clear: both;"></div>
+  </div>
+</div>
+{% endfor %}
