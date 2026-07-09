@@ -42,27 +42,57 @@ async function handleAuth(url, env) {
 }
 
 function callbackScriptResponse(status, token) {
+  const payload = JSON.stringify({ token, provider: "github" });
+  const message = `authorization:github:${status}:${payload}`;
+
   return new Response(
     `<!doctype html>
 <html>
   <body>
+    <p id="status">Authorizing Decap CMS…</p>
     <script>
       (function () {
-        function receiveMessage(message) {
-          window.opener.postMessage(
-            "authorization:github:${status}:${JSON.stringify({ token })}",
-            "*"
-          );
-          window.removeEventListener("message", receiveMessage, false);
+        var authMessage = ${JSON.stringify(message)};
+
+        function complete(origin) {
+          if (!window.opener) {
+            document.getElementById("status").textContent =
+              "Authorization complete. Close this tab and return to the CMS.";
+            return;
+          }
+
+          window.opener.postMessage(authMessage, origin || "*");
+          window.close();
         }
-        window.addEventListener("message", receiveMessage, false);
-        window.opener.postMessage("authorizing:github", "*");
+
+        // Decap CMS sends "authorizing:github" to this popup; reply with the token.
+        window.addEventListener("message", function (event) {
+          if (event.data === "authorizing:github") {
+            complete(event.origin);
+          }
+        });
+
+        // Legacy handshake used by some OAuth proxies.
+        if (window.opener) {
+          window.opener.postMessage("authorizing:github", "*");
+          window.addEventListener(
+            "message",
+            function (event) {
+              complete(event.origin);
+            },
+            { once: true }
+          );
+        }
       })();
     </script>
-    <p>Authorizing Decap CMS…</p>
   </body>
 </html>`,
-    { headers: { "Content-Type": "text/html; charset=utf-8" } }
+    {
+      headers: {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+      },
+    }
   );
 }
 
