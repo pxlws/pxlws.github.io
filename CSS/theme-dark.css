@@ -76,6 +76,11 @@ html.theme-dark .card-description {
   color: #fff;
 }
 
+html.theme-dark .card-gate-lock {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
 html.theme-dark .proj-tag {
   color: #9ca4ab;
 }
@@ -202,4 +207,27 @@ html.theme-dark .black-button {
 
 html.theme-dark #hero {
   background-color: #1a2026 !important;
+}
+
+html.theme-dark .project-gate-panel {
+  background-color: #1a2026;
+}
+
+html.theme-dark .project-gate-panel h2,
+html.theme-dark .project-gate-label {
+  color: #fff;
+}
+
+html.theme-dark .project-gate-panel p {
+  color: #9ca4ab;
+}
+
+html.theme-dark .project-gate-input {
+  background-color: #14171a;
+  border-color: #2d363d;
+  color: #fff;
+}
+
+html.theme-dark .project-gate-input:focus {
+  border-color: #00c0b9;
 }

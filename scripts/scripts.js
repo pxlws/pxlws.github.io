@@ -39,6 +39,39 @@ function updateThemeToggleIcon() {
   }
 }
 
+function isNavLinkActive(href) {
+  var current = window.location.pathname.replace(/\/index\.html$/, "/");
+  if (current.length > 1 && current.charAt(current.length - 1) === "/") {
+    current = current.slice(0, -1);
+  }
+  if (!current) current = "/";
+
+  var target;
+  try {
+    target = new URL(href, window.location.href).pathname.replace(/\/index\.html$/, "/");
+    if (target.length > 1 && target.charAt(target.length - 1) === "/") {
+      target = target.slice(0, -1);
+    }
+    if (!target) target = "/";
+  } catch (e) {
+    return false;
+  }
+
+  if (target === current) return true;
+
+  if (target === "/") return current === "/";
+
+  if (target === "/work" || href.indexOf("work") !== -1) {
+    return current === "/work" || current.indexOf("/work") === 0;
+  }
+
+  if (href.indexOf("gallery") !== -1) {
+    return current.indexOf("gallery") !== -1;
+  }
+
+  return false;
+}
+
 function initNavMenu() {
   var dropdown = document.getElementById("hamburger-dropdown");
   if (!dropdown || dropdown.dataset.enhanced) return;
@@ -62,6 +95,11 @@ function initNavMenu() {
     link.innerHTML =
       '<i class="fal ' + icon + '" aria-hidden="true"></i><span>' + label + "</span>";
     link.classList.add("nav-menu-item");
+
+    if (isNavLinkActive(link.getAttribute("href"))) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    }
   }
 
   var divider = document.createElement("div");
@@ -218,9 +256,53 @@ function loadDribbbleShots() {
     });
 }
 
+function getProjectSlugFromHref(href) {
+  if (!href) return null;
+  var match = href.match(/\/projects\/([^/]+)/);
+  return match ? match[1] : null;
+}
+
+function isProjectGateUnlocked(slug) {
+  try {
+    return sessionStorage.getItem("project-gate-unlock-" + slug) === "1";
+  } catch (e) {
+    return false;
+  }
+}
+
+function initProjectGateBadges() {
+  var cards = document.querySelectorAll(".card-link");
+  if (!cards.length) return;
+
+  fetch("/data/project-gates.json")
+    .then(function (response) {
+      if (!response.ok) throw new Error("Failed to load project gates");
+      return response.json();
+    })
+    .then(function (gates) {
+      cards.forEach(function (card) {
+        var slug = getProjectSlugFromHref(card.getAttribute("href"));
+        if (!slug || !gates[slug]) return;
+
+        var thumb = card.querySelector(".card-thumb");
+        if (!thumb || thumb.querySelector(".card-gate-lock")) return;
+
+        var unlocked = isProjectGateUnlocked(slug);
+        var lock = document.createElement("span");
+        lock.className = "card-gate-lock" + (unlocked ? " card-gate-lock--unlocked" : "");
+        lock.setAttribute("aria-hidden", "true");
+        lock.innerHTML =
+          '<i class="fal ' + (unlocked ? "fa-lock-open" : "fa-lock") + '"></i>';
+        thumb.appendChild(lock);
+      });
+    })
+    .catch(function () {});
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   initNavMenu();
   initThemeToggle();
   initGallerySizeControls();
+  initProjectGateBadges();
   loadDribbbleShots();
 });

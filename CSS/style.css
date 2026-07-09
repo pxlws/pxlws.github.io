@@ -273,10 +273,94 @@
   background-color: #0b9083;
 }
 
+#hamburger-dropdown a.nav-menu-item.is-active {
+  background-color: #0b9083;
+  font-weight: 700;
+}
+
+#hamburger-dropdown a.nav-menu-item.is-active:hover {
+  background-color: #0a8579;
+}
+
 .nav-menu-divider {
   background-color: rgba(255, 255, 255, 0.22);
   height: 1px;
   margin: 6px 12px;
+}
+
+html.project-gate-locked #layout {
+  filter: blur(16px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-gate {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  z-index: 10001;
+}
+
+.project-gate-panel {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.24);
+  max-width: 360px;
+  padding: 32px;
+  width: 100%;
+}
+
+.project-gate-panel h2 {
+  color: #222325;
+  font-size: 1.6em;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.project-gate-panel p {
+  color: #5d6770;
+  margin: 0 0 20px;
+}
+
+.project-gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-gate-label {
+  color: #222325;
+  font-family: "Lato", sans-serif;
+  font-size: 0.95em;
+}
+
+.project-gate-input {
+  border: 1px solid #d5dde4;
+  border-radius: 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.project-gate-input:focus {
+  border-color: #0f4e9a;
+  outline: none;
+}
+
+.project-gate-submit {
+  margin-top: 4px;
+  width: 100%;
+}
+
+.project-gate-error {
+  color: #c0392b;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 .theme-toggle .theme-icon-light {
@@ -521,12 +605,27 @@ a:hover {
 }
 
 .card-thumb {
+  position: relative;
   border-radius: 5px 5px 0 0;
   background-repeat: no-repeat;
   background: white;
   background-size: cover;
   background-position: center center;
   min-height: 140px;
+}
+
+.card-gate-lock {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .card {
