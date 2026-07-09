@@ -12,7 +12,7 @@
         <div style="background-color: #e4eaee; width: 100%; padding: 3% 6% 6% 6%; margin: 30px 0; border-radius: 8px;">
           {% for image in block.items %}
             <div{% if not loop.first %} style="padding-top: 25px;"{% endif %}>
-              <img style="padding-bottom:0px;" src="{{ image.src }}">
+              <img style="padding-bottom:0px;" src="{{ image.src | projectImageSrc(slug) }}">
               <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);">{{ image.caption }}</p>
             </div>
           {% endfor %}

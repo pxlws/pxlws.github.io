@@ -26,7 +26,40 @@
       .join("");
   }
 
-  function renderImageBlock(block, getAsset, key) {
+  function renderTextBody(text) {
+    if (!text) {
+      return "";
+    }
+
+    if (/<[a-z][\s\S]*>/i.test(text)) {
+      return text;
+    }
+
+    return renderMarkdown(text);
+  }
+
+  function resolveImageUrl(src, getAsset, slug) {
+    if (!src) {
+      return src;
+    }
+
+    var asset = getAsset ? getAsset(src) : null;
+    if (asset) {
+      return asset.toString();
+    }
+
+    if (src.indexOf("/") === 0 || src.indexOf("http") === 0) {
+      return src;
+    }
+
+    if (src.indexOf("images/") === 0) {
+      return "/projects/" + slug + "/" + src;
+    }
+
+    return "/projects/" + slug + "/images/" + src;
+  }
+
+  function renderImageBlock(block, getAsset, slug, key) {
     var items = block.get("items");
     if (!items || !items.size) return null;
 
@@ -44,8 +77,7 @@
       },
       items.map(function (image, index) {
         var src = image.get("src");
-        var asset = src && getAsset ? getAsset(src) : null;
-        var url = asset ? asset.toString() : src;
+        var url = resolveImageUrl(src, getAsset, slug);
 
         return h(
           "div",
@@ -74,6 +106,7 @@
       var getAsset = this.props.getAsset;
       var title = entry.getIn(["data", "title"]);
       var summary = entry.getIn(["data", "summary"]);
+      var slug = entry.getIn(["data", "slug"]);
       var sections = entry.getIn(["data", "sections"]);
 
       return h(
@@ -116,13 +149,13 @@
                             return h("div", {
                               key: blockIndex,
                               dangerouslySetInnerHTML: {
-                                __html: renderMarkdown(block.get("body") || ""),
+                                __html: renderTextBody(block.get("body") || ""),
                               },
                             });
                           }
 
                           if (type === "images") {
-                            return renderImageBlock(block, getAsset, blockIndex);
+                            return renderImageBlock(block, getAsset, slug, blockIndex);
                           }
 
                           return null;

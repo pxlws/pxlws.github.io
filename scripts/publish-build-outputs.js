@@ -7,6 +7,10 @@ const root = path.join(__dirname, "..");
 const projectsDir = path.join(root, "src", "projects");
 const builtRoot = path.join(root, "_site", "projects");
 
+function isDraft(value) {
+  return value === true || value === "true";
+}
+
 function loadCmsProjects() {
   if (!fs.existsSync(projectsDir)) {
     return [];
@@ -24,7 +28,7 @@ function loadCmsProjects() {
 
       return {
         slug: slug,
-        draft: !!parsed.data.draft,
+        draft: isDraft(parsed.data.draft),
         built: path.join(builtRoot, slug, "index.html"),
         target: path.join(root, "projects", slug, "index.html"),
       };
@@ -41,33 +45,54 @@ function copyIfExists(source, target) {
   return true;
 }
 
-const indexBuilt = path.join(root, "_site", "index.html");
-const indexTarget = path.join(root, "index.html");
+function publishBuildOutputs() {
+  let hadError = false;
 
-if (copyIfExists(indexBuilt, indexTarget)) {
-  console.log("Copied home page to index.html");
-}
+  const indexBuilt = path.join(root, "_site", "index.html");
+  const indexTarget = path.join(root, "index.html");
 
-const workBuilt = path.join(root, "_site", "work", "index.html");
-const workTarget = path.join(root, "work", "index.html");
-
-if (copyIfExists(workBuilt, workTarget)) {
-  console.log("Copied work page to work/index.html");
-}
-
-loadCmsProjects().forEach(function (project) {
-  if (project.draft) {
-    if (fs.existsSync(project.target)) {
-      fs.unlinkSync(project.target);
-      console.log("Removed draft project page:", project.target);
-    }
-    return;
+  if (copyIfExists(indexBuilt, indexTarget)) {
+    console.log("Copied home page to index.html");
   }
 
-  if (!copyIfExists(project.built, project.target)) {
-    console.error("Build output not found:", project.built);
+  const workBuilt = path.join(root, "_site", "work", "index.html");
+  const workTarget = path.join(root, "work", "index.html");
+
+  if (copyIfExists(workBuilt, workTarget)) {
+    console.log("Copied work page to work/index.html");
+  }
+
+  loadCmsProjects().forEach(function (project) {
+    if (project.draft) {
+      if (fs.existsSync(project.target)) {
+        fs.unlinkSync(project.target);
+        console.log("Removed draft project page:", project.target);
+      }
+
+      if (fs.existsSync(project.built)) {
+        fs.unlinkSync(project.built);
+        console.log("Removed draft build output:", project.built);
+      }
+
+      return;
+    }
+
+    if (!copyIfExists(project.built, project.target)) {
+      console.error("Build output not found:", project.built);
+      hadError = true;
+      return;
+    }
+
+    console.log("Copied project page to", project.target);
+  });
+
+  return !hadError;
+}
+
+module.exports = publishBuildOutputs;
+
+if (require.main === module) {
+  if (!publishBuildOutputs()) {
     process.exit(1);
   }
-
-  console.log("Copied project page to", project.target);
-});
+}

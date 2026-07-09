@@ -2,13 +2,15 @@
   "name": "joneckert",
   "private": true,
   "scripts": {
-    "build": "node scripts/sync-project-config.js && rm -rf _site && eleventy && node scripts/publish-build-outputs.js",
-    "dev": "node scripts/sync-project-config.js && eleventy --serve --watch",
-    "cms": "decap-server"
+    "build": "node scripts/sync-project-config.js && node scripts/fix-cms-image-paths.js && node scripts/normalize-project-frontmatter.js && rm -rf _site && eleventy && node scripts/publish-build-outputs.js",
+    "dev": "node scripts/sync-project-config.js && node scripts/sync-cms-local-config.js && eleventy --serve --watch",
+    "cms": "node scripts/sync-cms-local-config.js && decap-server",
+    "dev:cms": "node scripts/sync-project-config.js && node scripts/sync-cms-local-config.js && npx concurrently -k \"decap-server\" \"eleventy --serve --watch\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "cheerio": "^1.0.0",
+    "concurrently": "^9.1.2",
     "decap-server": "^3.0.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",

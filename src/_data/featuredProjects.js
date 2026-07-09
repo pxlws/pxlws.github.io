@@ -1,12 +1,8 @@
-const fs = require("fs");
 const path = require("path");
 
+const { buildFeaturedProjects, loadCmsProjects } = require("../../scripts/lib/cms-projects");
+
 module.exports = function () {
-  const featuredPath = path.join(__dirname, "..", "..", "data", "featured-projects.json");
-
-  if (!fs.existsSync(featuredPath)) {
-    return [];
-  }
-
-  return JSON.parse(fs.readFileSync(featuredPath, "utf8"));
+  const featuredBasePath = path.join(__dirname, "..", "..", "data", "featured-projects.base.json");
+  return buildFeaturedProjects(loadCmsProjects(), featuredBasePath);
 };

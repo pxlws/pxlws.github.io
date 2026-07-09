@@ -7,7 +7,6 @@ slug: retrocontrollers
 draft: false
 featured: false
 featuredOrder: 99
-showOnWork: true
 workOrder: 3
 passwordProtected: false
 password: ''

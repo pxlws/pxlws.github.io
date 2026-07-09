@@ -9,7 +9,6 @@ slug: recorddetailsredesign
 draft: false
 featured: true
 featuredOrder: 2
-showOnWork: true
 workOrder: 6
 passwordProtected: false
 password: ''
@@ -50,9 +49,9 @@ sections:
           time).</p>
       - type: images
         items:
-          - src: images/browser-drawer-old.png
+          - src: browser-drawer-old.png
             caption: A screenshot of the existing "drawer" style
-          - src: images/browser-details-old.png
+          - src: browser-details-old.png
             caption: A screenshot of the existing full-screen "details view" style
       - type: text
         body: '<div style="clear: both;"></div>'
@@ -118,9 +117,9 @@ sections:
           kicked into gear.</p>
       - type: images
         items:
-          - src: images/wireframe-tabs-vs-sections.png
+          - src: wireframe-tabs-vs-sections.png
             caption: A wireframe comparison between tabbed and collapsable sections
-          - src: images/wireframe-detailsview.png
+          - src: wireframe-detailsview.png
             caption: A wireframe of the full-screen "details view" in the new layout
       - type: text
         body: >-
@@ -135,9 +134,9 @@ sections:
           details can be viewed anywhere in the application.</p>
       - type: images
         items:
-          - src: images/drawer-redesign.png
+          - src: drawer-redesign.png
             caption: High fidelity mockup of the new "drawer" design
-          - src: images/detailsview-redesign.png
+          - src: detailsview-redesign.png
             caption: High fidelity mockup of the new full-screen "details view" design
       - type: text
         body: >-
@@ -177,7 +176,7 @@ sections:
           experience before fully committing. </p>
       - type: images
         items:
-          - src: images/earlyaccess-opt-in.png
+          - src: earlyaccess-opt-in.png
             caption: >-
               Users had the option to opt-in (and back out, if desired) to the
               new experience for a period of time

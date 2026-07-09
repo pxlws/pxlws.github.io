@@ -130,7 +130,6 @@ function migrateProject(slug) {
     draft: projectMeta.draft === true,
     featured: !!projectMeta.featured,
     featuredOrder: projectMeta.featuredOrder || 99,
-    showOnWork: projectMeta.draft ? false : projectMeta.showOnWork !== false,
     workOrder: projectMeta.workOrder || 99,
     passwordProtected: false,
     password: "",

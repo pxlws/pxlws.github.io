@@ -1,5 +1,7 @@
 # Production CMS — uses GitHub login via Netlify's OAuth broker.
-# Local editing: config.local.yml overrides with proxy backend when running `npm run cms`.
+# Local editing uses admin/config.local.yml (proxy backend, no login).
+local_backend: true
+
 backend:
   name: github
   repo: pxlws/pxlws.github.io
@@ -25,16 +27,20 @@ collections:
     slug: "{{slug}}"
     identifier_field: slug
     preview_path: "/projects/{{slug}}/"
+    media_folder: projects/{{slug}}/images
+    public_folder: /projects/{{slug}}/images
     fields:
       - label: Draft
         name: draft
         widget: boolean
         default: false
-        hint: Draft projects are hidden from the site and Work page until published.
+        required: false
+        hint: Draft projects are hidden from the site, Work page, and Featured work.
       - label: Featured on home page
         name: featured
         widget: boolean
         default: false
+        required: false
         hint: Show this project in the Featured work section on the home page.
       - label: Featured order
         name: featuredOrder
@@ -43,11 +49,6 @@ collections:
         value_type: int
         min: 1
         hint: Lower numbers appear first in Featured work.
-      - label: Show on Work page
-        name: showOnWork
-        widget: boolean
-        default: true
-        hint: Include this project on the Work page.
       - label: Work order
         name: workOrder
         widget: number
@@ -59,6 +60,7 @@ collections:
         name: passwordProtected
         widget: boolean
         default: false
+        required: false
         hint: Require a password to view this project page.
       - label: Password
         name: password
@@ -93,6 +95,7 @@ collections:
         name: sections
         label_singular: Section
         widget: list
+        required: false
         fields:
           - label: Heading
             name: heading
@@ -101,26 +104,36 @@ collections:
             name: blocks
             label_singular: Block
             widget: list
+            required: false
+            min: 0
             types:
               - label: Text
                 name: text
                 widget: object
+                required: false
                 fields:
                   - label: Body
                     name: body
                     widget: markdown
+                    required: false
               - label: Images
                 name: images
                 widget: object
+                required: false
                 fields:
                   - label: Images
                     name: items
                     label_singular: Image
                     widget: list
+                    required: false
+                    min: 0
                     fields:
                       - label: Image
                         name: src
                         widget: image
+                        required: false
                       - label: Caption
                         name: caption
                         widget: string
+                        required: false
+                        default: ""

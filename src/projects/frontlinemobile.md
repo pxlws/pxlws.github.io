@@ -8,13 +8,12 @@ slug: frontlinemobile
 draft: false
 featured: true
 featuredOrder: 1
-showOnWork: true
 workOrder: 1
 passwordProtected: false
 password: ''
 cardDescription: 'Legacy platforms, meet the mobile age.'
 cardTag: Product Design
-cardThumb: /assets/images/Frontline-Mobile-Thumb-1024x768.png
+cardThumb: /projects/frontlinemobile/images/Frontline-Mobile-Thumb-1024x768.png
 sections:
   - heading: Background
     blocks:
@@ -25,7 +24,7 @@ sections:
           powerful Human Campital Management applications.</p>
       - type: images
         items:
-          - src: images/fl-mobile-dash.png
+          - src: fl-mobile-dash.png
             caption: ''
       - type: text
         body: >-
@@ -50,7 +49,7 @@ sections:
           class="mark-teal"> product designer on the project.</mark></p>
       - type: images
         items:
-          - src: images/clocked-out.png
+          - src: clocked-out.png
             caption: ''
       - type: text
         body: >-
@@ -62,7 +61,7 @@ sections:
           as Scrum Master for the mobile development team. </p>
       - type: images
         items:
-          - src: images/absences.png
+          - src: absences.png
             caption: ''
       - type: text
         body: >-

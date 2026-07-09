@@ -8,7 +8,6 @@ slug: criteriacalculator
 draft: false
 featured: false
 featuredOrder: 99
-showOnWork: true
 workOrder: 2
 passwordProtected: false
 password: ''
@@ -27,7 +26,7 @@ sections:
           individually. We each put different value in various criteria.</p>
       - type: images
         items:
-          - src: images/macbook-criteriacalc.png
+          - src: macbook-criteriacalc.png
             caption: ''
       - type: text
         body: >-
@@ -48,7 +47,7 @@ sections:
           opinions and preferences into one, easy to understand metric. </p>
       - type: images
         items:
-          - src: images/mobile-criteriacalc.png
+          - src: mobile-criteriacalc.png
             caption: ''
       - type: text
         body: >-

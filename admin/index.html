@@ -5,8 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager | Jon Eckert</title>
+    <script>
+      (function () {
+        var host = window.location.hostname;
+        var isLocal = host === "localhost" || host === "127.0.0.1";
+
+        if (isLocal) {
+          var link = document.createElement("link");
+          link.href = "/admin/config.local.yml";
+          link.type = "text/yaml";
+          link.rel = "cms-config-url";
+          document.head.appendChild(link);
+        }
+      })();
+    </script>
+    <style>
+      #local-cms-notice {
+        display: none;
+        margin: 0;
+        padding: 12px 16px;
+        background: #0f4e9a;
+        color: #fff;
+        font: 14px/1.4 "Lato", sans-serif;
+      }
+
+      #local-cms-notice code {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
+    <p id="local-cms-notice">
+      <strong>Local CMS mode.</strong>
+      Run <code>npm run dev:cms</code> (recommended). Do not use
+      <code>python -m http.server</code> — it breaks CMS config loading.
+      Do not click Login with GitHub on localhost.
+    </p>
+    <script>
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1"
+      ) {
+        document.getElementById("local-cms-notice").style.display = "block";
+      }
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.8.0/dist/decap-cms.js"></script>
     <script src="/admin/preview.js"></script>
   </body>

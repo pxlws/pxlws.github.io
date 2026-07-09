@@ -8,7 +8,6 @@ slug: lunchbox
 draft: false
 featured: true
 featuredOrder: 3
-showOnWork: true
 workOrder: 5
 passwordProtected: false
 password: ''

@@ -2,7 +2,7 @@
   name: draft
   widget: boolean
   default: false
-  hint: Draft projects are hidden from the site and Work page until published.
+  hint: Draft projects are hidden from the site, Work page, and Featured work.
 - label: Featured on home page
   name: featured
   widget: boolean
@@ -15,11 +15,6 @@
   value_type: int
   min: 1
   hint: Lower numbers appear first in Featured work.
-- label: Show on Work page
-  name: showOnWork
-  widget: boolean
-  default: true
-  hint: Include this project on the Work page.
 - label: Work order
   name: workOrder
   widget: number

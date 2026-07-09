@@ -8,7 +8,6 @@ slug: flmobileonboarding
 draft: false
 featured: false
 featuredOrder: 99
-showOnWork: true
 workOrder: 4
 passwordProtected: false
 password: ''
@@ -29,7 +28,7 @@ sections:
           users.</p>
       - type: images
         items:
-          - src: images/flmobile-onboarding-sketch.png
+          - src: flmobile-onboarding-sketch.png
             caption: ''
       - type: text
         body: >-
@@ -65,7 +64,7 @@ sections:
           man were born.</p>
       - type: images
         items:
-          - src: images/fl-mobile-incorrect-pin.gif
+          - src: fl-mobile-incorrect-pin.gif
             caption: ''
       - type: text
         body: >-
@@ -111,7 +110,7 @@ sections:
           better story for this particular case.</p>
       - type: images
         items:
-          - src: images/flmobileonboarding-alternate-illustration.png
+          - src: flmobileonboarding-alternate-illustration.png
             caption: ''
       - type: text
         body: >-
@@ -120,7 +119,7 @@ sections:
           style.</p>
       - type: images
         items:
-          - src: images/launch-illustration-original.webp
+          - src: launch-illustration-original.webp
             caption: ''
       - type: text
         body: >-
