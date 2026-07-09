@@ -66,11 +66,7 @@
     if (!tint) return;
 
     tint.style.backgroundColor = color;
-
-    var nav = document.querySelector(".nav-bar");
-    if (nav) {
-      tint.style.height = Math.max(nav.getBoundingClientRect().height, 8) + "px";
-    }
+    tint.style.height = "8px";
   }
 
   window.updateThemeColor = updateThemeColor;
