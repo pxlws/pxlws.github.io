@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "frontlinemobile",
+    "title": "Frontline Mobile",
+    "href": "projects/frontlinemobile/index.html",
+    "cardDescription": "Legacy platforms, meet the mobile age.",
+    "cardTag": "Product Design",
+    "cardThumb": "assets/images/Frontline-Mobile-Thumb-1024x768.png",
+    "featuredOrder": 1
+  },
+  {
+    "slug": "recorddetailsredesign",
+    "title": "Aha! Record Details Redesign",
+    "href": "/projects/recorddetailsredesign/index.html",
+    "cardDescription": "Overhauling a complex legacy experience.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/recorddetailsredesign/images/recorddetails-thumb.png",
+    "featuredOrder": 2
+  },
+  {
+    "slug": "lunchbox",
+    "title": "Lunchbox Design System",
+    "href": "projects/lunchbox/index.html",
+    "cardDescription": "Modernizing & unifying legacy software.",
+    "cardTag": "Design Systems",
+    "cardThumb": "/projects/lunchbox/images/lunchbox_thumb.png",
+    "featuredOrder": 3
+  }
+]

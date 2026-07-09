@@ -1,0 +1,126 @@
+# Production CMS — uses GitHub login via Netlify's OAuth broker.
+# Local editing: config.local.yml overrides with proxy backend when running `npm run cms`.
+backend:
+  name: github
+  repo: pxlws/pxlws.github.io
+  branch: master
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: projects
+public_folder: /projects
+
+site_url: https://joneckert.com
+display_url: https://joneckert.com
+logo_url: https://joneckert.com/assets/images/jon-avatar-teal.png
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/projects
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    identifier_field: slug
+    preview_path: "/projects/{{slug}}/"
+    fields:
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: false
+        hint: Draft projects are hidden from the site and Work page until published.
+      - label: Featured on home page
+        name: featured
+        widget: boolean
+        default: false
+        hint: Show this project in the Featured work section on the home page.
+      - label: Featured order
+        name: featuredOrder
+        widget: number
+        default: 99
+        value_type: int
+        min: 1
+        hint: Lower numbers appear first in Featured work.
+      - label: Show on Work page
+        name: showOnWork
+        widget: boolean
+        default: true
+        hint: Include this project on the Work page.
+      - label: Work order
+        name: workOrder
+        widget: number
+        default: 99
+        value_type: int
+        min: 0
+        hint: Lower numbers appear earlier on the Work page.
+      - label: Password protected
+        name: passwordProtected
+        widget: boolean
+        default: false
+        hint: Require a password to view this project page.
+      - label: Password
+        name: password
+        widget: string
+        required: false
+        hint: Only used when password protection is enabled. Re-save to change the password.
+      - label: Title
+        name: title
+        widget: string
+      - label: Summary
+        name: summary
+        widget: text
+      - label: Slug
+        name: slug
+        widget: string
+        pattern:
+          - "^[a-z0-9-]+$"
+          - "Use lowercase letters, numbers, and hyphens only."
+      - label: Card description
+        name: cardDescription
+        widget: string
+        hint: Short description used on project cards.
+      - label: Card tag
+        name: cardTag
+        widget: string
+        default: Product Design
+      - label: Card thumbnail
+        name: cardThumb
+        widget: image
+        hint: Image used on project cards.
+      - label: Sections
+        name: sections
+        label_singular: Section
+        widget: list
+        fields:
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Content blocks
+            name: blocks
+            label_singular: Block
+            widget: list
+            types:
+              - label: Text
+                name: text
+                widget: object
+                fields:
+                  - label: Body
+                    name: body
+                    widget: markdown
+              - label: Images
+                name: images
+                widget: object
+                fields:
+                  - label: Images
+                    name: items
+                    label_singular: Image
+                    widget: list
+                    fields:
+                      - label: Image
+                        name: src
+                        widget: image
+                      - label: Caption
+                        name: caption
+                        widget: string

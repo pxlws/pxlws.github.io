@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% include "partials/head-analytics.njk" %}
+    <meta charset="utf-8">
+    <script src="/scripts/theme-init.js"></script>
+    <script src="/scripts/theme-color.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/theme-dark.css" media="screen">
+    <title>{{ title }} | Jon Eckert</title>
+    <link rel="image_src" href="/assets/images/joneckertavatar.png" />
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/albra/MyFontsWebfontsKit.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    <link href="/assets/fonts/all.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/project-gate.js"></script>
+    <script src="/scripts/scripts.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      {% include "partials/nav.njk" %}
+      <div id="project-container">
+        <div class="project-hero-content"></div>
+        <div class="project-content">
+          <div class="project-header">
+            <div class="project-header-content">
+              <a href="/work.html"><button class="ghost-button"><i class="fal fa-angle-left" style="padding: 0 10px 0 0; font-size: 20px; vertical-align:middle;"></i>All projects</button></a>
+              <h2>{{ title }}</h2>
+              <p>{{ summary }}</p>
+            </div>
+          </div>
+          {{ content | safe }}
+        </div>
+      </div>
+      {% include "partials/footer.njk" %}
+    </div>
+  </body>
+</html>

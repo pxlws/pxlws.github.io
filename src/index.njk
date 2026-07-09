@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -61,59 +64,7 @@
           <div class="projects">
             <h2>Featured work</h2>
 
-            
-<div class="grid-col1">
-  <a href="/projects/frontlinemobile/" class="card-link">
-    <div class="grid-item">
-      <div class="card card--radius">
-        <div class="card-thumb" style="background-image: url(/assets/images/Frontline-Mobile-Thumb-1024x768.png);">
-        </div>
-        <article class="pa4">
-          <h3>Frontline Mobile</h3>
-          <p class="card-description">Legacy platforms, meet the mobile age.</p>
-          <div class="proj-tag">Product Design</div>
-        </article>
-      </div>
-    </div>
-  </a>
-  <div style="clear: both;"></div>
-</div>
-
-<div class="grid-col2">
-  <a href="/projects/recorddetailsredesign/" class="card-link">
-    <div class="grid-item">
-      <div class="card card--radius">
-        <div class="card-thumb" style="background-image: url(/projects/recorddetailsredesign/images/recorddetails-thumb.png);">
-        </div>
-        <article class="pa4">
-          <h3>Record Details Redesign</h3>
-          <p class="card-description">Overhauling a major part of the UI.</p>
-          <div class="proj-tag">Product Design</div>
-        </article>
-      </div>
-    </div>
-  </a>
-  <div style="clear: both;"></div>
-</div>
-
-<div class="grid-col3">
-  <a href="/projects/lunchbox/" class="card-link">
-    <div class="grid-item">
-      <div class="card card--radius">
-        <div class="card-thumb" style="background-image: url(/projects/lunchbox/images/lunchbox_thumb.png);">
-        </div>
-        <article class="pa4">
-          <h3>Lunchbox Design System</h3>
-          <p class="card-description">Modernizing &amp; unifying legacy software.</p>
-          <div class="proj-tag">Design Systems</div>
-        </article>
-      </div>
-    </div>
-  </a>
-  <div style="clear: both;"></div>
-</div>
-
-
+            {% include "partials/featured-work.njk" %}
 
            <button class="ghost-button" onclick="window.location.href='/work/';">More work <i class="fal fa-angle-right" style="padding: 0 0 0 5px; font-size: 20px; vertical-align:middle;"></i></button>
 

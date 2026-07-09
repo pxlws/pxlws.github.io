@@ -1,0 +1,85 @@
+[
+  {
+    "gridClass": "grid-col1",
+    "projects": [
+      {
+        "slug": "frontlinemobile",
+        "title": "Frontline Mobile",
+        "href": "/projects/frontlinemobile/index.html",
+        "cardDescription": "Legacy platforms, meet the mobile age.",
+        "cardTag": "Product Design",
+        "cardThumb": "/assets/images/Frontline-Mobile-Thumb-1024x768.png",
+        "workOrder": 1
+      },
+      {
+        "slug": "criteriacalculator",
+        "title": "Criteria Calculator",
+        "href": "/projects/criteriacalculator/index.html",
+        "cardDescription": "Decision-making can be easier.",
+        "cardTag": "Product Design",
+        "cardThumb": "/projects/criteriacalculator/images/Criteria-Calc-Thumb.png",
+        "workOrder": 2
+      }
+    ]
+  },
+  {
+    "gridClass": "grid-col2",
+    "projects": [
+      {
+        "slug": "retrocontrollers",
+        "title": "Retro Controller Series",
+        "href": "/projects/retrocontrollers/index.html",
+        "cardDescription": "A series illustrating my childhood.",
+        "cardTag": "Illustration",
+        "cardThumb": "/projects/retrocontrollers/images/NEScontroller.png",
+        "workOrder": 3
+      },
+      {
+        "slug": "flmobileonboarding",
+        "title": "Frontline Mobile Onboarding",
+        "href": "/projects/flmobileonboarding/index.html",
+        "cardDescription": "Improving the onboarding experience.",
+        "cardTag": "Product Design • Illustration",
+        "cardThumb": "/projects/flmobileonboarding/images/flmobileonboarding-thumb2.png",
+        "workOrder": 4
+      }
+    ]
+  },
+  {
+    "gridClass": "grid-col3",
+    "projects": [
+      {
+        "slug": "lunchbox",
+        "title": "Lunchbox Design System",
+        "href": "/projects/lunchbox/index.html",
+        "cardDescription": "Modernizing & unifying legacy software.",
+        "cardTag": "Design Systems",
+        "cardThumb": "/projects/lunchbox/images/lunchbox_thumb.png",
+        "workOrder": 5
+      },
+      {
+        "slug": "recorddetailsredesign",
+        "title": "Record Details Redesign",
+        "href": "/projects/recorddetailsredesign/index.html",
+        "cardDescription": "Overhauling a major part of the UI.",
+        "cardTag": "Product Design",
+        "cardThumb": "/projects/recorddetailsredesign/images/recorddetails-thumb.png",
+        "workOrder": 6
+      }
+    ]
+  },
+  {
+    "gridClass": "grid-col1",
+    "projects": [
+      {
+        "slug": "darkmode",
+        "title": "Aha! Dark Mode",
+        "href": "/projects/darkmode/index.html",
+        "cardDescription": "Exploring dark mode for the web app.",
+        "cardTag": "Product Design",
+        "cardThumb": "/projects/darkmode/images/darkmode-thumb.png",
+        "workOrder": 99
+      }
+    ]
+  }
+]

@@ -2,14 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30206352-6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-30206352-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'UA-30206352-6');
-    </script>
+  gtag('config', 'UA-30206352-6');
+</script>
+
     <meta charset="utf-8">
     <script src="/scripts/theme-init.js"></script>
     <script src="/scripts/theme-color.js"></script>
@@ -25,30 +26,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/scripts/project-gate.js"></script>
     <script src="/scripts/scripts.js"></script>
-
   </head>
   <body>
     <div id="layout">
       <div class="nav-bar" style="background: #ebf1f5;">
-        <a href="/"><img src="/assets/images/jon-avatar-teal.png" class="logo"></a>
+  <a href="/"><img src="/assets/images/jon-avatar-teal.png" class="logo"></a>
 
-        <nav class="hamburger">
-            <span onclick="myFunction()" class="top-button"><i class="fal fa-bars"></i></span>
-            <div style="clear: both;"></div>
-            <div id="hamburger-dropdown">
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/work.html">Work</a></li>
-                <li><a href="/gallery.html">Gallery</a></li>
-              </ul>
-            </div>
-          </nav>
+  <nav class="hamburger">
+    <span onclick="myFunction()" class="top-button"><i class="fal fa-bars"></i></span>
+    <div style="clear: both;"></div>
+    <div id="hamburger-dropdown">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <div style="clear: both;"></div>
-      </div>
+  <div style="clear: both;"></div>
+</div>
+
       <div id="project-container">
-        <div class="project-hero-content">
-        </div>
+        <div class="project-hero-content"></div>
         <div class="project-content">
           <div class="project-header">
             <div class="project-header-content">
@@ -57,54 +57,85 @@
               <p>Born out of the frustrating house-buying process, this project was an attempt to simplify difficult decision-making by leveraging an easy-to-use, collaborative application.</p>
             </div>
           </div>
-
-          <div class="project-section">
-            <div class="project-col1">
-              <h3>The Project</h3>
-            <div style="clear: both;"></div>
+          
+<div class="project-section">
+  <div class="project-col1">
+    <h3>The Project</h3>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="project-col2">
+    
+      
+        <p style="color: #000;">This project was a collaboration with <a href="https://torymartin.com">Tory Martin</a>. The idea came to me while my wife and I were search for houses. For each house we looked at, there was criteria we shared as well as criteria we each had individually. We each put different value in various criteria.</p>
+      
+    
+      
+        <div style="background-color: #e4eaee; width: 100%; padding: 3% 6% 6% 6%; margin: 30px 0; border-radius: 8px;">
+          
+            <div>
+              <img style="padding-bottom:0px;" src="images/macbook-criteriacalc.png">
+              <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);"></p>
             </div>
-
-            <div class="project-col2">
-              <p style="color: #000;">This project was a collaboration with <a href="https://torymartin.com">Tory Martin</a>. The idea came to me while my wife and I were search for houses. For each house we looked at, there was criteria we shared as well as criteria we each had individually. We each put different value in various criteria.</p>
-
-              <img src="images/macbook-criteriacalc.png" style="background-color: #232e3b; width: 100%; padding: 15% 12%; margin: 30px 0; border-radius: 8px;">
-
-              <p style="color: #000;">I thought there had to be a better way to logically capture and compare criteria and produce a score to help people measure criteria and make sure they were making the right decisions.</p>
-            <div style="clear: both;"></div>
-            </div>
-          </div>
-          <div class="project-section">
-            <div class="project-col1">
-              <h3>The Idea</h3>
-            <div style="clear: both;"></div>
-            </div>
-            <div class="project-col2">
-              <p style="color: #000;">I knew that there had to be an easier way for an individual, or a group, to make better decisions by building a simple interface that collects, calculates, and combines each user's opinions and preferences into one, easy to understand metric. </p>
-
-              <img src="images/mobile-criteriacalc.png" style="background-color: #ebf1f5; width: 100%; padding: 15% 22%; margin: 30px 0; border-radius: 8px;">
-
-              <p style="color: #000;">The app has three key parts: the group, the instance, and the criteria. A group is a collection of instances. For each instance, each person involved can individiaully rate criteria on a scale of -4 to +4 (visualized using an easy to understand emoji-scale). The importance, or weight, of each criteria is set by, and specific to, each user and acts as a multiplier. </p>
-
-              <a href="/projects/criteriacalculator/images/criteriacalc-formula.png" target="_blank"><img src="images/criteriacalc-formula.png"></a>
-
-              <h3 style="padding-bottom: 15px; font-size: 1.6em;">Let's Go House Hunting</h3>
-              <p style="color: #000;">As an example, let's pretend my wife and I are actively searching for a new house. First, we would create a new group called "House Search". Before we visit any actual houses, we will sit down together and agree on a list of criteria (i.e. Big Yard, Basement, Fireplace, etc.). Then, logging in with our personal accounts, we would give each criteria an imporance: Low, Medium, or High. Let's say a big yard is very important to me, so I rate it high, but it is less important to my wife, so she rates it medium.</p>
-              <br>
-              <p style="color: #000;">Now that we have our House Search group set up with criteria, we're ready to start looking at properties. For each new house we visit, we'd create a new instance. Each new instance will already have a list of criteria attached, since we set that up at the group level. After visiting the house, we would log in individually and rate each criteria. In the interace, we don't show the -4 to +4 scale I mentioned above. Instead, we give a simple 5-point visual rating system using emoji-like faces. This helps prevent the user from being distracted by the individual numbers (specifically the connotation that goes along with selecting a negative number) and lets them focus on simply and quickly rating. I might rate the yard someone low (-2), but my wife, who loved the yard, might rate it high (+4). Becuase I maked the yard as "important", my rating would look like -2 x 4 = -8 while my wife's, who gave the yard critieria medium importance, would look like 4 x 0 = 4. The overall score for the yard criteria in this specific instance would be -4.</p>
-
-            <div style="clear: both;"></div>
-            </div>
-          </div>
+          
         </div>
-    </div>
-    <div class="footer">
-      <p style="color: #8f969a;">Designed and coded by Jon Eckert <i class="fas fa-heart" style="font-size: 12px; padding: 0 5px;"></i> <a href="mailto:jon@joneckert.com" style="color: #8f969a; text-decoration: underline;">Say hello!</a></p>
-      <div class="footer-icons">
-        <a href="https://dribbble.com/joneckert" target="_blank"><i class="fab fa-dribbble"></i></a>
-        <a href="https://twitter.com/jeckert" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/jeckert" target="_blank"><i class="fab fa-instagram"></i></a>
+      
+    
+      
+        <p style="color: #000;">I thought there had to be a better way to logically capture and compare criteria and produce a score to help people measure criteria and make sure they were making the right decisions.</p>
+<div style="clear: both;"></div>
+      
+    
+    <div style="clear: both;"></div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="project-col1">
+    <h3>The Idea</h3>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="project-col2">
+    
+      
+        <p style="color: #000;">I knew that there had to be an easier way for an individual, or a group, to make better decisions by building a simple interface that collects, calculates, and combines each user's opinions and preferences into one, easy to understand metric. </p>
+      
+    
+      
+        <div style="background-color: #e4eaee; width: 100%; padding: 3% 6% 6% 6%; margin: 30px 0; border-radius: 8px;">
+          
+            <div>
+              <img style="padding-bottom:0px;" src="images/mobile-criteriacalc.png">
+              <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);"></p>
+            </div>
+          
+        </div>
+      
+    
+      
+        <p style="color: #000;">The app has three key parts: the group, the instance, and the criteria. A group is a collection of instances. For each instance, each person involved can individiaully rate criteria on a scale of -4 to +4 (visualized using an easy to understand emoji-scale). The importance, or weight, of each criteria is set by, and specific to, each user and acts as a multiplier. </p>
+<p><a href="/projects/criteriacalculator/images/criteriacalc-formula.png" target="_blank"><img src="images/criteriacalc-formula.png"></a></p>
+<h3 style="padding-bottom: 15px; font-size: 1.6em;">Let's Go House Hunting</h3>
+<p style="color: #000;">As an example, let's pretend my wife and I are actively searching for a new house. First, we would create a new group called "House Search". Before we visit any actual houses, we will sit down together and agree on a list of criteria (i.e. Big Yard, Basement, Fireplace, etc.). Then, logging in with our personal accounts, we would give each criteria an imporance: Low, Medium, or High. Let's say a big yard is very important to me, so I rate it high, but it is less important to my wife, so she rates it medium.</p>
+<p style="color: #000;">Now that we have our House Search group set up with criteria, we're ready to start looking at properties. For each new house we visit, we'd create a new instance. Each new instance will already have a list of criteria attached, since we set that up at the group level. After visiting the house, we would log in individually and rate each criteria. In the interace, we don't show the -4 to +4 scale I mentioned above. Instead, we give a simple 5-point visual rating system using emoji-like faces. This helps prevent the user from being distracted by the individual numbers (specifically the connotation that goes along with selecting a negative number) and lets them focus on simply and quickly rating. I might rate the yard someone low (-2), but my wife, who loved the yard, might rate it high (+4). Becuase I maked the yard as "important", my rating would look like -2 x 4 = -8 while my wife's, who gave the yard critieria medium importance, would look like 4 x 0 = 4. The overall score for the yard criteria in this specific instance would be -4.</p>
+<div style="clear: both;"></div>
+      
+    
+    <div style="clear: both;"></div>
+  </div>
+</div>
+
+
+        </div>
       </div>
-    </div>
+      <div class="footer">
+  <p style="color: #8f969a;">Designed and coded by Jon Eckert <i class="fas fa-heart" style="font-size: 12px; padding: 0 5px;"></i> <a href="mailto:jon@joneckert.com" style="color: #8f969a; text-decoration: underline;">Say hello!</a></p>
+  <div class="footer-icons">
+    <a href="https://dribbble.com/joneckert" target="_blank"><i class="fab fa-dribbble"></i></a>
+    <a href="https://twitter.com/jeckert" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/jeckert" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
     </div>
   </body>
 </html>
