@@ -1,13 +1,13 @@
-# Production CMS — uses GitHub login via Netlify's OAuth broker.
+# Production CMS — GitHub login via Cloudflare OAuth proxy (see workers/decap-oauth).
 # Local editing uses admin/config.local.yml (proxy backend, no login).
-local_backend: true
+# Deploy proxy: npm run cms:oauth
 
 backend:
   name: github
   repo: pxlws/pxlws.github.io
   branch: master
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  base_url: https://joneckert-cms-auth.joneckert.workers.dev
+  auth_endpoint: /auth
 
 media_folder: projects
 public_folder: /projects

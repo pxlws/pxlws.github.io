@@ -1,7 +1,6 @@
 # Auto-generated from admin/config.yml — do not edit by hand.
 # Regenerate: node scripts/sync-cms-local-config.js
 # Requires `npm run cms` running alongside the dev server.
-local_backend: true
 backend:
   name: proxy
   proxy_url: http://localhost:8081/api/v1
@@ -134,3 +133,4 @@ collections:
                         widget: string
                         required: false
                         default: ''
+local_backend: true
