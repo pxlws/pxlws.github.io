@@ -41,9 +41,8 @@ async function handleAuth(url, env) {
   return Response.redirect(authorizationUri, 302);
 }
 
-function callbackScriptResponse(status, token) {
-  const payload = JSON.stringify({ token, provider: "github" });
-  const message = `authorization:github:${status}:${payload}`;
+function callbackScriptResponse(status, content) {
+  const payload = JSON.stringify(content);
 
   return new Response(
     `<!doctype html>
@@ -52,47 +51,41 @@ function callbackScriptResponse(status, token) {
     <p id="status">Authorizing Decap CMS…</p>
     <script>
       (function () {
-        var authMessage = ${JSON.stringify(message)};
+        var authMessage =
+          "authorization:github:${status}:" + ${JSON.stringify(payload)};
 
-        function complete(origin) {
-          if (!window.opener) {
+        function getOpener() {
+          return window.opener || window.open("", "Netlify Authorization");
+        }
+
+        function receiveMessage() {
+          var opener = getOpener();
+          if (!opener) {
             document.getElementById("status").textContent =
-              "Authorization complete. Close this tab and return to the CMS.";
+              "Could not connect to the CMS. Close this tab and try again.";
             return;
           }
 
-          window.opener.postMessage(authMessage, origin || "*");
+          opener.postMessage(authMessage, "*");
+          window.removeEventListener("message", receiveMessage, false);
           window.close();
         }
 
-        // Decap CMS sends "authorizing:github" to this popup; reply with the token.
-        window.addEventListener("message", function (event) {
-          if (event.data === "authorizing:github") {
-            complete(event.origin);
-          }
-        });
+        window.addEventListener("message", receiveMessage, false);
 
-        // Legacy handshake used by some OAuth proxies.
-        if (window.opener) {
-          window.opener.postMessage("authorizing:github", "*");
-          window.addEventListener(
-            "message",
-            function (event) {
-              complete(event.origin);
-            },
-            { once: true }
-          );
+        var opener = getOpener();
+        if (!opener) {
+          document.getElementById("status").textContent =
+            "Could not connect to the CMS. Close this tab and try again.";
+          return;
         }
+
+        opener.postMessage("authorizing:github", "*");
       })();
     </script>
   </body>
 </html>`,
-    {
-      headers: {
-        "Content-Type": "text/html; charset=utf-8",
-        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
-      },
-    }
+    { headers: { "Content-Type": "text/html; charset=utf-8" } }
   );
 }
 
@@ -114,9 +107,12 @@ async function handleCallback(url, env) {
       code,
       redirect_uri: redirectUri,
     });
-    return callbackScriptResponse("success", accessToken);
+    return callbackScriptResponse("success", {
+      token: accessToken,
+      provider: "github",
+    });
   } catch (error) {
-    return callbackScriptResponse("error", error.message);
+    return callbackScriptResponse("error", { message: error.message });
   }
 }
 

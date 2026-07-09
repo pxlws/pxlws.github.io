@@ -35,6 +35,11 @@ export class OAuthClient {
     }
 
     const json = await response.json();
+    if (json.error || !json.access_token) {
+      throw new Error(
+        json.error_description || json.error || "Missing access_token"
+      );
+    }
     return json.access_token;
   }
 }
