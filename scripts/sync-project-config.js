@@ -4,6 +4,7 @@ const path = require("path");
 
 const {
   buildFeaturedProjects,
+  isDraft,
   loadCmsProjects,
 } = require("./lib/cms-projects");
 

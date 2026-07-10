@@ -118,6 +118,20 @@ html.theme-dark .ghost-button:hover {
   color: #fff;
 }
 
+html.theme-dark .work-filter-btn {
+  background-color: #2d363d;
+  color: #fff;
+}
+
+html.theme-dark .work-filter-btn:hover {
+  background-color: #3a454d;
+}
+
+html.theme-dark .work-filter-btn.is-active {
+  background-color: #00c0b9;
+  color: #fff;
+}
+
 html.theme-dark .mark-teal {
   background: #005752;
   color: #fff;

@@ -50,7 +50,12 @@ permalink: /work/index.html
       <div id="projects">
         <div class="projects">
           <h2>Work</h2>
-          <br>
+          <div class="work-filters" id="work-filters" role="toolbar" aria-label="Filter projects by category">
+            <button type="button" class="work-filter-btn is-active" data-filter="all">All</button>
+            {% for category in workCategories %}
+            <button type="button" class="work-filter-btn" data-filter="{{ category.slug }}">{{ category.label }}</button>
+            {% endfor %}
+          </div>
           {% include "partials/work-projects.njk" %}
         </div>
       </div>

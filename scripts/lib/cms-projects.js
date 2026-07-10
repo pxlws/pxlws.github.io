@@ -34,6 +34,47 @@ function loadCmsProjects() {
     });
 }
 
+function slugifyCategory(label) {
+  return label.trim().toLowerCase().replace(/\s+/g, "-");
+}
+
+function projectCategories(cardTag) {
+  return (cardTag || "Product Design")
+    .split("•")
+    .map(function (tag) {
+      return slugifyCategory(tag);
+    })
+    .filter(Boolean);
+}
+
+function buildWorkCategories(cmsProjects) {
+  const labels = new Set();
+
+  cmsProjects.forEach(function (project) {
+    if (isDraft(project.data.draft)) {
+      return;
+    }
+
+    (project.data.cardTag || "Product Design")
+      .split("•")
+      .forEach(function (tag) {
+        const label = tag.trim();
+        if (label) {
+          labels.add(label);
+        }
+      });
+  });
+
+  return Array.from(labels)
+    .sort()
+    .map(function (label) {
+      return {
+        label: label,
+        slug: slugifyCategory(label),
+      };
+    });
+}
+
 function buildWorkColumns(cmsProjects) {
   const work = cmsProjects
     .filter(function (project) {
@@ -49,7 +90,8 @@ function buildWorkColumns(cmsProjects) {
         cardDescription: data.cardDescription || "",
         cardTag: data.cardTag || "Product Design",
         cardThumb: data.cardThumb || "",
-        workOrder: data.workOrder || 99,
+        workOrder: data.workOrder ?? 99,
+        categories: projectCategories(data.cardTag),
       };
     })
     .sort(function (a, b) {
@@ -133,7 +175,9 @@ function buildFeaturedProjects(cmsProjects, featuredBasePath) {
 
 module.exports = {
   GRID_CLASSES: GRID_CLASSES,
+  isDraft: isDraft,
   loadCmsProjects: loadCmsProjects,
   buildWorkColumns: buildWorkColumns,
+  buildWorkCategories: buildWorkCategories,
   buildFeaturedProjects: buildFeaturedProjects,
 };

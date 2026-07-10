@@ -574,6 +574,42 @@ a:hover {
   padding-bottom: 65px;
 }
 
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 28px;
+}
+
+.work-filter-btn {
+  background-color: #dbe2e6;
+  border: none;
+  border-radius: 100px;
+  color: #222325;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 0.95em;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.work-filter-btn:hover {
+  background-color: #cfd8de;
+}
+
+.work-filter-btn.is-active {
+  background-color: #0f4e9a;
+  color: #fff;
+}
+
+.work-card.is-hidden {
+  display: none;
+}
+
+.work-grid-column.is-empty {
+  display: none;
+}
+
 .proj-tag {
   padding: 14px 0 0 0;
   color: #a6acaf;

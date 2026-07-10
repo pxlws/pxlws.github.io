@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 featured: false
 featuredOrder: 4
 workOrder: 0
