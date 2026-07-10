@@ -26,29 +26,16 @@
       .join("");
   }
 
-  function renderTextBody(text) {
-    if (!text) {
-      return "";
-    }
-
-    if (/<[a-z][\s\S]*>/i.test(text)) {
-      return text;
-    }
-
-    return renderMarkdown(text);
-  }
-
-  function resolveImageUrl(src, getAsset, slug) {
-    if (!src) {
+  function resolveImageUrl(src, slug) {
+    if (!src || !slug) {
       return src;
     }
 
-    var asset = getAsset ? getAsset(src) : null;
-    if (asset) {
-      return asset.toString();
+    if (/^https?:\/\//i.test(src)) {
+      return src;
     }
 
-    if (src.indexOf("/") === 0 || src.indexOf("http") === 0) {
+    if (src.indexOf("/projects/") === 0) {
       return src;
     }
 
@@ -56,10 +43,39 @@
       return "/projects/" + slug + "/" + src;
     }
 
-    return "/projects/" + slug + "/images/" + src;
+    if (src.indexOf("/") === 0) {
+      return src;
+    }
+
+    return "/projects/" + slug + "/images/" + src.replace(/^images\//, "");
   }
 
-  function renderImageBlock(block, getAsset, slug, key) {
+  function rewriteHtmlImageSrcs(html, slug) {
+    if (!html || !slug) {
+      return html;
+    }
+
+    return html.replace(
+      /(<img\b[^>]*\bsrc=["'])([^"']+)(["'])/gi,
+      function (match, prefix, src, suffix) {
+        return prefix + resolveImageUrl(src, slug) + suffix;
+      }
+    );
+  }
+
+  function renderTextBody(text, slug) {
+    if (!text) {
+      return "";
+    }
+
+    if (/<[a-z][\s\S]*>/i.test(text)) {
+      return rewriteHtmlImageSrcs(text, slug);
+    }
+
+    return rewriteHtmlImageSrcs(renderMarkdown(text), slug);
+  }
+
+  function renderImageBlock(block, slug, key) {
     var items = block.get("items");
     if (!items || !items.size) return null;
 
@@ -77,7 +93,7 @@
       },
       items.map(function (image, index) {
         var src = image.get("src");
-        var url = resolveImageUrl(src, getAsset, slug);
+        var url = resolveImageUrl(src, slug);
 
         return h(
           "div",
@@ -103,7 +119,6 @@
   var ProjectPreview = createClass({
     render: function () {
       var entry = this.props.entry;
-      var getAsset = this.props.getAsset;
       var title = entry.getIn(["data", "title"]);
       var summary = entry.getIn(["data", "summary"]);
       var slug = entry.getIn(["data", "slug"]);
@@ -149,13 +164,13 @@
                             return h("div", {
                               key: blockIndex,
                               dangerouslySetInnerHTML: {
-                                __html: renderTextBody(block.get("body") || ""),
+                                __html: renderTextBody(block.get("body") || "", slug),
                               },
                             });
                           }
 
                           if (type === "images") {
-                            return renderImageBlock(block, getAsset, slug, blockIndex);
+                            return renderImageBlock(block, slug, blockIndex);
                           }
 
                           return null;
