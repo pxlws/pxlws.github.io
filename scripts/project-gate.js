@@ -62,6 +62,15 @@
     return null;
   }
 
+  function goBack() {
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    window.location.href = "/work/";
+  }
+
   function createGate(gate) {
     var expectedHash = gate.hash;
     var salt = gate.salt || "";
@@ -74,6 +83,9 @@
     overlay.setAttribute("aria-labelledby", "project-gate-title");
 
     overlay.innerHTML =
+      '<button type="button" class="project-gate-nav-back" aria-label="Go back">' +
+      '<i class="fal fa-arrow-left" aria-hidden="true"></i> Back' +
+      "</button>" +
       '<div class="project-gate-panel">' +
       '<h2 id="project-gate-title">Password required</h2>' +
       "<p>This project is password protected.</p>" +
@@ -89,6 +101,9 @@
     var input = overlay.querySelector("#project-gate-password");
     var error = overlay.querySelector("#project-gate-error");
     var submit = overlay.querySelector(".project-gate-submit");
+    var backButton = overlay.querySelector(".project-gate-nav-back");
+
+    backButton.addEventListener("click", goBack);
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();

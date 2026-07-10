@@ -246,6 +246,16 @@ html.theme-dark .project-gate-input:focus {
   border-color: #00c0b9;
 }
 
+html.theme-dark .project-gate-nav-back {
+  background-color: rgba(26, 32, 38, 0.92);
+  color: #fff;
+}
+
+html.theme-dark .project-gate-nav-back:hover {
+  background-color: #1a2026;
+  color: #00c0b9;
+}
+
 html.theme-dark [style*="background-color: #e4eaee"] {
   background-color: #1a2027 !important;
 }
