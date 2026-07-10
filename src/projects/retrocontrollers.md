@@ -13,6 +13,14 @@ password: ''
 cardDescription: A series illustrating my childhood.
 cardTag: Illustration
 cardThumb: /projects/retrocontrollers/images/NEScontroller.png
-sections: []
+sections:
+  - heading: ' '
+    blocks:
+      - type: text
+        body: >-
+          <img src="images/NEScontroller.png" style="padding-bottom:0px;">
+          <img src="images/gameboy-larger.png" style="padding-bottom:0px;">
+          <img src="images/superNEScontroller.png" style="padding-bottom:0px;">
+          <p>Ready for more? Check out <a href="/work/">more of my work here</a>.</p>
 ---
 

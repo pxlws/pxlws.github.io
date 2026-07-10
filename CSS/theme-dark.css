@@ -231,3 +231,11 @@ html.theme-dark .project-gate-input {
 html.theme-dark .project-gate-input:focus {
   border-color: #00c0b9;
 }
+
+html.theme-dark [style*="background-color: #e4eaee"] {
+  background-color: #1a2027 !important;
+}
+
+html.theme-dark [style*="background-color: #ebf1f5"] {
+  background-color: #1a2027 !important;
+}
