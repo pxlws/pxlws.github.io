@@ -1,7 +1,7 @@
 ---
 draft: false
-featured: false
-featuredOrder: 99
+featured: true
+featuredOrder: 1
 workOrder: 2
 passwordProtected: false
 password: ""
