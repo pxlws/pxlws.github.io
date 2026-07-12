@@ -1,5 +1,15 @@
 [
   {
+    "slug": "flmobileonboarding",
+    "title": "Frontline Mobile Onboarding",
+    "href": "/projects/flmobileonboarding/",
+    "cardDescription": "Improving the onboarding experience.",
+    "cardTag": "Product Design • Illustration",
+    "cardThumb": "/projects/flmobileonboarding/images/flmobileonboarding-thumb2.png",
+    "featuredOrder": 1,
+    "gridClass": "grid-col1"
+  },
+  {
     "slug": "frontlinemobile",
     "title": "Frontline Mobile",
     "href": "/projects/frontlinemobile/",
@@ -7,7 +17,7 @@
     "cardTag": "Product Design",
     "cardThumb": "/projects/frontlinemobile/images/Frontline-Mobile-Thumb-1024x768.png",
     "featuredOrder": 1,
-    "gridClass": "grid-col1"
+    "gridClass": "grid-col2"
   },
   {
     "slug": "recorddetailsredesign",
@@ -17,7 +27,7 @@
     "cardTag": "Product Design",
     "cardThumb": "/projects/recorddetailsredesign/images/recorddetails-thumb.png",
     "featuredOrder": 2,
-    "gridClass": "grid-col2"
+    "gridClass": "grid-col3"
   },
   {
     "slug": "lunchbox",
@@ -27,6 +37,6 @@
     "cardTag": "Design Systems",
     "cardThumb": "/projects/lunchbox/images/lunchbox_thumb.png",
     "featuredOrder": 3,
-    "gridClass": "grid-col3"
+    "gridClass": "grid-col1"
   }
 ]
