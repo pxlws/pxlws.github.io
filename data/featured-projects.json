@@ -1,5 +1,15 @@
 [
   {
+    "slug": "blinkappredesign",
+    "title": "Blink App Redesign",
+    "href": "/projects/blinkappredesign/",
+    "cardDescription": "Modernizing the app's most-used screens.",
+    "cardTag": "Product Design",
+    "cardThumb": "/projects/blinkappredesign/images/blinkapp-thumb.png",
+    "featuredOrder": 1,
+    "gridClass": "grid-col1"
+  },
+  {
     "slug": "frontlinemobile",
     "title": "Frontline Mobile",
     "href": "/projects/frontlinemobile/",
@@ -7,7 +17,7 @@
     "cardTag": "Product Design",
     "cardThumb": "/projects/frontlinemobile/images/Frontline-Mobile-Thumb-1024x768.png",
     "featuredOrder": 1,
-    "gridClass": "grid-col1"
+    "gridClass": "grid-col2"
   },
   {
     "slug": "recorddetailsredesign",
@@ -17,6 +27,6 @@
     "cardTag": "Product Design",
     "cardThumb": "/projects/recorddetailsredesign/images/recorddetails-thumb.png",
     "featuredOrder": 2,
-    "gridClass": "grid-col2"
+    "gridClass": "grid-col3"
   }
 ]
