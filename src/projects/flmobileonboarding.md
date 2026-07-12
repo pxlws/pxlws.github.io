@@ -1,8 +1,8 @@
 ---
 draft: false
-featured: true
+featured: false
 featuredOrder: 1
-workOrder: 2
+workOrder: 5
 passwordProtected: false
 password: ""
 title: Frontline Mobile Onboarding
