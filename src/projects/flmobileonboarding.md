@@ -1,16 +1,15 @@
 ---
-title: Frontline Mobile Onboarding
-summary: >-
-  As primary designer on the Frontline Mobile project, I helped define product
-  strategy and user interface. I worked closely with product management and
-  engineering as we built this "platform in your pocket".
-slug: flmobileonboarding
 draft: false
 featured: false
 featuredOrder: 99
-workOrder: 4
+workOrder: 2
 passwordProtected: false
-password: ''
+password: ""
+title: Frontline Mobile Onboarding
+summary: As primary designer on the Frontline Mobile project, I helped define
+  product strategy and user interface. I worked closely with product management
+  and engineering as we built this "platform in your pocket".
+slug: flmobileonboarding
 cardDescription: Improving the onboarding experience.
 cardTag: Product Design • Illustration
 cardThumb: /projects/flmobileonboarding/images/flmobileonboarding-thumb2.png
@@ -18,9 +17,8 @@ sections:
   - heading: The Project
     blocks:
       - type: text
-        body: >-
-          <p>One of Frontline Mobile's biggest challenges is that it is built on
-          top of a suite of legacy applications that have been built in-house or
+        body: <p>One of Frontline Mobile's biggest challenges is that it is built on top
+          of a suite of legacy applications that have been built in-house or
           acquired over many years. Frontline's platform aspiration means a
           shift from many, siloed applications to a single, needs-centric (as
           opposed to application-centric) product. Though the end-goal is a
@@ -29,7 +27,7 @@ sections:
       - type: images
         items:
           - src: flmobile-onboarding-sketch.png
-            caption: ''
+            caption: ""
       - type: text
         body: >-
           <p>Previously, a new user's first experience with Frontline Mobile was
@@ -53,19 +51,18 @@ sections:
   - heading: The Solution
     blocks:
       - type: text
-        body: >-
-          <p>This was a multi-layered problem. Based on information gathered
-          from customer feedback &amp; support requests, we developed an idea
-          for a light-hearted introductory screen that would provide an instant
-          sense of delight and whimsey. The illustration was a collaboration
-          between myself and fellow designer Jon Pope. It played off of the idea
-          that, for the first time, users could access this functionality from a
+        body: <p>This was a multi-layered problem. Based on information gathered from
+          customer feedback &amp; support requests, we developed an idea for a
+          light-hearted introductory screen that would provide an instant sense
+          of delight and whimsey. The illustration was a collaboration between
+          myself and fellow designer Jon Pope. It played off of the idea that,
+          for the first time, users could access this functionality from a
           mobile device. The quip "Work without limits" and our beloved space
           man were born.</p>
       - type: images
         items:
           - src: fl-mobile-incorrect-pin.gif
-            caption: ''
+            caption: ""
       - type: text
         body: >-
           <p>Next, to shift the user's thinking away from a password, we
@@ -89,8 +86,7 @@ sections:
           writing, the app sits at 4.3 stars.</p>
 
 
-          <div style="background-color: #ebf1f5; width: 100%; padding: 15% 20%;
-          margin: 20px 0; border-radius: 8px;">
+          <div style="background-color: #ebf1f5; width: 100%; padding: 15% 20%; margin: 20px 0; border-radius: 8px;">
                         <img src="images/fl-mobile-welcome.png">
                         <img src="images/fl-mobile-unlockcode.png">
                         <img src="images/fl-mobile-tooltip.png">
@@ -101,8 +97,7 @@ sections:
   - heading: Illustrations
     blocks:
       - type: text
-        body: >-
-          <p>While we ended up launching (pun intended) with the "blast off"
+        body: <p>While we ended up launching (pun intended) with the "blast off"
           illustration seen above, I created alternative illustration options as
           well. This one was a completely different direction, moving away from
           the "launch" concept and focusing more on having "arrived." While I
@@ -111,16 +106,14 @@ sections:
       - type: images
         items:
           - src: flmobileonboarding-alternate-illustration.png
-            caption: ''
+            caption: ""
       - type: text
-        body: >-
-          <p>This illustration was my original concept artwork before we
-          refactored it to fit in better with the brand's existing illustration
-          style.</p>
+        body: <p>This illustration was my original concept artwork before we refactored
+          it to fit in better with the brand's existing illustration style.</p>
       - type: images
         items:
           - src: launch-illustration-original.webp
-            caption: ''
+            caption: ""
       - type: text
         body: >-
           <p>Ready for more? Check out <a href="/work/">more of my work
@@ -129,4 +122,3 @@ sections:
 
           <div style="clear: both;"></div>
 ---
-
