@@ -8,8 +8,28 @@ const projectsDir = path.join(root, "src", "projects");
 
 const GRID_CLASSES = ["grid-col1", "grid-col2", "grid-col3"];
 
-function isDraft(value) {
+function parseBoolean(value) {
   return value === true || value === "true";
+}
+
+function isVisibleOnSite(data) {
+  if (!data || typeof data !== "object") {
+    return true;
+  }
+
+  if (data.visibleOnSite !== undefined && data.visibleOnSite !== null) {
+    return parseBoolean(data.visibleOnSite);
+  }
+
+  if (data.draft !== undefined && data.draft !== null) {
+    return !parseBoolean(data.draft);
+  }
+
+  return true;
+}
+
+function isHiddenFromSite(data) {
+  return !isVisibleOnSite(data);
 }
 
 function loadCmsProjects() {
@@ -51,7 +71,7 @@ function buildWorkCategories(cmsProjects) {
   const labels = new Set();
 
   cmsProjects.forEach(function (project) {
-    if (isDraft(project.data.draft)) {
+    if (isHiddenFromSite(project.data)) {
       return;
     }
 
@@ -78,7 +98,7 @@ function buildWorkCategories(cmsProjects) {
 function buildWorkColumns(cmsProjects) {
   const work = cmsProjects
     .filter(function (project) {
-      return !isDraft(project.data.draft);
+      return isVisibleOnSite(project.data);
     })
     .map(function (project) {
       const data = project.data;
@@ -130,7 +150,7 @@ function buildFeaturedProjects(cmsProjects, featuredBasePath) {
   cmsProjects.forEach(function (project) {
     const data = project.data;
 
-    if (!data.featured || isDraft(data.draft)) {
+    if (!data.featured || isHiddenFromSite(data)) {
       return;
     }
 
@@ -162,7 +182,8 @@ function buildFeaturedProjects(cmsProjects, featuredBasePath) {
 
 module.exports = {
   GRID_CLASSES: GRID_CLASSES,
-  isDraft: isDraft,
+  isVisibleOnSite: isVisibleOnSite,
+  isHiddenFromSite: isHiddenFromSite,
   loadCmsProjects: loadCmsProjects,
   buildWorkColumns: buildWorkColumns,
   buildWorkCategories: buildWorkCategories,

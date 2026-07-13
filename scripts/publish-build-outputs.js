@@ -3,13 +3,11 @@ const path = require("path");
 
 const matter = require("gray-matter");
 
+const { isHiddenFromSite } = require("./lib/cms-projects");
+
 const root = path.join(__dirname, "..");
 const projectsDir = path.join(root, "src", "projects");
 const builtRoot = path.join(root, "_site", "projects");
-
-function isDraft(value) {
-  return value === true || value === "true";
-}
 
 function loadCmsProjects() {
   if (!fs.existsSync(projectsDir)) {
@@ -28,7 +26,7 @@ function loadCmsProjects() {
 
       return {
         slug: slug,
-        draft: isDraft(parsed.data.draft),
+        hidden: isHiddenFromSite(parsed.data),
         built: path.join(builtRoot, slug, "index.html"),
         target: path.join(root, "projects", slug, "index.html"),
       };
@@ -63,15 +61,15 @@ function publishBuildOutputs() {
   }
 
   loadCmsProjects().forEach(function (project) {
-    if (project.draft) {
+    if (project.hidden) {
       if (fs.existsSync(project.target)) {
         fs.unlinkSync(project.target);
-        console.log("Removed draft project page:", project.target);
+        console.log("Removed hidden project page:", project.target);
       }
 
       if (fs.existsSync(project.built)) {
         fs.unlinkSync(project.built);
-        console.log("Removed draft build output:", project.built);
+        console.log("Removed hidden build output:", project.built);
       }
 
       return;

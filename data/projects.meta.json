@@ -62,6 +62,6 @@
     "featured": false,
     "featuredOrder": 4,
     "workOrder": 0,
-    "draft": true
+    "visibleOnSite": false
   }
 }

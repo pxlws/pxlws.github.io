@@ -127,7 +127,7 @@ function migrateProject(slug) {
     title: title,
     summary: summary,
     slug: slug,
-    draft: projectMeta.draft === true,
+    visibleOnSite: projectMeta.visibleOnSite !== false,
     featured: !!projectMeta.featured,
     featuredOrder: projectMeta.featuredOrder || 99,
     workOrder: projectMeta.workOrder || 99,

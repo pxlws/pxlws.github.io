@@ -6,7 +6,7 @@ const matter = require("gray-matter");
 const projectsDir = path.join(__dirname, "..", "src", "projects");
 
 const defaults = {
-  draft: false,
+  visibleOnSite: true,
   featured: false,
   featuredOrder: 99,
   workOrder: 99,

@@ -1,8 +1,8 @@
-- label: Draft
-  name: draft
+- label: Visible on site
+  name: visibleOnSite
   widget: boolean
-  default: false
-  hint: Draft projects are hidden from the site, Work page, and Featured work.
+  default: true
+  hint: When off, the project is hidden everywhere (project page, Work page, and Featured work). When on, it appears on Work and in Featured work if that toggle is on.
 - label: Featured on home page
   name: featured
   widget: boolean

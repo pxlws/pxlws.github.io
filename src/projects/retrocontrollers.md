@@ -4,7 +4,7 @@ summary: >-
   A fun side project in which I showcase the controllers of some favorite video
   game systems from my childhood. Life was so much simpler back then.
 slug: retrocontrollers
-draft: false
+visibleOnSite: true
 featured: false
 featuredOrder: 99
 workOrder: 3

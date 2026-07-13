@@ -4,7 +4,7 @@ const path = require("path");
 
 const {
   buildFeaturedProjects,
-  isDraft,
+  isHiddenFromSite,
   loadCmsProjects,
 } = require("./lib/cms-projects");
 
@@ -38,7 +38,7 @@ function syncProjectGates(cmsProjects) {
     const data = project.data;
     const slug = project.slug;
 
-    if (!data.passwordProtected || isDraft(data.draft)) {
+    if (!data.passwordProtected || isHiddenFromSite(data)) {
       delete gates[slug];
       return;
     }

@@ -5,7 +5,7 @@ summary: >-
   to simplify difficult decision-making by leveraging an easy-to-use,
   collaborative application.
 slug: criteriacalculator
-draft: false
+visibleOnSite: true
 featured: false
 featuredOrder: 99
 workOrder: 2

@@ -5,10 +5,6 @@ const md = markdownIt({
   breaks: true,
 });
 
-function isDraft(value) {
-  return value === true || value === "true";
-}
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("renderMarkdown", function (content) {
     return md.render(content || "");

@@ -1,8 +1,10 @@
+const { isVisibleOnSite } = require("../../scripts/lib/cms-projects");
+
 module.exports = {
   layout: "layouts/project-sections.njk",
   eleventyComputed: {
     permalink(data) {
-      if (data.draft === true || data.draft === "true") {
+      if (!isVisibleOnSite(data)) {
         return false;
       }
 

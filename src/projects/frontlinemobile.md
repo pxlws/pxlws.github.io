@@ -1,5 +1,5 @@
 ---
-draft: false
+visibleOnSite: true
 featured: true
 featuredOrder: 1
 workOrder: 2

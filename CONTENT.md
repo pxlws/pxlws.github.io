@@ -30,7 +30,7 @@ The source file is `src/projects/blinkappredesign.md` — YAML frontmatter with 
 
 | Field | What it does |
 |-------|----------------|
-| **Draft** | Hides the project page and keeps it off cards |
+| **Visible on site** | When off, hides the project page and keeps it off Work and Featured work |
 | **Featured on home page** | Adds the project to Featured work on the home page |
 | **Featured order** | Controls sort order (lower = earlier) |
 | **Password protected** | Enables the password gate on the project page |
@@ -38,18 +38,17 @@ The source file is `src/projects/blinkappredesign.md` — YAML frontmatter with 
 
 After saving in the CMS, run `npm run build` to update the site, featured cards, and password gates.
 
-## Draft projects
+## Hidden projects
 
-Projects with **Draft** checked are hidden from the public site:
+Projects with **Visible on site** turned off are hidden from the public site:
 
 - No page is built at `/projects/.../`
-- They won't appear on the Work page
+- They won't appear on the Work page or in Featured work
 
-To **publish** Blink when ready:
+To **show a project** on the site when ready:
 
-1. Uncheck **Draft** in the CMS (or set `draft: false` in the markdown file)
+1. Turn on **Visible on site** in the CMS (or set `visibleOnSite: true` in the markdown file)
 2. Run `npm run build`
-3. Add the project card back to `work/index.html`
 
 ## Build for GitHub Pages
 
