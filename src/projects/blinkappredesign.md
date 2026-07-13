@@ -1,5 +1,5 @@
 ---
-visibleOnSite: true
+draft: false
 featured: true
 featuredOrder: 1
 workOrder: 0
@@ -17,13 +17,12 @@ sections:
   - heading: Background
     blocks:
       - type: text
-        body: >
-          Amazon's [Blink](https://blinkforhome.com) is a home security camera
-          system used by tens of millions of customers to monitor their homes,
-          receive motion alerts, and review recorded events. The mobile app is
-          the primary way people interact with their cameras — checking live
-          views, arming their system, and reviewing clips when something
-          happens.
+        body: >-
+          Amazon's [Blink](https://blinkforhome.com) is a home WiFi security
+          camera system used by tens of millions of customers to keep an eye on
+          their homes. The mobile app is currently the only way users interact
+          with Blink products. In the app they can check a camera's live view,
+          watch recorded clips, and more.
 
 
           Over time, the app's interface had grown dated. While it remained functional, the visual language and interaction patterns no longer matched the expectations of modern mobile users. A redesign was needed to bring clarity, consistency, and a more polished feel to the experience.
