@@ -10,6 +10,7 @@ const localPath = path.join(root, "admin", "config.local.yml");
 const config = yaml.load(fs.readFileSync(configPath, "utf8"));
 
 config.local_backend = true;
+delete config.publish_mode;
 config.backend = {
   name: "proxy",
   proxy_url: "http://localhost:8081/api/v1",

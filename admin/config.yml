@@ -2,10 +2,13 @@
 # Local editing uses admin/config.local.yml (proxy backend, no login).
 # Deploy proxy: npm run cms:oauth
 
+publish_mode: editorial_workflow
+
 backend:
   name: github
   repo: pxlws/pxlws.github.io
   branch: master
+  squash_merges: true
   base_url: https://joneckert-cms-auth.joneckert.workers.dev
   auth_endpoint: /auth
 
@@ -55,7 +58,7 @@ collections:
         default: 99
         value_type: int
         min: 0
-        hint: Lower numbers appear earlier on the Work page.
+        hint: Lower numbers appear earlier, left to right across the grid (0 = first card, 1 = second, 2 = third in row one, etc.).
       - label: Password protected
         name: passwordProtected
         widget: boolean

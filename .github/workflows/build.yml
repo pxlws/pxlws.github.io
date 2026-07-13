@@ -12,6 +12,10 @@ on:
       - "package-lock.json"
       - ".eleventy.js"
 
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
 permissions:
   contents: write
 

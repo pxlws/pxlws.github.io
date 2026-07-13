@@ -6,7 +6,9 @@
     "dev": "node scripts/sync-project-config.js && node scripts/sync-cms-local-config.js && eleventy --serve --watch",
     "cms": "node scripts/sync-cms-local-config.js && decap-server",
     "dev:cms": "node scripts/sync-project-config.js && node scripts/sync-cms-local-config.js && npx concurrently -k \"decap-server\" \"eleventy --serve --watch\"",
-    "cms:oauth": "bash scripts/setup-cms-oauth.sh"
+    "cms:oauth": "bash scripts/setup-cms-oauth.sh",
+    "cms:publish-all": "node scripts/publish-cms-drafts.js",
+    "cms:publish-all:dry-run": "node scripts/publish-cms-drafts.js --dry-run"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

@@ -103,20 +103,7 @@ function buildWorkColumns(cmsProjects) {
   });
 
   work.forEach(function (project, index) {
-    const pairColumn = Math.floor(index / 2);
-
-    if (pairColumn < columns.length) {
-      columns[pairColumn].projects.push(project);
-      return;
-    }
-
-    let target = columns[0];
-    columns.forEach(function (column) {
-      if (column.projects.length < target.projects.length) {
-        target = column;
-      }
-    });
-    target.projects.push(project);
+    columns[index % columns.length].projects.push(project);
   });
 
   return columns.filter(function (column) {

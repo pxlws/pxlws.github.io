@@ -49,7 +49,9 @@ collections:
         default: 99
         value_type: int
         min: 0
-        hint: Lower numbers appear earlier on the Work page.
+        hint: >-
+          Lower numbers appear earlier, left to right across the grid (0 = first
+          card, 1 = second, 2 = third in row one, etc.).
       - label: Password protected
         name: passwordProtected
         widget: boolean
