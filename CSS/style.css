@@ -399,13 +399,13 @@ html.project-gate-locked #layout {
   color: #222325;
   cursor: pointer;
   display: inline-flex;
-  float: right;
   font-size: 1.1em;
   height: 44px;
   justify-content: center;
-  margin: 20px 10px 0 0;
   padding: 0;
-  position: relative;
+  position: fixed;
+  right: calc(28px + 50px + 10px);
+  top: 22px;
   transition: all 0.2s ease;
   width: 44px;
   z-index: 1001;
@@ -1235,7 +1235,7 @@ h1 {
 }
 
 .project-gate-unlock-control {
-  margin: 20px 8px 0 0;
+  right: calc(20px + 50px + 10px);
 }
 
 img {

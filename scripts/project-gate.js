@@ -163,12 +163,6 @@
       createGate(gate);
     });
 
-    var hamburger = document.querySelector(".nav-bar .hamburger");
-    if (hamburger && hamburger.parentNode) {
-      hamburger.parentNode.insertBefore(button, hamburger);
-      return;
-    }
-
     document.body.appendChild(button);
   }
 
