@@ -69,7 +69,7 @@ sections:
         items:
           - src: home-previous.png
             caption: The previous Home screen
-          - src: /projects/blinkappredesign/images/home-new-2.png
+          - src: home-new-2.png
             caption: The redesigned Home screen
       - type: text
         body: >
