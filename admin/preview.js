@@ -152,11 +152,25 @@
       items.map(function (image, index) {
         var src = image.get("src");
         var url = resolvePreviewImageUrl(src, slug, getAsset);
+        var width = image.get("width");
+        if (width === null || width === undefined || width === "") {
+          width = 100;
+        }
 
         return h(
           "div",
           { key: index, style: index > 0 ? { paddingTop: "25px" } : {} },
-          h("img", { src: url, style: { width: "100%", paddingBottom: "0" } }),
+          h("img", {
+            src: url,
+            style: {
+              width: width + "%",
+              height: "auto",
+              maxWidth: "100%",
+              display: "block",
+              margin: "0 auto",
+              paddingBottom: "0",
+            },
+          }),
           h(
             "p",
             {

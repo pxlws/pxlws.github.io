@@ -138,4 +138,16 @@ collections:
                         widget: string
                         required: false
                         default: ''
+                      - label: Width
+                        name: width
+                        widget: number
+                        required: false
+                        default: 100
+                        value_type: int
+                        min: 10
+                        max: 100
+                        hint: >-
+                          Width as a percentage of the content column. 100 is
+                          full width; lower values shrink the image and keep its
+                          aspect ratio.
 local_backend: true
