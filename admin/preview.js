@@ -45,12 +45,40 @@
       .replace(/<p>\s*<\/p>/gi, "");
   }
 
+  function isUsablePreviewUrl(url) {
+    if (!url || url === "[object Object]" || url === "[object Promise]") {
+      return false;
+    }
+
+    if (/^(blob:|data:)/i.test(url)) {
+      return true;
+    }
+
+    if (/localhost:\d+/i.test(url) || /127\.0\.0\.1:\d+/i.test(url)) {
+      return false;
+    }
+
+    if (/api\.github\.com/i.test(url)) {
+      return false;
+    }
+
+    if (/^https?:\/\//i.test(url)) {
+      return true;
+    }
+
+    return url.indexOf("/") === 0;
+  }
+
   function resolveImageUrl(src, slug) {
-    if (!src || !slug) {
+    if (!src) {
       return src;
     }
 
     if (/^https?:\/\//i.test(src)) {
+      return src;
+    }
+
+    if (!slug) {
       return src;
     }
 
@@ -69,32 +97,58 @@
     return "/projects/" + slug + "/images/" + src.replace(/^images\//, "");
   }
 
-  function rewriteHtmlImageSrcs(html, slug) {
-    if (!html || !slug) {
+  function resolvePreviewImageUrl(src, slug, getAsset) {
+    if (!src) {
+      return src;
+    }
+
+    if (/^(blob:|data:)/i.test(src)) {
+      return src;
+    }
+
+    if (getAsset) {
+      try {
+        var asset = getAsset(src);
+        if (asset) {
+          var assetUrl = typeof asset.toString === "function" ? asset.toString() : "";
+          if (isUsablePreviewUrl(assetUrl)) {
+            return assetUrl;
+          }
+        }
+      } catch (error) {
+        // Fall back to site-root paths below.
+      }
+    }
+
+    return resolveImageUrl(src, slug);
+  }
+
+  function rewriteHtmlImageSrcs(html, slug, getAsset) {
+    if (!html) {
       return html;
     }
 
     return html.replace(
       /(<img\b[^>]*\bsrc=["'])([^"']+)(["'])/gi,
       function (match, prefix, src, suffix) {
-        return prefix + resolveImageUrl(src, slug) + suffix;
+        return prefix + resolvePreviewImageUrl(src, slug, getAsset) + suffix;
       }
     );
   }
 
-  function renderTextBody(text, slug) {
+  function renderTextBody(text, slug, getAsset) {
     if (!text) {
       return "";
     }
 
     if (/<[a-z][\s\S]*>/i.test(text)) {
-      return rewriteHtmlImageSrcs(normalizeHtmlParagraphs(text), slug);
+      return rewriteHtmlImageSrcs(normalizeHtmlParagraphs(text), slug, getAsset);
     }
 
-    return rewriteHtmlImageSrcs(renderMarkdown(text), slug);
+    return rewriteHtmlImageSrcs(renderMarkdown(text), slug, getAsset);
   }
 
-  function renderImageBlock(block, slug, key) {
+  function renderImageBlock(block, slug, getAsset, key) {
     var items = block.get("items");
     if (!items || !items.size) return null;
 
@@ -112,7 +166,7 @@
       },
       items.map(function (image, index) {
         var src = image.get("src");
-        var url = resolveImageUrl(src, slug);
+        var url = resolvePreviewImageUrl(src, slug, getAsset);
 
         return h(
           "div",
@@ -138,6 +192,7 @@
   var ProjectPreview = createClass({
     render: function () {
       var entry = this.props.entry;
+      var getAsset = this.props.getAsset;
       var title = entry.getIn(["data", "title"]);
       var summary = entry.getIn(["data", "summary"]);
       var slug = entry.getIn(["data", "slug"]);
@@ -184,13 +239,13 @@
                               key: blockIndex,
                               className: "project-text-block",
                               dangerouslySetInnerHTML: {
-                                __html: renderTextBody(block.get("body") || "", slug),
+                                __html: renderTextBody(block.get("body") || "", slug, getAsset),
                               },
                             });
                           }
 
                           if (type === "images") {
-                            return renderImageBlock(block, slug, blockIndex);
+                            return renderImageBlock(block, slug, getAsset, blockIndex);
                           }
 
                           return null;
