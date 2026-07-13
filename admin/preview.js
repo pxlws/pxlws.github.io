@@ -3,8 +3,17 @@
     return;
   }
 
+  var md =
+    typeof window.markdownit === "function"
+      ? window.markdownit({ html: true, breaks: true })
+      : null;
+
   function renderMarkdown(text) {
     if (!text) return "";
+
+    if (md) {
+      return md.render(text);
+    }
 
     var html = text
       .replace(/&/g, "&amp;")
@@ -24,6 +33,16 @@
         return paragraph.trim() ? "<p>" + paragraph.replace(/\n/g, "<br>") + "</p>" : "";
       })
       .join("");
+  }
+
+  function normalizeHtmlParagraphs(html) {
+    if (!html) {
+      return "";
+    }
+
+    return html
+      .replace(/<br\s*\/?>\s*<br\s*\/?>/gi, "</p><p>")
+      .replace(/<p>\s*<\/p>/gi, "");
   }
 
   function resolveImageUrl(src, slug) {
@@ -69,7 +88,7 @@
     }
 
     if (/<[a-z][\s\S]*>/i.test(text)) {
-      return rewriteHtmlImageSrcs(text, slug);
+      return rewriteHtmlImageSrcs(normalizeHtmlParagraphs(text), slug);
     }
 
     return rewriteHtmlImageSrcs(renderMarkdown(text), slug);
@@ -163,6 +182,7 @@
                           if (type === "text") {
                             return h("div", {
                               key: blockIndex,
+                              className: "project-text-block",
                               dangerouslySetInnerHTML: {
                                 __html: renderTextBody(block.get("body") || "", slug),
                               },
@@ -187,6 +207,7 @@
   });
 
   CMS.registerPreviewStyle("/CSS/style.css");
+  CMS.registerPreviewStyle("/admin/preview.css");
   CMS.registerPreviewStyle("/assets/fonts/all.css");
   CMS.registerPreviewTemplate("projects", ProjectPreview);
 })();

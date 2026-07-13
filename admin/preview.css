@@ -1,0 +1,19 @@
+/* Loaded after style.css in the CMS preview iframe. */
+.project-content .project-text-block p {
+  color: #000 !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.1em !important;
+  line-height: 1.6em !important;
+  margin: 0 0 1.25em 0 !important;
+  opacity: 1 !important;
+  text-align: left !important;
+}
+
+.project-content .project-text-block p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.project-content .project-text-block ul,
+.project-content .project-text-block ol {
+  margin: 0 0 1.25em 0 !important;
+}
