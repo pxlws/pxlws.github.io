@@ -246,8 +246,11 @@
     },
   });
 
+  CMS.registerPreviewStyle(
+    "https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap"
+  );
+  CMS.registerPreviewStyle("/assets/fonts/albra/MyFontsWebfontsKit.css");
   CMS.registerPreviewStyle("/CSS/style.css");
   CMS.registerPreviewStyle("/admin/preview.css");
-  CMS.registerPreviewStyle("/assets/fonts/all.css");
   CMS.registerPreviewTemplate("projects", ProjectPreview);
 })();
