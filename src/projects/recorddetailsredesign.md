@@ -1,17 +1,16 @@
 ---
-title: Record Details Redesign
-summary: >-
-  As the primary designer tasked with a complete redesign of all record detail
-  views across the entire application, I overcame many challenges to introduce
-  an easier to use, flexible, and scalable solution, helping to vastly improve
-  the user experience of the application.
-slug: recorddetailsredesign
 draft: false
 featured: true
 featuredOrder: 2
-workOrder: 6
+workOrder: 3
 passwordProtected: false
-password: ''
+password: ""
+title: Record Details Redesign
+summary: As the primary designer tasked with a complete redesign of all record
+  detail views across the entire application, I overcame many challenges to
+  introduce an easier to use, flexible, and scalable solution, helping to vastly
+  improve the user experience of the application.
+slug: recorddetailsredesign
 cardDescription: Overhauling a major part of the UI.
 cardTag: Product Design
 cardThumb: /projects/recorddetailsredesign/images/recorddetails-thumb.png
@@ -42,11 +41,7 @@ sections:
 
 
 
-          <p>The original details pages were extremely information dense. While
-          there were benefits to being able to see a maximum amount of
-          information "above the fold," the UI was difficult to parse and felt
-          daunting to non-power users (power users just learned the UI over
-          time).</p>
+          <p>The original details pages were extremely information dense. While there were benefits to being able to see a maximum amount of information "above the fold," the UI was difficult to parse and felt daunting to non-power users (power users just learned the UI over time).</p>
       - type: images
         items:
           - src: browser-drawer-old.png
@@ -72,9 +67,7 @@ sections:
                           <li>Improve the performance of the details pages, especially upon initial load</li>
                         </ul>
 
-          <p>We believe strongly in these goals and ran every decision we made
-          through them to ensure that we were staying true to what we set out to
-          do.</p>
+          <p>We believe strongly in these goals and ran every decision we made through them to ensure that we were staying true to what we set out to do.</p>
 
 
           <div style="clear: both;"></div>
@@ -105,16 +98,7 @@ sections:
           <h4>Early Iteration</h4>
 
 
-          <p>This project required many low-fidelity wireframes. One major
-          reason for this was that we were exploring some major structural
-          changes to the record detail interface. One of these major decisions
-          was whether to keep the "everyone on one screen" approach that the
-          detail pages had always used or to use a more modular tabbed approach,
-          breaking record details into logical groupings. We knew that
-          introducing tabs would be met with a lot of hesitancy, but we felt
-          that it was necessary to improve performance and reduce cognitive
-          load. Once we decided that tabs were the way forward, things really
-          kicked into gear.</p>
+          <p>This project required many low-fidelity wireframes. One major reason for this was that we were exploring some major structural changes to the record detail interface. One of these major decisions was whether to keep the "everyone on one screen" approach that the detail pages had always used or to use a more modular tabbed approach, breaking record details into logical groupings. We knew that introducing tabs would be met with a lot of hesitancy, but we felt that it was necessary to improve performance and reduce cognitive load. Once we decided that tabs were the way forward, things really kicked into gear.</p>
       - type: images
         items:
           - src: wireframe-tabs-vs-sections.png
@@ -126,12 +110,7 @@ sections:
           <h4>High Fidelity</h4>
 
 
-          <p>Once we knew the general layout, it was time to work out the
-          details of the UI. This was particularly challenging because we knew
-          we wanted to improve the look and feel of the record details pages to
-          give it a more modern feel and make it simpler, but we also needed to
-          work within the confines of the existing design language since record
-          details can be viewed anywhere in the application.</p>
+          <p>Once we knew the general layout, it was time to work out the details of the UI. This was particularly challenging because we knew we wanted to improve the look and feel of the record details pages to give it a more modern feel and make it simpler, but we also needed to work within the confines of the existing design language since record details can be viewed anywhere in the application.</p>
       - type: images
         items:
           - src: drawer-redesign.png
@@ -150,11 +129,7 @@ sections:
           <h4>Additional Records</h4>
 
 
-          <p>Once we had a basic framework in place, it was time to apply it to
-          the many different records in the product. Each record had <mark
-          class="mark-teal">distinct data that needed to be manually
-          designed.</mark> Thankfully, our ultra-modular design was able to
-          handle the many needs of all of the records.</p>
+          <p>Once we had a basic framework in place, it was time to apply it to the many different records in the product. Each record had <mark class="mark-teal">distinct data that needed to be manually designed.</mark> Thankfully, our ultra-modular design was able to handle the many needs of all of the records.</p>
 
 
           <div style="clear: both;"></div>
@@ -171,15 +146,12 @@ sections:
 
 
 
-          <p>We also, for the first time, made the transition opt-in for a
-          period of time. This gave users time to explore the new record details
-          experience before fully committing. </p>
+          <p>We also, for the first time, made the transition opt-in for a period of time. This gave users time to explore the new record details experience before fully committing. </p>
       - type: images
         items:
           - src: earlyaccess-opt-in.png
-            caption: >-
-              Users had the option to opt-in (and back out, if desired) to the
-              new experience for a period of time
+            caption: Users had the option to opt-in (and back out, if desired) to the new
+              experience for a period of time
       - type: text
         body: '<div style="clear: both;"></div>'
   - heading: The Result
@@ -195,13 +167,8 @@ sections:
 
 
 
-          <p>Now, over a year later, we get a lot of <mark
-          class="mark-teal">positive feedback on the redesigned record details
-          views.</mark>  Internally, when we manage to stumble across a
-          screenshot of the old design, it is clear that we made great strides
-          in the user experience for the product.</p>
+          <p>Now, over a year later, we get a lot of <mark class="mark-teal">positive feedback on the redesigned record details views.</mark>  Internally, when we manage to stumble across a screenshot of the old design, it is clear that we made great strides in the user experience for the product.</p>
 
 
           <div style="clear: both;"></div>
 ---
-
