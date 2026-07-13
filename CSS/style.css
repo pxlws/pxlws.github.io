@@ -399,16 +399,16 @@ html.project-gate-locked #layout {
   color: #222325;
   cursor: pointer;
   display: inline-flex;
+  float: right;
   font-size: 1.1em;
   height: 44px;
   justify-content: center;
+  margin: 20px 10px 0 0;
   padding: 0;
-  position: fixed;
-  right: 24px;
-  top: 24px;
+  position: relative;
   transition: all 0.2s ease;
   width: 44px;
-  z-index: 10002;
+  z-index: 1001;
 }
 
 .project-gate-unlock-control:hover {
@@ -1232,6 +1232,10 @@ h1 {
 
 .hamburger {
   margin: 20px 20px 0 0;
+}
+
+.project-gate-unlock-control {
+  margin: 20px 8px 0 0;
 }
 
 img {
