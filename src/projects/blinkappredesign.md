@@ -69,8 +69,10 @@ sections:
         items:
           - src: home-previous.png
             caption: The previous Home screen
+            width: 80
           - src: home-new-2.png
             caption: The redesigned Home screen
+            width: 80
       - type: text
         body: >
           Device-level actions — like toggling motion detection, refreshing a
