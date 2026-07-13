@@ -45,30 +45,6 @@
       .replace(/<p>\s*<\/p>/gi, "");
   }
 
-  function isUsablePreviewUrl(url) {
-    if (!url || url === "[object Object]" || url === "[object Promise]") {
-      return false;
-    }
-
-    if (/^(blob:|data:)/i.test(url)) {
-      return true;
-    }
-
-    if (/localhost:\d+/i.test(url) || /127\.0\.0\.1:\d+/i.test(url)) {
-      return false;
-    }
-
-    if (/api\.github\.com/i.test(url)) {
-      return false;
-    }
-
-    if (/^https?:\/\//i.test(url)) {
-      return true;
-    }
-
-    return url.indexOf("/") === 0;
-  }
-
   function resolveImageUrl(src, slug) {
     if (!src) {
       return src;
@@ -106,17 +82,26 @@
       return src;
     }
 
+    var candidates = [src];
+    if (src.indexOf("/") === 0) {
+      candidates.push(src.split("/").pop());
+    }
+
     if (getAsset) {
-      try {
-        var asset = getAsset(src);
-        if (asset) {
+      for (var i = 0; i < candidates.length; i++) {
+        try {
+          var asset = getAsset(candidates[i]);
+          if (!asset) {
+            continue;
+          }
+
           var assetUrl = typeof asset.toString === "function" ? asset.toString() : "";
-          if (isUsablePreviewUrl(assetUrl)) {
+          if (/^(blob:|data:)/i.test(assetUrl)) {
             return assetUrl;
           }
+        } catch (error) {
+          // Try the next candidate.
         }
-      } catch (error) {
-        // Fall back to site-root paths below.
       }
     }
 

@@ -30,7 +30,7 @@ collections:
     slug: "{{slug}}"
     identifier_field: slug
     preview_path: "/projects/{{slug}}/"
-    media_folder: projects/{{slug}}/images
+    media_folder: /projects/{{slug}}/images
     public_folder: /projects/{{slug}}/images
     fields:
       - label: Visible on site
