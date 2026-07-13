@@ -861,6 +861,17 @@ a:hover {
 .project-content p {
   font-size: 1.1em;
   color: #000;
+  line-height: 1.6em;
+  margin: 0 0 1.25em 0;
+}
+
+.project-content p:last-child {
+  margin-bottom: 0;
+}
+
+.project-content ul,
+.project-content ol {
+  margin: 0 0 1.25em 0;
 }
 
 .project-header p {
