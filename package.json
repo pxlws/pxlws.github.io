@@ -8,7 +8,10 @@
     "dev:cms": "node scripts/sync-project-config.js && node scripts/sync-cms-local-config.js && npx concurrently -k \"decap-server\" \"eleventy --serve --watch\"",
     "cms:oauth": "bash scripts/setup-cms-oauth.sh",
     "cms:publish-all": "node scripts/publish-cms-drafts.js",
-    "cms:publish-all:dry-run": "node scripts/publish-cms-drafts.js --dry-run"
+    "cms:publish-all:dry-run": "node scripts/publish-cms-drafts.js --dry-run",
+    "cms:workflow-status": "node scripts/cleanup-cms-workflow.js --dry-run",
+    "cms:clean-workflow": "node scripts/cleanup-cms-workflow.js",
+    "cms:discard-draft": "node scripts/cleanup-cms-workflow.js --discard"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

@@ -13,7 +13,7 @@ function listOpenCmsPullRequests() {
     "--state",
     "open",
     "--json",
-    "number,headRefName,title",
+    "number,headRefName,title,mergeable",
     "--limit",
     "100",
   ]);
@@ -21,6 +21,26 @@ function listOpenCmsPullRequests() {
   return JSON.parse(output).filter(function (pr) {
     return pr.headRefName.startsWith("cms/");
   });
+}
+
+function updatePullRequestBranch(number) {
+  try {
+    runGh([
+      "api",
+      "-X",
+      "PUT",
+      "repos/pxlws/pxlws.github.io/pulls/" + number + "/update-branch",
+    ]);
+    console.log("  Synced pull request branch with master.");
+  } catch (error) {
+    const message = error.message || "";
+    if (message.includes("already up to date") || message.includes("422")) {
+      console.log("  Pull request branch is already current.");
+      return;
+    }
+
+    throw error;
+  }
 }
 
 function main() {
@@ -51,6 +71,7 @@ function main() {
 
   pullRequests.forEach(function (pr) {
     console.log("Merging #" + pr.number + "...");
+    updatePullRequestBranch(pr.number);
     runGh(["pr", "merge", String(pr.number), "--squash", "--delete-branch"]);
   });
 
