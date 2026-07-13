@@ -1,7 +1,7 @@
 ---
+featuredOrder: 1
 draft: false
 featured: true
-featuredOrder: 1
 workOrder: 0
 passwordProtected: true
 password: gobirds
@@ -69,7 +69,7 @@ sections:
         items:
           - src: home-previous.png
             caption: The previous Home screen
-          - src: home-new.png
+          - src: /projects/blinkappredesign/images/home-new-2.png
             caption: The redesigned Home screen
       - type: text
         body: >
