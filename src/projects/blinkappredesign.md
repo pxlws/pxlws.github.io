@@ -110,18 +110,10 @@ sections:
         items:
           - src: clips-previous.png
             caption: The previous Clip List
-          - src: clips-new.png
+            width: 80
+          - src: /projects/blinkappredesign/images/clips1-new-1.png
             caption: The redesigned Clip List
-      - type: text
-        body: >
-          Bulk actions were also rethought. Entering edit mode lets users select
-          multiple clips across date groups, with clear affordances for select
-          all, mark as viewed, and delete — making it much faster to manage a
-          growing library of recordings.
-      - type: images
-        items:
-          - src: clips-selection-new.png
-            caption: Multi-select mode in the redesigned Clip List
+            width: 80
   - heading: My Role
     blocks:
       - type: text
