@@ -391,6 +391,31 @@ html.project-gate-locked #layout {
   color: #0f4e9a;
 }
 
+.project-gate-unlock-control {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: none;
+  border-radius: 100px;
+  color: #222325;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.1em;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  transition: all 0.2s ease;
+  width: 44px;
+  z-index: 10002;
+}
+
+.project-gate-unlock-control:hover {
+  background-color: #fff;
+  color: #0f4e9a;
+}
+
 .project-gate-error {
   color: #c0392b;
   font-family: "Lato", sans-serif;
