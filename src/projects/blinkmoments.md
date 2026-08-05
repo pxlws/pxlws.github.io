@@ -82,6 +82,11 @@ sections:
 
 
           Moments can be toggled on or off from the clip list, exported as a single MP4, or shared directly to social and messaging apps. Bulk actions — select all, delete, mark as viewed — work across Moments the same way they do for individual clips. First-time users get a short onboarding tour, and an in-app survey collects feedback on the experience.
+      - type: images
+        items:
+          - caption: ""
+            width: 21
+            src: /projects/blinkmoments/images/imockup-iphone-15-pro-max-1.png
   - heading: The Result
     blocks:
       - type: text
