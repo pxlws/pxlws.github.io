@@ -18,15 +18,16 @@ sections:
   - heading: Background
     blocks:
       - type: text
-        body: >
+        body: >-
           Amazon's [Blink](https://blinkforhome.com) is a home WiFi security
-          camera system used by millions of customers to monitor their homes,
-          receive motion alerts, and review recorded events. The mobile app is
-          the primary way people interact with their cameras — checking live
-          views, arming their system, and browsing clips when something happens.
+          camera system used by tens of millions of customers to monitor their
+          homes, receive motion alerts, and review recorded events. The mobile
+          app is the primary way people interact with their cameras — checking
+          live views, arming their system, and browsing clips when something
+          happens.
 
 
-          That clip list grows quickly. The average Blink household has three or more devices, generating roughly 1,009 motion detections each month. Reviewing those events one clip at a time meant scrolling through a long, fragmented timeline — and missing the bigger picture of how an event unfolded across cameras.
+          That clip list grows quickly. The average Blink household has three or more devices, generating 1000+ motion detections each month. Reviewing those events one clip at a time meant scrolling through a long, fragmented timeline — and missing the bigger picture of how an event unfolded across cameras.
   - heading: The Challenge
     blocks:
       - type: text
