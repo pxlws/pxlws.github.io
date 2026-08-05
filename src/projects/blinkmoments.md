@@ -31,6 +31,11 @@ sections:
           sharing, and onboarding. I worked closely with product and engineering
           to turn a dense clip-review problem into a clearer event experience —
           and to iterate after launch based on real customer feedback.
+      - type: images
+        items:
+          - caption: ""
+            width: 90
+            src: /projects/blinkmoments/images/moment-highlighted.png
   - heading: The Challenge
     blocks:
       - type: text
