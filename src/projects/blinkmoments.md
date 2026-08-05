@@ -12,7 +12,7 @@ summary: >-
   seamless, multi-camera event videos customers can review, share, and manage
   with far less effort.
 slug: blinkmoments
-cardDescription: Turning clip overload into seamless event stories.
+cardDescription: Reducing clip overload with seamless Moments.
 cardTag: Product Design
 cardThumb: /projects/blinkmoments/images/moments-thumb.png
 sections:
