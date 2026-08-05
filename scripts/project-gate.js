@@ -19,12 +19,6 @@
     } catch (e) {}
   }
 
-  function clearUnlocked() {
-    try {
-      sessionStorage.removeItem(STORAGE_KEY);
-    } catch (e) {}
-  }
-
   function lockPage() {
     document.documentElement.classList.add("project-gate-locked");
     document.body.classList.add("project-gate-locked");
@@ -122,7 +116,6 @@
             setUnlocked();
             unlockPage();
             overlay.remove();
-            createUnlockControl(gate);
             return;
           }
 
@@ -143,29 +136,6 @@
     input.focus();
   }
 
-  function createUnlockControl(gate) {
-    if (document.getElementById("project-gate-unlock-control")) {
-      return;
-    }
-
-    var button = document.createElement("button");
-    button.type = "button";
-    button.id = "project-gate-unlock-control";
-    button.className = "project-gate-unlock-control";
-    button.setAttribute("aria-label", "Lock project");
-    button.setAttribute("title", "Lock this project");
-    button.innerHTML = '<i class="fal fa-lock-open" aria-hidden="true"></i>';
-
-    button.addEventListener("click", function () {
-      clearUnlocked();
-      lockPage();
-      button.remove();
-      createGate(gate);
-    });
-
-    document.body.appendChild(button);
-  }
-
   function initGate(config) {
     var gate = normalizeGate(config && config[slug]);
 
@@ -175,7 +145,6 @@
 
     if (isUnlocked()) {
       unlockPage();
-      createUnlockControl(gate);
       return;
     }
 

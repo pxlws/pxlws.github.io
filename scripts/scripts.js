@@ -347,6 +347,62 @@ function initWorkCategoryFilter() {
     });
   }
 
+  function syncCardHeightsByRow() {
+    var visibleCards = cards.filter(function (card) {
+      return !card.classList.contains("is-hidden");
+    });
+
+    visibleCards.forEach(function (card) {
+      var body = card.querySelector(".card .pa4");
+      if (body) body.style.height = "";
+    });
+
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      return;
+    }
+
+    var visibleColumns = columns.filter(function (column) {
+      return !column.classList.contains("is-empty");
+    });
+
+    if (visibleColumns.length < 2) {
+      return;
+    }
+
+    var cardsByColumn = visibleColumns.map(function (column) {
+      return Array.from(column.querySelectorAll(".work-card:not(.is-hidden)"));
+    });
+    var rowCount = Math.max.apply(
+      null,
+      cardsByColumn.map(function (columnCards) {
+        return columnCards.length;
+      })
+    );
+
+    for (var index = 0; index < rowCount; index++) {
+      var row = cardsByColumn
+        .map(function (columnCards) {
+          return columnCards[index];
+        })
+        .filter(Boolean);
+      var bodies = row
+        .map(function (card) {
+          return card.querySelector(".card .pa4");
+        })
+        .filter(Boolean);
+      var rowHeight = Math.max.apply(
+        null,
+        bodies.map(function (body) {
+          return body.scrollHeight;
+        })
+      );
+
+      bodies.forEach(function (body) {
+        body.style.height = rowHeight + "px";
+      });
+    }
+  }
+
   function restoreOriginalLayout() {
     cards.forEach(function (card) {
       card.classList.remove("is-hidden");
@@ -371,6 +427,8 @@ function initWorkCategoryFilter() {
         });
       column.classList.remove("is-empty");
     });
+
+    syncCardHeightsByRow();
   }
 
   function reflowFiltered(filter) {
@@ -398,6 +456,7 @@ function initWorkCategoryFilter() {
     });
 
     updateEmptyColumns();
+    syncCardHeightsByRow();
   }
 
   filters.addEventListener("click", function (event) {
@@ -416,6 +475,57 @@ function initWorkCategoryFilter() {
 
     reflowFiltered(filter);
   });
+
+  var resizeFrame;
+  window.addEventListener("resize", function () {
+    window.cancelAnimationFrame(resizeFrame);
+    resizeFrame = window.requestAnimationFrame(syncCardHeightsByRow);
+  });
+
+  syncCardHeightsByRow();
+}
+
+function initFeaturedCardHeights() {
+  var cards = Array.from(document.querySelectorAll(".featured-card"));
+  if (!cards.length) return;
+
+  function syncFeaturedCardHeights() {
+    var bodies = cards
+      .map(function (card) {
+        return card.querySelector(".card .pa4");
+      })
+      .filter(Boolean);
+
+    bodies.forEach(function (body) {
+      body.style.height = "";
+    });
+
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      return;
+    }
+
+    for (var index = 0; index < bodies.length; index += 3) {
+      var row = bodies.slice(index, index + 3);
+      var rowHeight = Math.max.apply(
+        null,
+        row.map(function (body) {
+          return body.scrollHeight;
+        })
+      );
+
+      row.forEach(function (body) {
+        body.style.height = rowHeight + "px";
+      });
+    }
+  }
+
+  var resizeFrame;
+  window.addEventListener("resize", function () {
+    window.cancelAnimationFrame(resizeFrame);
+    resizeFrame = window.requestAnimationFrame(syncFeaturedCardHeights);
+  });
+
+  syncFeaturedCardHeights();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -425,5 +535,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initProjectGateBadges();
   initAdminShortcut();
   initWorkCategoryFilter();
+  initFeaturedCardHeights();
   loadDribbbleShots();
 });
