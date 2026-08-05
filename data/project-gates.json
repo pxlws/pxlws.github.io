@@ -2,5 +2,9 @@
   "blinkappredesign": {
     "salt": "c89b4a3d719722ac",
     "hash": "39b7591e531f6e7ccd16e4c384dc2d6da0c486d2393b1021a6bd24b69a28cda0"
+  },
+  "blinkmoments": {
+    "salt": "96aec882cc8272f7",
+    "hash": "7725a0423dcf15f940db6632d698bd19eb0119dfdd8eab66ce1f8d33fe5c5422"
   }
 }

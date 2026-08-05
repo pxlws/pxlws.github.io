@@ -142,6 +142,25 @@ html.theme-dark .mark-teal-alt {
   color: #fff;
 }
 
+html.theme-dark .project-content h4 {
+  color: #fff;
+}
+
+html.theme-dark .project-data-table th {
+  background-color: #232b31;
+  color: #fff;
+}
+
+html.theme-dark .project-data-table th,
+html.theme-dark .project-data-table td {
+  border-bottom-color: #2d363d;
+  color: #e8eef3;
+}
+
+html.theme-dark .project-data-table .table-note {
+  color: #9ca4ab;
+}
+
 html.theme-dark #shots img {
   border-color: #2d363d;
 }
