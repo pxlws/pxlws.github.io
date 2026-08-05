@@ -18,28 +18,11 @@ sections:
   - heading: Background
     blocks:
       - type: text
-        body: >-
-          Amazon's [Blink](https://blinkforhome.com) is a home WiFi security
-          camera system used by tens of millions of customers to monitor their
-          homes, receive motion alerts, and review recorded events. The mobile
-          app is the primary way people interact with their cameras — checking
-          live views, arming their system, and browsing clips when something
-          happens.
-
-
-          That clip list grows quickly. The average Blink household has three or more devices, generating 1000+ motion detections each month. Reviewing those events one clip at a time meant scrolling through a long, fragmented timeline — and missing the bigger picture of how an event unfolded across cameras.
-  - heading: The Challenge
-    blocks:
-      - type: text
-        body: >
-          Customers weren't just drowning in clips — they were piecing stories
-          together by hand. A package delivery might appear as separate clips
-          from the front door and driveway cameras, recorded seconds apart.
-          Finding what mattered meant scrubbing through each one, remembering
-          timestamps, and mentally stitching the sequence.
-
-
-          We needed a way to surface complete events automatically — across cameras, in order — without asking customers to do that work themselves. Moments had to feel like a natural extension of the Clip List, not a second place to look.
+        body: Amazon's [Blink](https://blinkforhome.com/) is a home WiFi security camera
+          system used by tens of millions of customers to monitor their homes,
+          receive motion alerts, and review recorded events. The mobile app is
+          the primary way people interact with their cameras — checking live
+          views, arming their system, and browsing clips when something happens.
   - heading: My Role
     blocks:
       - type: text
@@ -48,6 +31,20 @@ sections:
           sharing, and onboarding. I worked closely with product and engineering
           to turn a dense clip-review problem into a clearer event experience —
           and to iterate after launch based on real customer feedback.
+  - heading: The Challenge
+    blocks:
+      - type: text
+        body: >-
+          The average Blink household has three or more devices, generating
+          1000+ motion detections each month. Reviewing those events one clip at
+          a time meant scrolling through a long, fragmented timeline — and
+          missing the bigger picture of how an event unfolded across cameras.
+
+
+          Customers were telling us that one of their biggest issues with the platform is that there were too many clips and it was difficult to find the important ones.
+
+
+          We needed to find a way to surface important events happening across cameras and over a period of time.
   - heading: Our Goals
     blocks:
       - type: text
