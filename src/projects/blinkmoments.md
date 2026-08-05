@@ -6,7 +6,8 @@ workOrder: 1
 passwordProtected: true
 password: gobirds
 title: Blink Moments
-summary: As a designer on the Blink mobile app, I helped shape Blink Moments — a
+summary: >-
+  As a designer on the Blink mobile app, I helped shape Blink Moments — a
   subscription feature that turns a flood of individual camera clips into
   seamless, multi-camera event videos customers can review, share, and manage
   with far less effort.
@@ -18,24 +19,21 @@ sections:
   - heading: Background
     blocks:
       - type: text
-        body: Amazon's [Blink](https://blinkforhome.com/) is a home WiFi security camera
-          system used by tens of millions of customers to monitor their homes,
-          receive motion alerts, and review recorded events. The mobile app is
-          the primary way people interact with their cameras — checking live
-          views, arming their system, and browsing clips when something happens.
+        body: "Amazon's\_[Blink](https://blinkforhome.com/)\_is a home WiFi security camera system used by tens of millions of customers to monitor their homes, receive motion alerts, and review recorded events. The mobile app is the primary way people interact with their cameras — checking live views, arming their system, and browsing clips when something happens."
   - heading: My Role
     blocks:
       - type: text
-        body: As the lead designer on this project, I contributed to the interaction and
-          visual design of Moments across clip stitching, playback, details,
+        body: >-
+          As the lead designer on this project, I contributed to the interaction
+          and visual design of Moments across clip stitching, playback, details,
           sharing, and onboarding. I worked closely with product and engineering
           to turn a dense clip-review problem into a clearer event experience —
           and to iterate after launch based on real customer feedback.
       - type: images
         items:
-          - caption: ""
+          - caption: ''
             width: 90
-            src: /projects/blinkmoments/images/moment-highlighted.png
+            src: moment-highlighted.png
   - heading: The Challenge
     blocks:
       - type: text
@@ -46,10 +44,13 @@ sections:
           missing the bigger picture of how an event unfolded across cameras.
 
 
-          Customers were telling us that one of their biggest issues with the platform is that there were too many clips and it was difficult to find the important ones.
+          Customers were telling us that one of their biggest issues with the
+          platform is that there were too many clips and it was difficult to
+          find the important ones.
 
 
-          We needed to find a way to surface important events happening across cameras and over a period of time.
+          We needed to find a way to surface important events happening across
+          cameras and over a period of time.
   - heading: Our Goals
     blocks:
       - type: text
@@ -58,15 +59,19 @@ sections:
           with a clear set of goals:
 
 
-          - Reduce information overload by grouping related clips into manageable events
+          - Reduce information overload by grouping related clips into
+          manageable events
 
-          - Make event discovery automatic — show the full sequence without manual sifting
+          - Make event discovery automatic — show the full sequence without
+          manual sifting
 
-          - Support multi-camera viewing so customers can see an event from every relevant angle
+          - Support multi-camera viewing so customers can see an event from
+          every relevant angle
 
           - Simplify sharing by exporting a complete Moment as a single video
 
-          - Save time while making it less likely customers miss something important
+          - Save time while making it less likely customers miss something
+          important
   - heading: The Experience
     blocks:
       - type: text
@@ -78,15 +83,24 @@ sections:
           specific occurrence.
 
 
-          Instead of scrolling a long list of individual clips, customers open one continuous video. A notched scrubber marks where each clip begins within the Moment, so the structure of the event stays visible while playback feels unbroken. Long-pressing a Moment opens a details sheet with thumbnails, timestamps, and event types for every clip inside it.
+          Instead of scrolling a long list of individual clips, customers open
+          one continuous video. A notched scrubber marks where each clip begins
+          within the Moment, so the structure of the event stays visible while
+          playback feels unbroken. Long-pressing a Moment opens a details sheet
+          with thumbnails, timestamps, and event types for every clip inside it.
 
 
-          Moments can be toggled on or off from the clip list, exported as a single MP4, or shared directly to social and messaging apps. Bulk actions — select all, delete, mark as viewed — work across Moments the same way they do for individual clips. First-time users get a short onboarding tour, and an in-app survey collects feedback on the experience.
+          Moments can be toggled on or off from the clip list, exported as a
+          single MP4, or shared directly to social and messaging apps. Bulk
+          actions — select all, delete, mark as viewed — work across Moments the
+          same way they do for individual clips. First-time users get a short
+          onboarding tour, and an in-app survey collects feedback on the
+          experience.
       - type: images
         items:
-          - caption: ""
+          - caption: ''
             width: 70
-            src: /projects/blinkmoments/images/imockup-iphone-15-pro-max-1.png
+            src: imockup-iphone-15-pro-max-1.png
   - heading: The Result
     blocks:
       - type: text
@@ -99,7 +113,9 @@ sections:
 
           <h4>Moments awareness</h4>
 
-          <p>Free-trial users who viewed at least one Moment attached to Plus at roughly <mark class="mark-teal">2.5× the rate</mark> of users who watched clips but never opened a Moment.</p>
+          <p>Free-trial users who viewed at least one Moment attached to Plus at
+          roughly <mark class="mark-teal">2.5× the rate</mark> of users who
+          watched clips but never opened a Moment.</p>
 
           <table class="project-data-table">
             <thead>
@@ -123,7 +139,9 @@ sections:
 
           <h4>Moments engagement</h4>
 
-          <p>Among three-camera customers, deeper Moments use during trial correlated with more than <mark class="mark-teal">3× higher</mark> attach.</p>
+          <p>Among three-camera customers, deeper Moments use during trial
+          correlated with more than <mark class="mark-teal">3× higher</mark>
+          attach.</p>
 
           <table class="project-data-table">
             <thead>
@@ -147,7 +165,11 @@ sections:
 
           <h4>Year-over-year eligibility</h4>
 
-          <p>Comparing August cohorts — with Moments available in 2024, and without in 2023 — Plus attach was about <mark class="mark-teal">8× higher</mark>. Basic Plan attach actually fell over the same period, which made the Plus gains harder to dismiss as general market lift.</p>
+          <p>Comparing August cohorts — with Moments available in 2024, and
+          without in 2023 — Plus attach was about <mark class="mark-teal">8×
+          higher</mark>. Basic Plan attach actually fell over the same period,
+          which made the Plus gains harder to dismiss as general market
+          lift.</p>
 
           <table class="project-data-table">
             <thead>
@@ -172,7 +194,15 @@ sections:
           </table>
 
 
-          <p>Moments usage tracked specifically with Plus conversion — the core business objective for Blink. Adoption backed that story up at scale: roughly <strong>4 million</strong> eligible customers, <strong>88%</strong> with Moments enabled, more than <strong>2.5 million hours</strong> watched, and over <strong>45 minutes</strong> average watch time per customer. All eight rollout ramps completed without a forced rollback across US, CA, UK, FR, IT, ES, NL, DE, BE, and MX, and “do no harm” guardrails on customer contacts and escalations held throughout.</p>
+          <p>Moments usage tracked specifically with Plus conversion — the core
+          business objective for Blink. Adoption backed that story up at scale:
+          roughly <strong>4 million</strong> eligible customers,
+          <strong>88%</strong> with Moments enabled, more than <strong>2.5
+          million hours</strong> watched, and over <strong>45 minutes</strong>
+          average watch time per customer. All eight rollout ramps completed
+          without a forced rollback across US, CA, UK, FR, IT, ES, NL, DE, BE,
+          and MX, and “do no harm” guardrails on customer contacts and
+          escalations held throughout.</p>
   - heading: Closing
     blocks:
       - type: text
@@ -183,5 +213,9 @@ sections:
           sharing a complete sequence as simple as exporting one video.
 
 
-          Viewed in aggregate, the post-launch data points to a common theme: Moments usage correlates with Plus Plan attach. For Blink, that made Moments more than a better way to watch clips — it became a meaningful driver of the subscription business.
+          Viewed in aggregate, the post-launch data points to a common theme:
+          Moments usage correlates with Plus Plan attach. For Blink, that made
+          Moments more than a better way to watch clips — it became a meaningful
+          driver of the subscription business.
 ---
+
