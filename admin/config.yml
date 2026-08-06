@@ -124,12 +124,6 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - label: Grey background
-                    name: showBackground
-                    widget: boolean
-                    required: false
-                    default: true
-                    hint: Show the soft grey frame behind this image group. Turn off for images that already have their own background.
                   - label: Images
                     name: items
                     label_singular: Image
@@ -155,3 +149,9 @@ collections:
                         min: 10
                         max: 100
                         hint: Width as a percentage of the content column. 100 is full width; lower values shrink the image and keep its aspect ratio.
+                      - label: Grey background
+                        name: showBackground
+                        widget: boolean
+                        required: false
+                        default: true
+                        hint: Show the soft grey frame behind this image. Turn off for images that already have their own background.

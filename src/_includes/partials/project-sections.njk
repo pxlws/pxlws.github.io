@@ -12,10 +12,10 @@
       {% if block.type == "text" %}
         {{ block.body | renderMarkdown | safe }}
       {% elif block.type == "images" %}
-        {% set showBackground = block.showBackground | default(true) %}
-        <div class="project-image-block{% if showBackground %} project-image-block--framed{% endif %}">
+        <div class="project-image-block">
           {% for image in block.items %}
-            <div{% if not loop.first %} style="padding-top: 25px;"{% endif %}>
+            {% set showBackground = image.showBackground | default(true) %}
+            <div class="project-image{% if showBackground %} project-image--framed{% endif %}">
               {% set imgWidth = image.width | default(100) %}
               <img style="padding-bottom:0px; width: {{ imgWidth }}%; height: auto; max-width: 100%; display: block; margin: 0 auto;" src="{{ image.src | projectImageSrc(slug) }}" alt="{{ image.caption }}">
               <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);">{{ image.caption }}</p>

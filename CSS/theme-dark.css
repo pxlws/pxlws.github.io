@@ -275,6 +275,7 @@ html.theme-dark .project-gate-nav-back:hover {
   color: #00c0b9;
 }
 
+html.theme-dark .project-image--framed,
 html.theme-dark .project-image-block--framed,
 html.theme-dark [style*="background-color: #e4eaee"] {
   background-color: #1a2027 !important;

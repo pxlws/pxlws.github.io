@@ -137,30 +137,15 @@
     var items = block.get("items");
     if (!items || !items.size) return null;
 
-    var showBackground = block.get("showBackground");
-    if (showBackground === null || showBackground === undefined) {
-      showBackground = true;
-    }
-
-    var style = {
-      width: "100%",
-      margin: "30px 0",
-    };
-
-    if (showBackground) {
-      style.backgroundColor = "#e4eaee";
-      style.padding = "3% 6% 6% 6%";
-      style.borderRadius = "8px";
-    }
-
     return h(
       "div",
       {
         key: key,
-        className: showBackground
-          ? "project-image-block project-image-block--framed"
-          : "project-image-block",
-        style: style,
+        className: "project-image-block",
+        style: {
+          width: "100%",
+          margin: "30px 0",
+        },
       },
       items.map(function (image, index) {
         var src = image.get("src");
@@ -170,9 +155,27 @@
           width = 100;
         }
 
+        var showBackground = image.get("showBackground");
+        if (showBackground === null || showBackground === undefined) {
+          showBackground = true;
+        }
+
+        var itemStyle = index > 0 ? { marginTop: "25px" } : {};
+        if (showBackground) {
+          itemStyle.backgroundColor = "#e4eaee";
+          itemStyle.padding = "3% 6% 6% 6%";
+          itemStyle.borderRadius = "8px";
+        }
+
         return h(
           "div",
-          { key: index, style: index > 0 ? { paddingTop: "25px" } : {} },
+          {
+            key: index,
+            className: showBackground
+              ? "project-image project-image--framed"
+              : "project-image",
+            style: itemStyle,
+          },
           h("img", {
             src: url,
             style: {

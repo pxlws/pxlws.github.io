@@ -985,7 +985,11 @@ a:hover {
   width: 100%;
 }
 
-.project-image-block--framed {
+.project-image + .project-image {
+  margin-top: 25px;
+}
+
+.project-image--framed {
   background-color: #e4eaee;
   border-radius: 8px;
   padding: 3% 6% 6% 6%;
