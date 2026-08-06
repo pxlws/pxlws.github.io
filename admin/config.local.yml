@@ -122,6 +122,14 @@ collections:
                 widget: object
                 required: false
                 fields:
+                  - label: Grey background
+                    name: showBackground
+                    widget: boolean
+                    required: false
+                    default: true
+                    hint: >-
+                      Show the soft grey frame behind this image group. Turn off
+                      for images that already have their own background.
                   - label: Images
                     name: items
                     label_singular: Image

@@ -12,7 +12,8 @@
       {% if block.type == "text" %}
         {{ block.body | renderMarkdown | safe }}
       {% elif block.type == "images" %}
-        <div style="background-color: #e4eaee; width: 100%; padding: 3% 6% 6% 6%; margin: 30px 0; border-radius: 8px;">
+        {% set showBackground = block.showBackground | default(true) %}
+        <div class="project-image-block{% if showBackground %} project-image-block--framed{% endif %}">
           {% for image in block.items %}
             <div{% if not loop.first %} style="padding-top: 25px;"{% endif %}>
               {% set imgWidth = image.width | default(100) %}

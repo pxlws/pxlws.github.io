@@ -137,17 +137,30 @@
     var items = block.get("items");
     if (!items || !items.size) return null;
 
+    var showBackground = block.get("showBackground");
+    if (showBackground === null || showBackground === undefined) {
+      showBackground = true;
+    }
+
+    var style = {
+      width: "100%",
+      margin: "30px 0",
+    };
+
+    if (showBackground) {
+      style.backgroundColor = "#e4eaee";
+      style.padding = "3% 6% 6% 6%";
+      style.borderRadius = "8px";
+    }
+
     return h(
       "div",
       {
         key: key,
-        style: {
-          backgroundColor: "#e4eaee",
-          width: "100%",
-          padding: "3% 6% 6% 6%",
-          margin: "30px 0",
-          borderRadius: "8px",
-        },
+        className: showBackground
+          ? "project-image-block project-image-block--framed"
+          : "project-image-block",
+        style: style,
       },
       items.map(function (image, index) {
         var src = image.get("src");
