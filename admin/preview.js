@@ -216,16 +216,22 @@
           sections && sections.size
             ? sections.map(function (section, sectionIndex) {
                 var blocks = section.get("blocks");
+                var heading = (section.get("heading") || "").trim();
+                var sectionClass = heading
+                  ? "project-section"
+                  : "project-section project-section--full";
 
                 return h(
                   "div",
-                  { className: "project-section", key: sectionIndex },
-                  h(
-                    "div",
-                    { className: "project-col1" },
-                    h("h3", {}, section.get("heading")),
-                    h("div", { style: { clear: "both" } })
-                  ),
+                  { className: sectionClass, key: sectionIndex },
+                  heading
+                    ? h(
+                        "div",
+                        { className: "project-col1" },
+                        h("h3", {}, heading),
+                        h("div", { style: { clear: "both" } })
+                      )
+                    : null,
                   h(
                     "div",
                     { className: "project-col2" },

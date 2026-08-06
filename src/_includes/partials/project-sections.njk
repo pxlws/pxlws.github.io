@@ -1,9 +1,12 @@
 {% for section in sections %}
-<div class="project-section">
+{% set heading = section.heading | trim %}
+<div class="project-section{% if not heading %} project-section--full{% endif %}">
+  {% if heading %}
   <div class="project-col1">
-    <h3>{{ section.heading }}</h3>
+    <h3>{{ heading }}</h3>
     <div style="clear: both;"></div>
   </div>
+  {% endif %}
   <div class="project-col2">
     {% for block in section.blocks %}
       {% if block.type == "text" %}
