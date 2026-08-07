@@ -57,23 +57,24 @@ sections:
   - heading: Home Screen
     blocks:
       - type: text
-        body: The previous Home screen presented cameras as a vertical list with small
-          thumbnails, separate settings icons, and an arming toggle overlaid on
-          the feed. It worked, but felt utilitarian — controls were scattered,
-          and the hierarchy between cameras, live view, and system status wasn't
-          always clear.
+        body: The previous Home screen surfaced a number of action buttons that did not
+          have clear definition. Users like the fact that these buttons were at
+          the top level and easy to access, but there was a significant learning
+          curve for new users to understand what each button did. There were
+          also issue with visual weight, spacing, tappable elements being too
+          close together, and more.
       - type: images
         items:
           - src: home-previous.png
             caption: The previous Home screen
             width: 80
       - type: text
-        body: The redesigned Home screen puts camera feeds front and center. Each device
-          is shown as a large, immersive card with a prominent play button for
-          live view. Motion detection status and quick actions are grouped into
-          a compact control pill on each card, and system-level arming is
-          surfaced directly on multi-camera views. A streamlined bottom
-          navigation and refreshed header complete the look.
+        body: The redesigned Home screen keeps camera feeds front and center with a more
+          modern, clean look. Each device is shown as a large, immersive card
+          with a large thumbnail and a prominent play button that opens live
+          view. We kept the motion detection status (enabled or disabled) at the
+          top level so it was always visible and integrated it into a more
+          actions button that housed all other device-level actions.
       - type: images
         items:
           - caption: ""
@@ -81,10 +82,17 @@ sections:
             showBackground: true
             src: /projects/blinkappredesign/images/home-new-2.png
       - type: text
-        body: Device-level actions — like toggling motion detection, refreshing a
+        body: >-
+          Device-level actions — like toggling motion detection, refreshing a
           thumbnail, or adjusting lights — were consolidated into a clean action
-          sheet. This keeps the main view focused on the cameras while still
-          giving users fast access to the controls they reach for most often.
+          sheet. This offered a number of positive improvements: 
+
+
+          * Ensured device-level actions were now found in one consistent place.
+
+          * Removed unnecessary visual clutter from the Home screen, allowing the user to focus on the content of their cameras.
+
+          * Allowed actions to use both an icon, label, and optional subtext to improve usability, making it easier for new users to navigate the space.
       - type: images
         items:
           - src: home3-new-1.png
