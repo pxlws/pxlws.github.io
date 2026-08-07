@@ -22,7 +22,7 @@ sections:
           Amazon's [Blink](https://blinkforhome.com) is a home WiFi security
           camera system used by tens of millions of customers to keep an eye on
           their homes. The mobile app is currently the only way users interact
-          with Blink products. In the app they can check a camera's live view,
+          with Blink products. In the app, users can check a camera's live view,
           watch recorded clips, and more.
 
 
@@ -42,26 +42,26 @@ sections:
   - heading: Our Goals
     blocks:
       - type: text
-        body: >
+        body: >-
           With so many customers depending on these screens daily, we set out
           with a clear set of goals to guide every design decision:
 
 
-          - Modernize the visual design with a cleaner, more consistent interface
+          * Modernize the visual design with a cleaner, more consistent interface
 
-          - Improve scannability so users can find cameras and clips faster
+          * Improve scannability so users can find cameras and clips faster
 
-          - Surface the most important actions — live view, arming, and clip management — without cluttering the screen
+          * Surface the most important actions — live view, arming, and clip management — without cluttering the screen
 
-          - Support both light and dark mode with equal attention to detail
+          * Support both light and dark modes with equal attention to detail
   - heading: Home Screen
     blocks:
       - type: text
-        body: >
+        body: >-
           The previous Home screen presented cameras as a vertical list with
           small thumbnails, separate settings icons, and an arming toggle
           overlaid on the feed. It worked, but felt utilitarian — controls were
-          scattered and the hierarchy between cameras, live view, and system
+          scattered, and the hierarchy between cameras, live view, and system
           status wasn't always clear.
 
 
@@ -98,15 +98,15 @@ sections:
   - heading: Clip List
     blocks:
       - type: text
-        body: >
+        body: >-
           The Clip List is where users go to review what happened — motion
           events, doorbell rings, live view recordings, and more. The previous
           design combined an inline video player with a dense list of clips
-          below it. Useful for playback, but difficult to scan when you just
-          wanted to find a specific event.
+          below it. It was useful for playback, but difficult to scan when users
+          just wanted to find a specific event.
 
 
-          The redesign separates browsing from playback. Clips are organized into clear date groupings with event counts, rich thumbnails, and descriptive tags for event type — motion, doorbell, person detection, and live view. Unviewed clips are marked with a subtle indicator, and cloud storage status is always visible at the bottom of the list.
+          The redesign separates browsing from playback. Clips are organized into clear date groupings with event counts, rich thumbnails, and descriptive tags for event types — motion, doorbell, person detection, and live view. Unviewed clips are marked with a subtle indicator, and cloud storage status is always visible at the bottom of the list.
       - type: images
         items:
           - src: clips-previous.png
@@ -118,7 +118,7 @@ sections:
   - heading: My Role
     blocks:
       - type: text
-        body: >
+        body: >-
           As a designer on this project, I contributed to the visual and
           interaction design of both the Home and Clip List experiences. I
           worked closely with product and engineering to explore concepts,
@@ -126,7 +126,7 @@ sections:
           diverse customer base.
 
 
-          This included competitive research, iterating on high-fidelity mockups in both light and dark mode, and collaborating on the details — from event type labeling to bulk selection patterns — that make these screens feel polished at scale.
+          This included competitive research, iterating on high-fidelity mockups in both light and dark modes, and collaborating on the details — from event type labeling to bulk selection patterns — that make these screens feel polished at scale.
   - heading: The Result
     blocks:
       - type: text
