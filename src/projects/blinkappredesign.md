@@ -67,7 +67,7 @@ sections:
         items:
           - src: home-previous.png
             caption: The previous Home screen
-            width: 80
+            width: 70
       - type: text
         body: The redesigned Home screen keeps camera feeds front and center with a more
           modern, clean look. Each device is shown as a large, immersive card
@@ -78,7 +78,7 @@ sections:
       - type: images
         items:
           - caption: ""
-            width: 80
+            width: 70
             showBackground: true
             src: home-new-2.png
       - type: text
@@ -97,7 +97,7 @@ sections:
         items:
           - src: home3-new-1.png
             caption: A device action sheet for quick camera controls
-            width: 74
+            width: 70
       - type: text
         body: Dark mode received the same level of care. Camera cards, navigation, and
           controls were designed to feel native in both themes — not simply
@@ -106,7 +106,7 @@ sections:
         items:
           - src: home2-new-1.png
             caption: The redesigned Home screen in dark mode
-            width: 80
+            width: 70
         body: The redesigned Home screen puts camera feeds front and center. Each device
           is shown as a large, immersive card with a prominent play button for
           live view. Motion detection status and quick actions are grouped into
@@ -124,7 +124,7 @@ sections:
         items:
           - src: clips-previous.png
             caption: The previous Clip List design
-            width: 80
+            width: 70
             showBackground: true
       - type: text
         body: In the redesigned version, clips are organized into clear date groupings
@@ -137,7 +137,7 @@ sections:
       - type: images
         items:
           - caption: ""
-            width: 80
+            width: 70
             showBackground: true
             src: imockup-iclip-list-playing.png
   - heading: My Role
