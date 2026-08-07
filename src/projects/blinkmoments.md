@@ -52,8 +52,8 @@ sections:
           We needed to find a way to surface important events happening across cameras and over a period of time.
       - type: images
         items:
-          - caption: I made this animation in After Effects to illustrate the value of
-              Moments
+          - caption: An animation I created in After Effects for the feature's onboarding
+              education.
             width: 100
             showBackground: false
             src: /projects/blinkmoments/images/img_0736.gif
