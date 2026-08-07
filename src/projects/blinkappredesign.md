@@ -118,9 +118,8 @@ sections:
       - type: text
         body: The Clip List is where users go to review what happened — motion events,
           doorbell rings, live view recordings, and more. The previous design
-          combined an inline video player with a dense list of clips below it.
-          It was useful for playback, but difficult to scan when users just
-          wanted to find a specific event.
+          was outdated, visually unrefined, and the list of recordings was very
+          dense.
       - type: images
         items:
           - src: clips-previous.png
@@ -128,11 +127,13 @@ sections:
             width: 80
             showBackground: true
       - type: text
-        body: The redesign separates browsing from playback. Clips are organized into
-          clear date groupings with event counts, rich thumbnails, and
-          descriptive tags for event types — motion, doorbell, person detection,
-          and live view. Unviewed clips are marked with a subtle indicator, and
-          cloud storage status is always visible at the bottom of the list.
+        body: In the redesigned version, clips are organized into clear date groupings
+          with event counts, rich thumbnails, and descriptive tags for event
+          types — motion, doorbell, person detection, and live view. Each clip
+          is shown as an individual card, making it easier to scan, discern each
+          clip, and identify important information. The cloud storage indicator
+          was moved to be a little more subtle while still visible at the top
+          level.
       - type: images
         items:
           - caption: ""
@@ -143,24 +144,26 @@ sections:
     blocks:
       - type: text
         body: >-
-          As a designer on this project, I contributed to the visual and
-          interaction design of both the Home and Clip List experiences. I
+          As the lead designer on this project, I was responsible for the visual
+          and interaction design of both the Home and Clip List experiences. I
           worked closely with product and engineering to explore concepts,
           refine layouts, and validate designs against the needs of a large and
           diverse customer base.
 
 
-          This included competitive research, iterating on high-fidelity mockups in both light and dark modes, and collaborating on the details — from event type labeling to bulk selection patterns — that make these screens feel polished at scale.
+          This included competitive research, iterating on high-fidelity mockups, usability studies, and more.
   - heading: The Result
     blocks:
       - type: text
         body: >-
-          The redesigned Home and Clip List screens bring a modern, cohesive
-          feel to two of the most-used pages in the Blink app. Camera access is
-          more immediate, clip browsing is more scannable, and everyday actions
-          — arming the system, checking live view, managing recordings — are
-          easier to find and use.
+          The redesign of the Home Screen and Clip List successfully modernized
+          the app for over **7.5 million users**. By creating a cleaner and more
+          intuitive layout, we made it easier for people to connect with their
+          cameras, giving them more peace of mind. 
 
 
-          For tens of millions of customers checking their homes every day, these screens are the front door to the Blink experience. Getting them right mattered — and we're proud of where they landed.
+          This positive impact was immediately clear with the updated Camera Tile, which caused Live View usage to nearly double, jumping to **1.88 daily views** per user (from the **1.02** baseline). 
+
+
+          The refreshed Clip List also provided a smoother, faster way for users to watch and manage their saved videos. While updating a familiar design naturally requires an adjustment period for long-time customers, the new interface achieved its main goal: delivering an easy-to-use, modern experience that actively encouraged people to engage more with their smart home system.
 ---
