@@ -27,6 +27,18 @@ sections:
 
 
           Over time, the app's interface had grown dated and was unintuitive and limited in its ability to scale to support new products and features. A redesign was needed to bring consistency, accessibility, scalability, and a more polished feel to the overall experience.
+  - heading: My Role
+    blocks:
+      - type: text
+        body: >-
+          As the lead designer on this project, I was responsible for the visual
+          and interaction design of both the Home and Clip List experiences. I
+          worked closely with product and engineering to explore concepts,
+          refine layouts, and validate designs against the needs of a large and
+          diverse customer base.
+
+
+          This included competitive research, iterating on high-fidelity mockups, usability studies, and more.
   - heading: The Challenge
     blocks:
       - type: text
@@ -58,7 +70,7 @@ sections:
     blocks:
       - type: text
         body: The previous Home screen surfaced a number of action buttons that did not
-          have clear definition. Users like the fact that these buttons were at
+          have clear definition. Users liked the fact that these buttons were at
           the top level and easy to access, but there was a significant learning
           curve for new users to understand what each button did. There were
           also issue with visual weight, spacing, tappable elements being too
@@ -116,10 +128,10 @@ sections:
   - heading: Clip List
     blocks:
       - type: text
-        body: The Clip List is where users go to review what happened — motion events,
-          doorbell rings, live view recordings, and more. The previous design
-          was outdated, visually unrefined, and the list of recordings was very
-          dense.
+        body: The Clips list is where users go to review what happened around their home
+          — motion events, doorbell rings, live view recordings, and more. The
+          previous design was outdated, visually unrefined, and the list of
+          recordings was dense and difficult to parse.
       - type: images
         items:
           - src: clips-previous.png
@@ -127,31 +139,19 @@ sections:
             width: 70
             showBackground: true
       - type: text
-        body: In the redesigned version, clips are organized into clear date groupings
-          with event counts, rich thumbnails, and descriptive tags for event
-          types — motion, doorbell, person detection, and live view. Each clip
-          is shown as an individual card, making it easier to scan, discern each
-          clip, and identify important information. The cloud storage indicator
-          was moved to be a little more subtle while still visible at the top
-          level.
+        body: In the redesigned version, clips are organized by date with event counts
+          by day, rich thumbnails, and descriptive tags for event types —
+          motion, doorbell, person detection, and live view. Each clip is shown
+          as an individual card, making it easier to scan, distinguish clips
+          from one another, and more easily identify important information. The
+          cloud storage indicator was moved to be a little more subtle while
+          still visible at the top level.
       - type: images
         items:
           - caption: ""
             width: 70
             showBackground: true
             src: imockup-iclip-list-playing.png
-  - heading: My Role
-    blocks:
-      - type: text
-        body: >-
-          As the lead designer on this project, I was responsible for the visual
-          and interaction design of both the Home and Clip List experiences. I
-          worked closely with product and engineering to explore concepts,
-          refine layouts, and validate designs against the needs of a large and
-          diverse customer base.
-
-
-          This included competitive research, iterating on high-fidelity mockups, usability studies, and more.
   - heading: The Result
     blocks:
       - type: text
