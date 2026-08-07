@@ -19,26 +19,27 @@ sections:
     blocks:
       - type: text
         body: >-
-          Amazon's [Blink](https://blinkforhome.com) is a home WiFi security
-          camera system used by tens of millions of customers to keep an eye on
-          their homes. The mobile app is currently the only way users interact
-          with Blink products. In the app, users can check a camera's live view,
-          watch recorded clips, and more.
+          Amazon's [Blink](https://blinkforhome.com) brand is a consumer-focused
+          WiFi security camera system used by tens of millions of customers to
+          keep an eye on their homes. The mobile app is currently the only way
+          users interact with Blink products. In the app, users can check a
+          camera's live view, watch recorded clips, and more.
 
 
-          Over time, the app's interface had grown dated. While it remained functional, the visual language and interaction patterns no longer matched the expectations of modern mobile users. A redesign was needed to bring clarity, consistency, and a more polished feel to the experience.
+          Over time, the app's interface had grown dated. While it remained functional, the visual language and interaction patterns no longer matched the expectations of modern mobile users. A redesign was needed to bring clarity, consistency, accessibility, and a more polished feel to the experience.
   - heading: The Challenge
     blocks:
       - type: text
         body: >-
           We focused on two areas that sit at the heart of daily use in the app:
-          the Home screen, which is the default landing page and houses access
-          to all of a user's cameras, and the Clip List, where users browse
-          recordings of events that occurred on their cameras. Together, these
-          are among the highest-traffic pages in the entire application.
+          the Home screen, which is the default landing page and contains all of
+          a user's cameras, and the Clip List, where users browse recordings of
+          events that their cameras captured. Together, these are among the
+          highest-traffic screens in the entire application and contain the
+          Blink platform's core functionality. 
 
 
-          Redesigning them meant balancing a lot of competing needs. Customers needed quick access to live views and system controls, but also a scannable way to review dozens of clips across multiple cameras and locations. Any change had to feel familiar enough for existing users while still delivering a meaningfully better experience.
+          Redesigning them meant balancing a lot of competing needs. On the Home screen, customers needed quick access to live views and system controls, while designing a system that was scalable for future products and features. On the Clips list, users needed a scannable way to review dozens of clips across multiple cameras and locations. Any change had to feel intuitive enough for existing users while still delivering a meaningfully better experience for all.
   - heading: Our Goals
     blocks:
       - type: text
