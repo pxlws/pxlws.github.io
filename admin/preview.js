@@ -187,18 +187,22 @@
               paddingBottom: "0",
             },
           }),
-          h(
-            "p",
-            {
-              style: {
-                textAlign: "center",
-                fontSize: "13px",
-                fontStyle: "italic",
-                color: "rgb(97, 97, 97)",
-              },
-            },
-            image.get("caption")
-          )
+          image.get("caption")
+            ? h(
+                "p",
+                {
+                  className: "project-image-caption",
+                  style: {
+                    textAlign: "center",
+                    fontSize: "13px",
+                    fontStyle: "italic",
+                    color: "rgb(97, 97, 97)",
+                    margin: "14px 0 0",
+                  },
+                },
+                image.get("caption")
+              )
+            : null
         );
       })
     );

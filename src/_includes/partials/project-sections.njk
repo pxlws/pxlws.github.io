@@ -17,8 +17,10 @@
             {% set showBackground = image.showBackground | default(true) %}
             <div class="project-image{% if showBackground %} project-image--framed{% endif %}">
               {% set imgWidth = image.width | default(100) %}
-              <img style="padding-bottom:0px; width: {{ imgWidth }}%; height: auto; max-width: 100%; display: block; margin: 0 auto;" src="{{ image.src | projectImageSrc(slug) }}" alt="{{ image.caption }}">
-              <p style="text-align: center; font-size: 13px; font-style: italic; color:rgb(97, 97, 97);">{{ image.caption }}</p>
+              <img style="width: {{ imgWidth }}%; height: auto; max-width: 100%; display: block; margin: 0 auto;" src="{{ image.src | projectImageSrc(slug) }}" alt="{{ image.caption }}">
+              {% if image.caption %}
+              <p class="project-image-caption">{{ image.caption }}</p>
+              {% endif %}
             </div>
           {% endfor %}
         </div>

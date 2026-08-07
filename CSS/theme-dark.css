@@ -233,6 +233,10 @@ html.theme-dark .project-section li {
   color: #fff !important;
 }
 
+html.theme-dark .project-image .project-image-caption {
+  color: #9aa3aa !important;
+}
+
 html.theme-dark .black-button {
   color: #fff;
   border-color: #fff;

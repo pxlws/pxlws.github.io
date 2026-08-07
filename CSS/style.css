@@ -989,6 +989,18 @@ a:hover {
   margin-top: 25px;
 }
 
+.project-image img {
+  padding-bottom: 0;
+}
+
+.project-image .project-image-caption {
+  color: rgb(97, 97, 97);
+  font-size: 13px;
+  font-style: italic;
+  margin: 14px 0 0;
+  text-align: center;
+}
+
 .project-image--framed {
   background-color: #e4eaee;
   border-radius: 8px;
