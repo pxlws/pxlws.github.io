@@ -48,6 +48,7 @@ sections:
         items:
           - src: clocked-out.png
             caption: ""
+            width: 75
       - type: text
         body: <p>As primary designer, I was responsible for working closely with the
           Mobile Product Manager as well as Product Managers for the
@@ -59,6 +60,7 @@ sections:
         items:
           - src: absences.png
             caption: ""
+            width: 75
       - type: text
         body: >-
           <p>Ready for more? Check out <a href="/work/">more of my work
