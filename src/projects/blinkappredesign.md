@@ -91,12 +91,9 @@ sections:
             caption: A device action sheet for quick camera controls
             width: 74
       - type: text
-        body: The redesigned Home screen puts camera feeds front and center. Each device
-          is shown as a large, immersive card with a prominent play button for
-          live view. Motion detection status and quick actions are grouped into
-          a compact control pill on each card, and system-level arming is
-          surfaced directly on multi-camera views. A streamlined bottom
-          navigation and refreshed header complete the look.
+        body: Dark mode received the same level of care. Camera cards, navigation, and
+          controls were designed to feel native in both themes — not simply
+          inverted, but thoughtfully adapted for low-light use.
       - type: images
         items:
           - src: home2-new-1.png
