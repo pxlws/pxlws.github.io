@@ -116,23 +116,28 @@ sections:
   - heading: Clip List
     blocks:
       - type: text
-        body: >-
-          The Clip List is where users go to review what happened — motion
-          events, doorbell rings, live view recordings, and more. The previous
-          design combined an inline video player with a dense list of clips
-          below it. It was useful for playback, but difficult to scan when users
-          just wanted to find a specific event.
-
-
-          The redesign separates browsing from playback. Clips are organized into clear date groupings with event counts, rich thumbnails, and descriptive tags for event types — motion, doorbell, person detection, and live view. Unviewed clips are marked with a subtle indicator, and cloud storage status is always visible at the bottom of the list.
+        body: The Clip List is where users go to review what happened — motion events,
+          doorbell rings, live view recordings, and more. The previous design
+          combined an inline video player with a dense list of clips below it.
+          It was useful for playback, but difficult to scan when users just
+          wanted to find a specific event.
       - type: images
         items:
           - src: clips-previous.png
             caption: The previous Clip List
+            width: 64
+      - type: text
+        body: The redesign separates browsing from playback. Clips are organized into
+          clear date groupings with event counts, rich thumbnails, and
+          descriptive tags for event types — motion, doorbell, person detection,
+          and live view. Unviewed clips are marked with a subtle indicator, and
+          cloud storage status is always visible at the bottom of the list.
+      - type: images
+        items:
+          - caption: ""
             width: 80
-          - src: /projects/blinkappredesign/images/imockup-iclip-list-playing.png
-            caption: The redesigned Clip List
-            width: 80
+            showBackground: true
+            src: /projects/blinkappredesign/images/imockup-iclip-list-playing.png
   - heading: My Role
     blocks:
       - type: text
@@ -148,7 +153,7 @@ sections:
   - heading: The Result
     blocks:
       - type: text
-        body: >
+        body: >-
           The redesigned Home and Clip List screens bring a modern, cohesive
           feel to two of the most-used pages in the Blink app. Camera access is
           more immediate, clip browsing is more scannable, and everyday actions
