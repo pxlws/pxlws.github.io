@@ -57,26 +57,25 @@ sections:
   - heading: Home Screen
     blocks:
       - type: text
-        body: >-
-          The previous Home screen presented cameras as a vertical list with
-          small thumbnails, separate settings icons, and an arming toggle
-          overlaid on the feed. It worked, but felt utilitarian — controls were
-          scattered, and the hierarchy between cameras, live view, and system
-          status wasn't always clear.
-
-
-          The redesigned Home screen puts camera feeds front and center. Each device is shown as a large, immersive card with a prominent play button for live view. Motion detection status and quick actions are grouped into a compact control pill on each card, and system-level arming is surfaced directly on multi-camera views. A streamlined bottom navigation and refreshed header complete the look.
+      - type: text
+        body: The previous Home screen presented cameras as a vertical list with small
+          thumbnails, separate settings icons, and an arming toggle overlaid on
+          the feed. It worked, but felt utilitarian — controls were scattered,
+          and the hierarchy between cameras, live view, and system status wasn't
+          always clear.
       - type: images
         items:
           - src: home-previous.png
             caption: The previous Home screen
             width: 80
-          - src: home-new-2.png
-            caption: The redesigned Home screen
+      - type: images
+        items:
+          - caption: ""
             width: 80
+            showBackground: true
+            src: /projects/blinkappredesign/images/home-new-2.png
       - type: text
-        body: >
-          Device-level actions — like toggling motion detection, refreshing a
+        body: Device-level actions — like toggling motion detection, refreshing a
           thumbnail, or adjusting lights — were consolidated into a clean action
           sheet. This keeps the main view focused on the cameras while still
           giving users fast access to the controls they reach for most often.
@@ -86,15 +85,23 @@ sections:
             caption: A device action sheet for quick camera controls
             width: 74
       - type: text
-        body: >
-          Dark mode received the same level of care. Camera cards, navigation,
-          and controls were designed to feel native in both themes — not simply
-          inverted, but thoughtfully adapted for low-light use.
+        body: The redesigned Home screen puts camera feeds front and center. Each device
+          is shown as a large, immersive card with a prominent play button for
+          live view. Motion detection status and quick actions are grouped into
+          a compact control pill on each card, and system-level arming is
+          surfaced directly on multi-camera views. A streamlined bottom
+          navigation and refreshed header complete the look.
       - type: images
         items:
           - src: home2-new-1.png
             caption: The redesigned Home screen in dark mode
             width: 80
+        body: The redesigned Home screen puts camera feeds front and center. Each device
+          is shown as a large, immersive card with a prominent play button for
+          live view. Motion detection status and quick actions are grouped into
+          a compact control pill on each card, and system-level arming is
+          surfaced directly on multi-camera views. A streamlined bottom
+          navigation and refreshed header complete the look.
   - heading: Clip List
     blocks:
       - type: text
