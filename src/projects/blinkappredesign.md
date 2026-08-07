@@ -130,7 +130,7 @@ sections:
           - src: clips-previous.png
             caption: The previous Clip List
             width: 80
-          - src: clips1-new-1.png
+          - src: /projects/blinkappredesign/images/imockup-iclip-list-playing.png
             caption: The redesigned Clip List
             width: 80
   - heading: My Role
