@@ -31,12 +31,12 @@ sections:
     blocks:
       - type: text
         body: >-
-          We focused on two areas that sit at the heart of daily use in the app:
-          the Home screen, which is the default landing page and contains all of
-          a user's cameras, and the Clip List, where users browse recordings of
-          events that their cameras captured. Together, these are among the
-          highest-traffic screens in the entire application and contain the
-          Blink platform's core functionality. 
+          We focused on two areas that are a core part of a customer's daily
+          usage of the app: the Home screen, which is the default landing page
+          and contains access to all of the user's cameras, and the Clip List,
+          where users browse recordings of events that their cameras captured.
+          Together, these are among the highest-traffic screens in the entire
+          application and contain the Blink platform's core functionality. 
 
 
           Redesigning them meant balancing a lot of competing needs. On the Home screen, customers needed quick access to live views and system controls, while designing a system that was scalable for future products and features. On the Clips list, users needed a scannable way to review dozens of clips across multiple cameras and locations. Any change had to feel intuitive enough for existing users while still delivering a meaningfully better experience for all.
