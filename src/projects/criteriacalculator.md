@@ -1,5 +1,5 @@
 ---
-visibleOnSite: true
+visibleOnSite: false
 featured: false
 featuredOrder: 99
 workOrder: 10
