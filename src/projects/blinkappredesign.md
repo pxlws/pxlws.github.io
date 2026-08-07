@@ -26,7 +26,7 @@ sections:
           live view, watch recorded clips, and more.
 
 
-          Over time, the app's interface had grown dated. While it remained functional, the visual language and interaction patterns no longer matched the expectations of modern mobile users. A redesign was needed to bring clarity, consistency, accessibility, and a more polished feel to the experience.
+          Over time, the app's interface had grown dated and was unintuitive and limited in its ability to scale to support new products and features. A redesign was needed to bring consistency, accessibility, scalability, and a more polished feel to the overall experience.
   - heading: The Challenge
     blocks:
       - type: text
