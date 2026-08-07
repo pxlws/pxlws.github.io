@@ -124,8 +124,9 @@ sections:
       - type: images
         items:
           - src: clips-previous.png
-            caption: The previous Clip List
-            width: 64
+            caption: The previous Clip List design
+            width: 80
+            showBackground: true
       - type: text
         body: The redesign separates browsing from playback. Clips are organized into
           clear date groupings with event counts, rich thumbnails, and
