@@ -37,6 +37,11 @@
           statusInfoTooltipDraft:
             "This entry has unpublished changes. Set the status to ‘In review’ when you are ready to publish.",
         },
+        editorWidgets: {
+          list: {
+            add: "Add %{item}",
+          },
+        },
       },
       workflow: {
         workflowList: {

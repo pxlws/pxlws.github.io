@@ -1,0 +1,24 @@
+/**
+ * CMS UI stability helpers.
+ * Nested rich-text editors are collapsed by default in config.yml so only one
+ * block editor is mounted at a time — that avoids Decap's known list/editor
+ * identity bugs that could write into the wrong text block.
+ */
+
+/* Keep collapsed list rows readable */
+.nc-listControl-item,
+[class*="ListItem-"] {
+  margin-bottom: 8px;
+}
+
+/* Prefer a stable editing surface for richtext/raw fields */
+div[data-slate-editor],
+div[contenteditable="true"] {
+  -webkit-user-modify: read-write !important;
+}
+
+/* Soft warning strip when editing — reinforces collapsing other blocks */
+.nc-entryEdit-main,
+[class*="EditorContainer"] {
+  scroll-behavior: smooth;
+}

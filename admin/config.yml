@@ -99,6 +99,8 @@ collections:
         label_singular: Section
         widget: list
         required: false
+        summary: "{{heading}}"
+        collapsed: true
         fields:
           - label: Heading
             name: heading
@@ -109,20 +111,39 @@ collections:
             widget: list
             required: false
             min: 0
+            summary: "{{type}}"
+            collapsed: true
             types:
               - label: Text
                 name: text
                 widget: object
                 required: false
+                summary: "Text — {{body}}"
                 fields:
                   - label: Body
                     name: body
-                    widget: markdown
+                    widget: richtext
                     required: false
+                    default: ""
+                    minimal: true
+                    modes:
+                      - rich_text
+                      - raw
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - bulleted-list
+                      - numbered-list
+                      - heading-three
+                      - heading-four
+                    editor_components: []
+                    hint: Prefer the visual editor for normal writing. Use Raw only when you need custom HTML (tables, etc.). Collapse other blocks while editing to avoid mix-ups.
               - label: Images
                 name: images
                 widget: object
                 required: false
+                summary: Images
                 fields:
                   - label: Images
                     name: items
@@ -130,6 +151,8 @@ collections:
                     widget: list
                     required: false
                     min: 0
+                    summary: "{{caption}}"
+                    collapsed: true
                     fields:
                       - label: Image
                         name: src
