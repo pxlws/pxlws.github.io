@@ -1,11 +1,11 @@
 [
   {
-    "slug": "blinkappredesign",
-    "title": "Blink App Redesign",
-    "href": "/projects/blinkappredesign/",
-    "cardDescription": "Modernizing the app's most-used screens.",
+    "slug": "blinkmoments",
+    "title": "Blink Moments",
+    "href": "/projects/blinkmoments/",
+    "cardDescription": "Reducing clip overload with seamless Moments.",
     "cardTag": "Product Design",
-    "cardThumb": "/projects/blinkappredesign/images/blinkapp-thumb.png",
+    "cardThumb": "/projects/blinkmoments/images/moments-thumb.png",
     "featuredOrder": 1,
     "gridClass": "grid-col1"
   },

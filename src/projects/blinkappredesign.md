@@ -1,8 +1,8 @@
 ---
-featuredOrder: 1
+featuredOrder: 99
 draft: false
 visibleOnSite: true
-featured: true
+featured: false
 workOrder: 0
 passwordProtected: true
 password: gobirds

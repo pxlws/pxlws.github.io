@@ -1,7 +1,7 @@
 ---
 visibleOnSite: true
-featured: false
-featuredOrder: 99
+featured: true
+featuredOrder: 1
 workOrder: 1
 passwordProtected: true
 password: gobirds
