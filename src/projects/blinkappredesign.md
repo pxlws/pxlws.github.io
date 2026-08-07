@@ -8,8 +8,8 @@ passwordProtected: true
 password: gobirds
 title: Blink App Redesign
 summary: As a designer on the Blink mobile app, I helped reimagine two of the
-  app's most critical screens — Home and Clip List — modernizing the experience
-  for tens of millions of customers who rely on them every day.
+  app's most critical areas — the Home and Clips screens — modernizing the
+  experience for millions of customers who rely on them every day.
 slug: blinkappredesign
 cardDescription: Modernizing the app's most-used screens.
 cardTag: Product Design
