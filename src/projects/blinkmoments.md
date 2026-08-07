@@ -52,7 +52,7 @@ sections:
               education.
             width: 100
             showBackground: false
-            src: img_0736.gif
+            src: /projects/blinkmoments/images/img_0741.gif
   - heading: Our Goals
     blocks:
       - type: text
