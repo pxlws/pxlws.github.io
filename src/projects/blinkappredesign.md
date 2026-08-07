@@ -44,17 +44,16 @@ sections:
     blocks:
       - type: text
         body: >-
-          With so many customers depending on these screens daily, we set out
-          with a clear set of goals to guide every design decision:
+          High-level goals we set for this project: 
 
 
           * Modernize the visual design with a cleaner, more consistent interface
 
-          * Improve scannability so users can find cameras and clips faster
+          * Develop an interface that was scalable and sustainable, allowing the company to add more products and functionality.
 
-          * Surface the most important actions — live view, arming, and clip management — without cluttering the screen
+          * Improve scannability so users can find clips faster
 
-          * Support both light and dark modes with equal attention to detail
+          * Make common actions intuitive and easy to access while improving usability.
   - heading: Home Screen
     blocks:
       - type: text
