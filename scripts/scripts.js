@@ -198,13 +198,14 @@ function initChristmasMode() {
   function updateSeason() {
     var now = new Date();
     var month = now.getMonth();
+    var day = now.getDate();
     var year = now.getFullYear();
     var nextSeason = null;
     if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
       nextSeason = "preview";
-    } else if (month === 11) {
+    } else if ((month === 10 && day >= 15) || month === 11) {
       nextSeason = year;
-    } else if (month === 0 || (month === 1 && now.getDate() <= 28)) {
+    } else if (month === 0 && day === 1) {
       nextSeason = year - 1;
     }
 
@@ -222,7 +223,7 @@ function initChristmasMode() {
       setChristmasMode(season !== null && !paused);
     }
 
-    var midnight = new Date(year, month, now.getDate() + 1);
+    var midnight = new Date(year, month, day + 1);
     window.setTimeout(updateSeason, midnight - now);
   }
 
