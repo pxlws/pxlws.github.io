@@ -151,6 +151,38 @@
   overflow: visible;
 }
 
+.christmas-snow {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.christmas-snow span {
+  position: absolute;
+  top: var(--flake-rest-top);
+  width: var(--flake-size);
+  height: var(--flake-size);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgb(58 105 140 / 45%);
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .christmas-snow span {
+    top: -10px;
+    animation: christmas-snowfall linear infinite;
+  }
+}
+
+@keyframes christmas-snowfall {
+  to {
+    transform: translate(var(--flake-drift), calc(100vh + 20px));
+  }
+}
+
 .hamburger.is-open {
   z-index: 999;
 }
@@ -262,7 +294,8 @@
   color: #fff;
 }
 
-#hamburger-dropdown .theme-toggle {
+#hamburger-dropdown .theme-toggle,
+#hamburger-dropdown .winter-toggle {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -277,7 +310,9 @@
 }
 
 #hamburger-dropdown a.nav-menu-item:hover:not(.is-active),
-#hamburger-dropdown .theme-toggle:hover {
+#hamburger-dropdown .theme-toggle:hover,
+#hamburger-dropdown .winter-toggle:hover,
+#hamburger-dropdown .winter-toggle[aria-pressed="true"] {
   background-color: #0b9083;
 }
 

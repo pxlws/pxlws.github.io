@@ -12,6 +12,7 @@ function myFunction() {
 
 var GALLERY_SIZE_KEY = "gallery-shot-size";
 var THEME_KEY = "theme";
+var CHRISTMAS_MODE_KEY = "christmas-mode";
 
 function setTheme(theme) {
   var isDark = theme === "dark";
@@ -141,6 +142,104 @@ function initThemeToggle() {
 
     setHamburgerMenuOpen(false);
   });
+}
+
+function initChristmasMode() {
+  var menu = document.querySelector(".nav-menu-actions");
+  if (!menu) return;
+
+  var hero = document.querySelector("[data-winter-src]");
+  var regularHeroSrc = hero && hero.getAttribute("src");
+  var item = document.createElement("li");
+  var button = document.createElement("button");
+  button.type = "button";
+  button.className = "winter-toggle nav-menu-item";
+  button.innerHTML =
+    '<i class="fas fa-snowflake" aria-hidden="true"></i><span>Winter mode</span>';
+  item.appendChild(button);
+
+  var snow;
+  var season;
+  var paused = false;
+
+  function setChristmasMode(enabled) {
+    button.setAttribute("aria-pressed", String(enabled));
+    if (hero) {
+      hero.src = enabled ? hero.dataset.winterSrc : regularHeroSrc;
+    }
+
+    if (!enabled && snow) {
+      snow.remove();
+      snow = null;
+    }
+
+    if (enabled && !snow) {
+      snow = document.createElement("div");
+      snow.className = "christmas-snow";
+      snow.setAttribute("aria-hidden", "true");
+
+      var flakeCount = window.matchMedia("(max-width: 720px)").matches ? 24 : 44;
+      for (var i = 0; i < flakeCount; i++) {
+        var flake = document.createElement("span");
+        var duration = 8 + Math.random() * 10;
+        flake.style.left = Math.random() * 100 + "%";
+        flake.style.setProperty("--flake-rest-top", Math.random() * 100 + "%");
+        flake.style.setProperty("--flake-size", 2 + Math.random() * 4 + "px");
+        flake.style.setProperty("--flake-drift", Math.random() * 100 - 50 + "px");
+        flake.style.animationDuration = duration + "s";
+        flake.style.animationDelay = -Math.random() * duration + "s";
+        snow.appendChild(flake);
+      }
+
+      document.body.appendChild(snow);
+    }
+  }
+
+  function updateSeason() {
+    var now = new Date();
+    var month = now.getMonth();
+    var year = now.getFullYear();
+    var nextSeason = null;
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      nextSeason = "preview";
+    } else if (month === 11) {
+      nextSeason = year;
+    } else if (month === 0 || (month === 1 && now.getDate() <= 28)) {
+      nextSeason = year - 1;
+    }
+
+    if (nextSeason !== season) {
+      season = nextSeason;
+      paused = false;
+      if (season === null) {
+        item.remove();
+      } else {
+        try {
+          paused = sessionStorage.getItem(CHRISTMAS_MODE_KEY) === String(season);
+        } catch (e) {}
+        menu.appendChild(item);
+      }
+      setChristmasMode(season !== null && !paused);
+    }
+
+    var midnight = new Date(year, month, now.getDate() + 1);
+    window.setTimeout(updateSeason, midnight - now);
+  }
+
+  button.addEventListener("click", function () {
+    paused = !paused;
+    setChristmasMode(!paused);
+
+    try {
+      if (paused) {
+        sessionStorage.setItem(CHRISTMAS_MODE_KEY, String(season));
+      } else {
+        sessionStorage.removeItem(CHRISTMAS_MODE_KEY);
+      }
+    } catch (e) {}
+  });
+
+  updateSeason();
 }
 
 function updateGallerySizeThumb() {
@@ -531,6 +630,7 @@ function initFeaturedCardHeights() {
 document.addEventListener("DOMContentLoaded", function () {
   initNavMenu();
   initThemeToggle();
+  initChristmasMode();
   initGallerySizeControls();
   initProjectGateBadges();
   initAdminShortcut();
